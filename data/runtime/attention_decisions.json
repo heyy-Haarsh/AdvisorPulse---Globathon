@@ -1,0 +1,116 @@
+{
+  "DEMO-INV-H03": {
+    "investor_id": "DEMO-INV-H03",
+    "action": "dismiss",
+    "key": "DEMO-INV-H03",
+    "updated_at": "2026-10-19T14:44:02.837939+00:00",
+    "id": "8376023f-f18d-4235-a89d-bda5e7ca3943"
+  },
+  "memory::DEMO-INV-001::33e93be5-9430-4b98-baf7-4a9b9ef8bc5f": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "33e93be5-9430-4b98-baf7-4a9b9ef8bc5f",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::33e93be5-9430-4b98-baf7-4a9b9ef8bc5f",
+    "updated_at": "2026-10-18T18:29:45.214867+00:00",
+    "id": "0a3a037d-ed4a-4e21-959f-4893e6616277"
+  },
+  "memory::DEMO-INV-001::62f61229-bec0-4be8-bc75-1d366715ba88": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "62f61229-bec0-4be8-bc75-1d366715ba88",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::62f61229-bec0-4be8-bc75-1d366715ba88",
+    "updated_at": "2026-10-18T18:30:08.855159+00:00",
+    "id": "7021a7ae-6a95-4249-9211-931ece9a7978"
+  },
+  "memory::DEMO-INV-001::b3aa1732-6f46-47e7-9a3f-1902160d86ed": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "b3aa1732-6f46-47e7-9a3f-1902160d86ed",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::b3aa1732-6f46-47e7-9a3f-1902160d86ed",
+    "updated_at": "2026-10-18T18:30:34.195573+00:00",
+    "id": "b32e0386-7f30-4061-bdac-46794cd9cf49"
+  },
+  "memory::DEMO-INV-001::9dd3a96a-7a9f-4174-a95f-f079433898cb": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "9dd3a96a-7a9f-4174-a95f-f079433898cb",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::9dd3a96a-7a9f-4174-a95f-f079433898cb",
+    "updated_at": "2026-10-18T18:31:49.445434+00:00",
+    "id": "350f0594-352f-4450-b171-e1b5cd18b6fb"
+  },
+  "DEMO-INV-001": {
+    "action": "dismiss",
+    "note": "Rejected suggested pack",
+    "source": "next_review_action",
+    "key": "DEMO-INV-001",
+    "updated_at": "2026-10-19T14:47:00.593150+00:00",
+    "id": "b83765e3-9f2a-407b-b904-467c2acc526f"
+  },
+  "memory::DEMO-INV-001::61253aee-92ed-431c-b368-596057a516c7": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "61253aee-92ed-431c-b368-596057a516c7",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::61253aee-92ed-431c-b368-596057a516c7",
+    "updated_at": "2026-10-19T13:08:00.809348+00:00",
+    "id": "ed02d43d-3de2-468f-acea-a6966105b865"
+  },
+  "memory::DEMO-INV-001::e6f50333-dd60-4175-b3b8-55337d1167f6": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "e6f50333-dd60-4175-b3b8-55337d1167f6",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::e6f50333-dd60-4175-b3b8-55337d1167f6",
+    "updated_at": "2026-10-19T13:08:18.714594+00:00",
+    "id": "62705296-9007-4d5d-b00f-7e8f4b8456a7"
+  },
+  "memory::DEMO-INV-001::1a3a67b9-9023-4c95-b7eb-f9e4e55ca77b": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "1a3a67b9-9023-4c95-b7eb-f9e4e55ca77b",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::1a3a67b9-9023-4c95-b7eb-f9e4e55ca77b",
+    "updated_at": "2026-10-19T13:14:20.802782+00:00",
+    "id": "1a938d5c-72e0-416b-a506-9706c94c8b14"
+  },
+  "DEMO-INV-L017": {
+    "action": "follow_up",
+    "note": "Schedule portfolio review to address goal-path deviation and open follow-ups",
+    "source": "next_review_action",
+    "action_key": "clarify_goal_or_withdrawal",
+    "key": "DEMO-INV-L017",
+    "updated_at": "2026-10-19T13:27:23.451884+00:00",
+    "id": "272034be-28af-4010-87da-046c45849542"
+  },
+  "memory::DEMO-INV-001::a0037e2a-81be-4a67-af67-4bd2a352ac4a": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "a0037e2a-81be-4a67-af67-4bd2a352ac4a",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::a0037e2a-81be-4a67-af67-4bd2a352ac4a",
+    "updated_at": "2026-10-19T14:30:30.531614+00:00",
+    "id": "52b62753-a01e-4fb3-a920-07d088fcd842"
+  },
+  "memory::DEMO-INV-001::e889f786-101d-4951-a299-0280fe7d3274": {
+    "investor_id": "DEMO-INV-001",
+    "action": "follow_up",
+    "source": "advisor_memory",
+    "extraction_id": "e889f786-101d-4951-a299-0280fe7d3274",
+    "detail": "Discuss / execute rebalancing; Review SIP level",
+    "key": "memory::DEMO-INV-001::e889f786-101d-4951-a299-0280fe7d3274",
+    "updated_at": "2026-10-19T14:44:07.190262+00:00",
+    "id": "43dc8845-127c-43f4-b3fb-9d31b6a67be2"
+  }
+}

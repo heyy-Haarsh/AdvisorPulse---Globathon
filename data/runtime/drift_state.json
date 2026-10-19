@@ -1,0 +1,12 @@
+{
+  "DEMO-INV-001::allocation_drift::Equity - Large Cap": {
+    "status": "confirmed",
+    "note": "",
+    "updated_at": "2026-10-19T04:41:20.584131+00:00"
+  },
+  "DEMO-INV-001::goal_path_drift": {
+    "status": "dismissed",
+    "note": "",
+    "updated_at": "2026-10-19T13:55:38.657341+00:00"
+  }
+}

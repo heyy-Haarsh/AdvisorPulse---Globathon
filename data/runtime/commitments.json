@@ -1,0 +1,90 @@
+[
+  {
+    "id": "d0ce8216-48d9-4032-9d71-1f3532e931b2",
+    "investor_id": "DEMO-INV-001",
+    "action": "Review allocation drift vs agreed policy with client",
+    "action_key": "rebalance_review",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T13:07:59.495645+00:00",
+    "note": "pytest accept",
+    "updated_at": "2026-10-19T13:07:59.495645+00:00"
+  },
+  {
+    "id": "e6b6f10f-9d15-43eb-9869-75ca018911db",
+    "investor_id": "DEMO-INV-001",
+    "action": "Review allocation drift vs agreed policy with client",
+    "action_key": "rebalance_review",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T13:08:20.538281+00:00",
+    "note": "pytest accept",
+    "updated_at": "2026-10-19T13:08:20.538281+00:00"
+  },
+  {
+    "id": "6ff21db2-290b-4b22-9375-0b25f45cd675",
+    "investor_id": "DEMO-INV-001",
+    "action": "Review allocation drift vs agreed policy with client",
+    "action_key": "rebalance_review",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T13:14:22.638409+00:00",
+    "note": "pytest accept",
+    "updated_at": "2026-10-19T13:14:22.638409+00:00"
+  },
+  {
+    "id": "a4131a2c-990d-4e87-a71a-977b6574d935",
+    "investor_id": "DEMO-INV-L017",
+    "action": "Schedule portfolio review to address goal-path deviation and open follow-ups",
+    "action_key": "clarify_goal_or_withdrawal",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T13:27:23.482094+00:00",
+    "note": "",
+    "updated_at": "2026-10-19T13:27:23.482094+00:00"
+  },
+  {
+    "id": "8ec209eb-abb7-43ac-9461-09b45909063d",
+    "investor_id": "DEMO-INV-001",
+    "action": "Review allocation drift vs agreed policy with client",
+    "action_key": "rebalance_review",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T14:30:32.609416+00:00",
+    "note": "pytest accept",
+    "updated_at": "2026-10-19T14:30:32.609416+00:00"
+  },
+  {
+    "id": "e13f4498-988f-42fe-8495-013a7a79af5e",
+    "investor_id": "DEMO-INV-001",
+    "action": "Review allocation drift vs agreed policy with client",
+    "action_key": "rebalance_review",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T14:43:08.836377+00:00",
+    "note": "pytest accept",
+    "updated_at": "2026-10-19T14:43:08.836377+00:00"
+  },
+  {
+    "id": "5a3c1390-7880-4e16-be79-5e3a15053376",
+    "investor_id": "DEMO-INV-001",
+    "action": "Review allocation drift vs agreed policy with client",
+    "action_key": "rebalance_review",
+    "status": "open",
+    "source": "next_review_action",
+    "created_at": "2026-10-19T14:44:16.651488+00:00",
+    "note": "pytest accept",
+    "updated_at": "2026-10-19T14:44:16.651488+00:00"
+  },
+  {
+    "id": "b8ee1a2c-661d-423a-9150-acc17090e60b",
+    "investor_id": "DEMO-INV-001",
+    "action": "File meeting notes and mark review complete",
+    "due": null,
+    "status": "open",
+    "source": "meeting_follow_through",
+    "authoritative": true,
+    "updated_at": "2026-10-19T14:46:51.621802+00:00",
+    "created_at": "2026-10-19T14:46:51.621802+00:00"
+  }
+]

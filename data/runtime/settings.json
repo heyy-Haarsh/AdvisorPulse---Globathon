@@ -1,0 +1,24 @@
+{
+  "weights": {
+    "goal_deviation": 0.35,
+    "active_underperformance": 0.2,
+    "urgency_time_to_goal": 0.15,
+    "overdue_followups": 0.15,
+    "stale_review": 0.1,
+    "data_quality": 0.05
+  },
+  "goal_deviation_critical_pct": -18.0,
+  "goal_deviation_high_pct": -8.0,
+  "active_return_high_pp": -4.0,
+  "stale_data_days": 45,
+  "stale_review_days": 120,
+  "note_retention_days": 365,
+  "privacy": {
+    "demo_auth": true,
+    "demo_auth_note": "Demo uses a single DEMO-ADV-USER-01 context. Production must enforce real advisor-client ACL.",
+    "transcription_mode": "mocked_local",
+    "log_pii": false
+  },
+  "advisor_id": "DEMO-ADV-USER-01",
+  "accessible_clients": null
+}

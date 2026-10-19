@@ -1,0 +1,11 @@
+transaction_id,user_id,date,time,description,category,amount,currency,type,payment_mode,city
+T00001,SAL,01-04-2026,09:15:00,Salary Credit,Income,85000,INR,credit,BankTransfer,Pune
+T00002,SAL,02-04-2026,13:20:00,Swiggy Order,food_delivery,420,INR,debit,UPI,Pune
+T00003,STU,02-04-2026,16:45:00,H&M Apparel,,1899,INR,debit,Card,Mumbai
+T00004,SAL,03-04-2026,12:10:00,Zomato Lunch,Food Delivery,560,INR,debit,UPI,Pune
+T00005,GIG,03-04-2026,18:30:00,  Petrol Pump  ,Fuel,2500,INR,debit,UPI,
+T00006,STU,04-04-2026,11:00:00,Course Fee,Education,"₹43,437.10",INR,debit,NetBanking,Bengaluru
+T00007,SAL,05-04-2026,20:15:00,Electricity Bill,Utilities,2100,INR,debit,UPI,Pune
+T00008,GIG,05-04-2026,21:00:00,Swiggy Dinner,,390,INR,debit,UPI,
+T00009,SAL,06-04-2026,10:00:00,Amazon Apparel,Clothing,1299,INR,debit,Card,Pune
+T00010,SAL,06-04-2026,10:00:00,Amazon Apparel,Clothing,1299,INR,debit,Card,Pune

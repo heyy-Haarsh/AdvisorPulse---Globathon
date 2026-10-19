@@ -1,0 +1,221 @@
+transaction_id,user_id,date,time,description,category,amount,currency,type,payment_mode,city
+TXN-00001,txn-user-a,2026-10-16,14:09:00,  Salary Credit  ,Income,85000,INR,CREDIT,NetBanking,
+TXN-00002,txn-user-a,2026-10-16,14:11:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Bengaluru
+TXN-00003,txn-user-a,2026-10-15,18:46:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,UPI,Bengaluru
+TXN-00004,txn-user-a,2026-10-15,13:08:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Bengaluru
+TXN-00005,txn-user-a,2026-10-15,18:42:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,Bengaluru
+TXN-00006,txn-user-a,2026-10-14,12:47:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,UPI,Bengaluru
+TXN-00007,txn-user-a,2026-10-13,10:27:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,,Pune
+TXN-00008,txn-user-a,2026-10-13,13:59:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,NetBanking,Mumbai
+TXN-00009,txn-user-a,2026-10-12,15:29:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,NetBanking,Pune
+TXN-00010,txn-user-a,2026-10-11,13:43:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,Pune
+TXN-00011,txn-user-a,2026-10-11,13:26:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,Bengaluru
+TXN-00012,txn-user-a,2026-10-10,18:02:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,
+TXN-00013,txn-user-a,2026-10-10,16:06:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,Mumbai
+TXN-00014,txn-user-a,2026-10-09,15:44:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Bengaluru
+TXN-00015,txn-user-a,2026-10-09,13:23:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,Mumbai
+TXN-00016,txn-user-a,2026-10-08,16:46:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,
+TXN-00017,txn-user-a,2026-10-07,19:16:00,  Petrol Pump  ,Fuel,2500,INR,debit,UPI,Bengaluru
+TXN-00018,txn-user-a,2026-10-05,17:30:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,Bengaluru
+TXN-00019,txn-user-a,2026-10-05,19:49:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,Card,
+TXN-00020,txn-user-a,2026-10-05,14:58:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,
+TXN-00021,txn-user-a,2026-10-05,14:13:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,Bengaluru
+TXN-00022,txn-user-a,2026-10-04,15:38:00,  Petrol Pump  ,Fuel,abc,INR,DEBIT,NetBanking,Pune
+TXN-00023,txn-user-a,2026-10-04,08:45:00,  Amazon Apparel  ,Clothing,abc,INR,DEBIT,NetBanking,Mumbai
+TXN-00024,txn-user-a,2026-10-04,12:46:00,  Electricity Bill  ,Utilities,abc,INR,DEBIT,,Bengaluru
+TXN-00025,txn-user-a,2026-10-03,14:30:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,
+TXN-00026,txn-user-a,2026-10-03,13:52:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,Mumbai
+TXN-00027,txn-user-a,2026-10-03,19:10:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,
+TXN-00028,txn-user-a,2026-10-02,15:35:00,  Electricity Bill  ,Utilities,2100,INR,debit,NetBanking,Pune
+TXN-00029,txn-user-a,2026-10-02,16:23:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,NetBanking,
+TXN-00030,txn-user-a,2026-10-01,17:10:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,NetBanking,Bengaluru
+TXN-00031,txn-user-a,2026-09-30,19:31:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Bengaluru
+TXN-00032,txn-user-a,2026-09-30,17:54:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,Pune
+TXN-00033,txn-user-a,2026-09-29,09:36:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Mumbai
+TXN-00034,txn-user-a,2026-09-28,17:17:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,NetBanking,
+TXN-00035,txn-user-a,2026-09-26,14:31:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,
+TXN-00036,txn-user-a,2026-09-25,12:00:00,  Swiggy Order  ,,420,INR,DEBIT,NetBanking,Bengaluru
+TXN-00037,txn-user-a,2026-09-25,17:41:00,  Electricity Bill  ,,2100,INR,DEBIT,,Bengaluru
+TXN-00038,txn-user-a,2026-09-24,17:32:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Bengaluru
+TXN-00039,txn-user-a,2026-09-24,11:10:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,Pune
+TXN-00040,txn-user-a,2026-09-23,17:56:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,Mumbai
+TXN-00041,txn-user-a,2026-09-23,13:46:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,Mumbai
+TXN-00042,txn-user-a,2026-09-22,10:18:00,  Petrol Pump  ,Fuel,2500,INR,debit,UPI,Pune
+TXN-00043,txn-user-a,2026-09-22,15:29:00,  Amazon Apparel  ,Clothing,1899,INR,debit,Card,Bengaluru
+TXN-00044,txn-user-a,2026-09-21,17:53:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,Mumbai
+TXN-00045,txn-user-a,2026-09-21,19:04:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,Pune
+TXN-00046,txn-user-a,2026-09-18,20:25:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,
+TXN-00047,txn-user-a,2026-09-16,09:09:00,  Salary Credit  ,Income,85000,INR,CREDIT,NetBanking,Pune
+TXN-00048,txn-user-a,2026-09-16,11:50:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Mumbai
+TXN-00049,txn-user-a,2026-09-16,13:41:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,Bengaluru
+TXN-00050,txn-user-a,2026-09-15,12:21:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,Bengaluru
+TXN-00051,txn-user-a,2026-09-15,15:44:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,NetBanking,
+TXN-00052,txn-user-a,2026-09-14,12:01:00,  Petrol Pump  ,,2500,INR,DEBIT,Card,
+TXN-00053,txn-user-a,2026-09-14,19:10:00,  SIP DEMO-NOT-LINKED  ,,10000,INR,DEBIT,NetBanking,Bengaluru
+TXN-00054,txn-user-a,2026-09-13,20:44:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Mumbai
+TXN-00055,txn-user-a,2026-09-12,11:01:00,  Swiggy Order  ,Food Delivery,420,INR,debit,Card,
+TXN-00056,txn-user-a,2026-09-12,08:16:00,  Petrol Pump  ,Fuel,2500,INR,debit,NetBanking,Bengaluru
+TXN-00057,txn-user-a,2026-09-09,11:19:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Mumbai
+TXN-00058,txn-user-a,2026-09-09,17:49:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,Mumbai
+TXN-00059,txn-user-a,2026-09-07,11:23:00,  Amazon Apparel  ,Clothing,1899,INR,debit,UPI,Bengaluru
+TXN-00060,txn-user-a,2026-09-06,16:54:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,UPI,Pune
+TXN-00061,txn-user-a,2026-09-06,20:47:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,Mumbai
+TXN-00062,txn-user-a,2026-09-05,19:29:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,Pune
+TXN-00063,txn-user-a,2026-09-05,12:05:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Pune
+TXN-00064,txn-user-a,2026-09-05,12:03:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,Mumbai
+TXN-00065,txn-user-a,2026-09-04,20:37:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,,Bengaluru
+TXN-00066,txn-user-a,2026-09-04,20:03:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Pune
+TXN-00067,txn-user-a,2026-09-04,09:28:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Bengaluru
+TXN-00068,txn-user-a,2026-09-04,16:37:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,Bengaluru
+TXN-00069,txn-user-a,2026-09-04,08:37:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,Pune
+TXN-00070,txn-user-b,2026-10-16,20:29:00,  Salary Credit  ,Income,85000,INR,CREDIT,UPI,
+TXN-00071,txn-user-b,2026-10-16,16:30:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,NetBanking,
+TXN-00072,txn-user-b,2026-10-16,16:15:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,
+TXN-00073,txn-user-b,2026-10-15,20:11:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Pune
+TXN-00074,txn-user-b,2026-10-15,16:30:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,Mumbai
+TXN-00075,txn-user-b,2026-10-14,20:27:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Pune
+TXN-00076,txn-user-b,2026-10-13,20:06:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,Mumbai
+TXN-00077,txn-user-b,2026-10-13,12:20:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,Pune
+TXN-00078,txn-user-b,2026-10-13,18:09:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,Mumbai
+TXN-00079,txn-user-b,2026-10-12,14:50:00,  Swiggy Order  ,Food Delivery,420,INR,debit,Card,Mumbai
+TXN-00080,txn-user-b,2026-10-12,16:30:00,  Amazon Apparel  ,Clothing,1899,INR,debit,,
+TXN-00081,txn-user-b,2026-10-12,12:30:00,  Electricity Bill  ,Utilities,2100,INR,debit,NetBanking,
+TXN-00082,txn-user-b,2026-10-12,13:46:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,NetBanking,
+TXN-00083,txn-user-b,2026-10-09,19:12:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,Card,
+TXN-00084,txn-user-b,2026-10-09,13:01:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,Bengaluru
+TXN-00085,txn-user-b,2026-10-09,16:47:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,Mumbai
+TXN-00086,txn-user-b,2026-10-08,09:15:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,
+TXN-00087,txn-user-b,2026-10-06,17:37:00,  Amazon Apparel  ,,1899,INR,DEBIT,,Pune
+TXN-00088,txn-user-b,2026-10-06,18:21:00,  Electricity Bill  ,,2100,INR,DEBIT,NetBanking,
+TXN-00089,txn-user-b,2026-10-05,15:08:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,
+TXN-00090,txn-user-b,2026-10-04,16:48:00,  SIP DEMO-NOT-LINKED  ,Transfers,abc,INR,DEBIT,NetBanking,
+TXN-00091,txn-user-b,2026-10-03,20:04:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,
+TXN-00092,txn-user-b,2026-10-02,15:14:00,  Swiggy Order  ,Food Delivery,420,INR,debit,,
+TXN-00093,txn-user-b,2026-10-02,18:45:00,  Petrol Pump  ,Fuel,2500,INR,debit,NetBanking,
+TXN-00094,txn-user-b,2026-10-02,18:26:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,,Bengaluru
+TXN-00095,txn-user-b,2026-10-01,16:23:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,Bengaluru
+TXN-00096,txn-user-b,2026-09-30,16:31:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,
+TXN-00097,txn-user-b,2026-09-28,15:39:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,Card,Pune
+TXN-00098,txn-user-b,2026-09-28,15:56:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,
+TXN-00099,txn-user-b,2026-09-27,18:36:00,  Swiggy Order  ,Food Delivery,420,INR,debit,NetBanking,Bengaluru
+TXN-00100,txn-user-b,2026-09-26,17:18:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,Bengaluru
+TXN-00101,txn-user-b,2026-09-26,11:20:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,Mumbai
+TXN-00102,txn-user-b,2026-09-26,11:37:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,Bengaluru
+TXN-00103,txn-user-b,2026-09-26,17:59:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,Mumbai
+TXN-00104,txn-user-b,2026-09-25,10:13:00,  Swiggy Order  ,,420,INR,DEBIT,NetBanking,Mumbai
+TXN-00105,txn-user-b,2026-09-25,16:38:00,  Petrol Pump  ,,2500,INR,DEBIT,UPI,Mumbai
+TXN-00106,txn-user-b,2026-09-25,13:59:00,  SIP DEMO-NOT-LINKED  ,,10000,INR,DEBIT,Card,Mumbai
+TXN-00107,txn-user-b,2026-09-24,10:27:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Mumbai
+TXN-00108,txn-user-b,2026-09-24,13:01:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,Card,Bengaluru
+TXN-00109,txn-user-b,2026-09-24,14:01:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Mumbai
+TXN-00110,txn-user-b,2026-09-23,14:37:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Pune
+TXN-00111,txn-user-b,2026-09-22,11:07:00,  Amazon Apparel  ,Clothing,1899,INR,debit,,
+TXN-00112,txn-user-b,2026-09-22,11:13:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,UPI,
+TXN-00113,txn-user-b,2026-09-21,14:51:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Bengaluru
+TXN-00114,txn-user-b,2026-09-20,13:19:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,Bengaluru
+TXN-00115,txn-user-b,2026-09-20,19:05:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Bengaluru
+TXN-00116,txn-user-b,2026-09-20,12:46:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,Pune
+TXN-00117,txn-user-b,2026-09-19,11:11:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,Mumbai
+TXN-00118,txn-user-b,2026-09-19,15:48:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Pune
+TXN-00119,txn-user-b,2026-09-19,19:42:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,
+TXN-00120,txn-user-b,2026-09-18,16:09:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,
+TXN-00121,txn-user-b,2026-09-17,10:01:00,  Swiggy Order  ,Food Delivery,420,INR,debit,,Mumbai
+TXN-00122,txn-user-b,2026-09-17,18:23:00,  Petrol Pump  ,Fuel,2500,INR,debit,NetBanking,
+TXN-00123,txn-user-b,2026-09-17,08:21:00,  Amazon Apparel  ,Clothing,1899,INR,debit,UPI,Bengaluru
+TXN-00124,txn-user-b,2026-09-17,10:58:00,  Electricity Bill  ,Utilities,2100,INR,debit,,Pune
+TXN-00125,txn-user-b,2026-09-16,20:38:00,  Salary Credit  ,Income,85000,INR,CREDIT,Card,Mumbai
+TXN-00126,txn-user-b,2026-09-16,13:57:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,Pune
+TXN-00127,txn-user-b,2026-09-16,15:29:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,,Bengaluru
+TXN-00128,txn-user-b,2026-09-16,17:51:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,
+TXN-00129,txn-user-b,2026-09-15,13:42:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Pune
+TXN-00130,txn-user-b,2026-09-14,11:32:00,  Swiggy Order  ,,420,INR,DEBIT,Card,Mumbai
+TXN-00131,txn-user-b,2026-09-14,09:47:00,  Petrol Pump  ,,2500,INR,DEBIT,UPI,Bengaluru
+TXN-00132,txn-user-b,2026-09-14,17:06:00,  Amazon Apparel  ,,1899,INR,DEBIT,Card,Mumbai
+TXN-00133,txn-user-b,2026-09-14,19:42:00,  Electricity Bill  ,,2100,INR,DEBIT,NetBanking,
+TXN-00134,txn-user-b,2026-09-13,10:20:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,
+TXN-00135,txn-user-b,2026-09-12,20:24:00,  Electricity Bill  ,Utilities,2100,INR,debit,UPI,Mumbai
+TXN-00136,txn-user-b,2026-09-11,18:02:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,Mumbai
+TXN-00137,txn-user-b,2026-09-11,15:30:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,Mumbai
+TXN-00138,txn-user-b,2026-09-10,17:16:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,,Pune
+TXN-00139,txn-user-b,2026-09-09,10:16:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Bengaluru
+TXN-00140,txn-user-b,2026-09-09,13:48:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,Pune
+TXN-00141,txn-user-b,2026-09-08,16:08:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Mumbai
+TXN-00142,txn-user-b,2026-09-07,19:18:00,  Swiggy Order  ,Food Delivery,420,INR,debit,Card,
+TXN-00143,txn-user-b,2026-09-07,14:35:00,  Petrol Pump  ,Fuel,2500,INR,debit,UPI,Mumbai
+TXN-00144,txn-user-b,2026-09-06,18:14:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,UPI,Mumbai
+TXN-00145,txn-user-b,2026-09-06,16:33:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,
+TXN-00146,txn-user-b,2026-09-05,10:06:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,Mumbai
+TXN-00147,txn-user-b,2026-09-04,17:27:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,Card,
+TXN-00148,txn-user-b,2026-09-04,14:18:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,,Bengaluru
+TXN-00149,txn-user-b,2026-09-03,12:00:00,  Swiggy Order  ,,420,INR,DEBIT,UPI,
+TXN-00150,txn-user-b,2026-09-03,19:39:00,  Electricity Bill  ,,2100,INR,DEBIT,UPI,Pune
+TXN-00151,txn-user-c,2026-10-16,10:09:00,  Salary Credit  ,Income,85000,INR,CREDIT,,Mumbai
+TXN-00152,txn-user-c,2026-10-16,20:10:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Bengaluru
+TXN-00153,txn-user-c,2026-10-15,13:04:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,
+TXN-00154,txn-user-c,2026-10-15,14:07:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,Card,Mumbai
+TXN-00155,txn-user-c,2026-10-14,09:33:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Pune
+TXN-00156,txn-user-c,2026-10-14,15:19:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,Bengaluru
+TXN-00157,txn-user-c,2026-10-14,20:58:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,
+TXN-00158,txn-user-c,2026-10-13,12:07:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,Bengaluru
+TXN-00159,txn-user-c,2026-10-12,09:05:00,  Amazon Apparel  ,Clothing,1899,INR,debit,NetBanking,Mumbai
+TXN-00160,txn-user-c,2026-10-10,19:46:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,
+TXN-00161,txn-user-c,2026-10-10,18:53:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,NetBanking,
+TXN-00162,txn-user-c,2026-10-10,09:45:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Mumbai
+TXN-00163,txn-user-c,2026-10-09,14:42:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Pune
+TXN-00164,txn-user-c,2026-10-08,09:37:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,Pune
+TXN-00165,txn-user-c,2026-10-07,20:15:00,  Swiggy Order  ,Food Delivery,420,INR,debit,NetBanking,Bengaluru
+TXN-00166,txn-user-c,2026-10-07,18:50:00,  Electricity Bill  ,Utilities,2100,INR,debit,,Bengaluru
+TXN-00167,txn-user-c,2026-10-05,17:11:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,UPI,
+TXN-00168,txn-user-c,2026-10-05,14:51:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Bengaluru
+TXN-00169,txn-user-c,2026-10-05,18:22:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,Mumbai
+TXN-00170,txn-user-c,2026-10-04,20:03:00,  Swiggy Order  ,Food Delivery,abc,INR,DEBIT,NetBanking,Bengaluru
+TXN-00171,txn-user-c,2026-10-04,16:49:00,  SIP DEMO-NOT-LINKED  ,Transfers,abc,INR,DEBIT,NetBanking,Bengaluru
+TXN-00172,txn-user-c,2026-10-03,15:54:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,
+TXN-00173,txn-user-c,2026-10-02,12:06:00,  Amazon Apparel  ,Clothing,1899,INR,debit,UPI,Bengaluru
+TXN-00174,txn-user-c,2026-10-02,15:40:00,  Electricity Bill  ,Utilities,2100,INR,debit,Card,Bengaluru
+TXN-00175,txn-user-c,2026-10-02,19:31:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,NetBanking,
+TXN-00176,txn-user-c,2026-10-01,09:12:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,NetBanking,
+TXN-00177,txn-user-c,2026-09-30,09:45:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,
+TXN-00178,txn-user-c,2026-09-29,13:34:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Bengaluru
+TXN-00179,txn-user-c,2026-09-29,14:06:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Pune
+TXN-00180,txn-user-c,2026-09-29,11:28:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,UPI,Mumbai
+TXN-00181,txn-user-c,2026-09-28,15:14:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,Card,Mumbai
+TXN-00182,txn-user-c,2026-09-28,12:15:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,Bengaluru
+TXN-00183,txn-user-c,2026-09-25,13:23:00,  SIP DEMO-NOT-LINKED  ,,10000,INR,DEBIT,Card,
+TXN-00184,txn-user-c,2026-09-24,19:08:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Mumbai
+TXN-00185,txn-user-c,2026-09-24,20:32:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,
+TXN-00186,txn-user-c,2026-09-23,17:14:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Mumbai
+TXN-00187,txn-user-c,2026-09-23,17:28:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Bengaluru
+TXN-00188,txn-user-c,2026-09-23,10:01:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,,Pune
+TXN-00189,txn-user-c,2026-09-22,13:04:00,  Electricity Bill  ,Utilities,2100,INR,debit,NetBanking,
+TXN-00190,txn-user-c,2026-09-20,15:19:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,
+TXN-00191,txn-user-c,2026-09-20,20:56:00,  Amazon Apparel  ,Clothing,1899,INR,DEBIT,,Mumbai
+TXN-00192,txn-user-c,2026-09-19,20:22:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,UPI,Pune
+TXN-00193,txn-user-c,2026-09-18,17:49:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,Mumbai
+TXN-00194,txn-user-c,2026-09-18,15:46:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,
+TXN-00195,txn-user-c,2026-09-17,14:36:00,  Swiggy Order  ,Food Delivery,420,INR,debit,,Bengaluru
+TXN-00196,txn-user-c,2026-09-17,12:22:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,debit,Card,Bengaluru
+TXN-00197,txn-user-c,2026-09-16,12:31:00,  Salary Credit  ,Income,85000,INR,CREDIT,UPI,Mumbai
+TXN-00198,txn-user-c,2026-09-16,11:14:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,NetBanking,Pune
+TXN-00199,txn-user-c,2026-09-16,20:06:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Pune
+TXN-00200,txn-user-c,2026-09-16,16:03:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,NetBanking,Pune
+TXN-00201,txn-user-c,2026-09-16,16:00:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,UPI,
+TXN-00202,txn-user-c,2026-09-15,17:36:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Pune
+TXN-00203,txn-user-c,2026-09-15,17:31:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,Mumbai
+TXN-00204,txn-user-c,2026-09-14,18:58:00,  Swiggy Order  ,,420,INR,DEBIT,Card,
+TXN-00205,txn-user-c,2026-09-13,10:52:00,  Swiggy Order  ,Food Delivery,420,INR,DEBIT,,Pune
+TXN-00206,txn-user-c,2026-09-12,12:59:00,  Swiggy Order  ,Food Delivery,420,INR,debit,NetBanking,Pune
+TXN-00207,txn-user-c,2026-09-12,10:37:00,  Petrol Pump  ,Fuel,2500,INR,debit,Card,Pune
+TXN-00208,txn-user-c,2026-09-10,16:04:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Mumbai
+TXN-00209,txn-user-c,2026-09-10,15:12:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Pune
+TXN-00210,txn-user-c,2026-09-08,16:05:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Bengaluru
+TXN-00211,txn-user-c,2026-09-08,10:28:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,
+TXN-00212,txn-user-c,2026-09-07,08:31:00,  Electricity Bill  ,Utilities,2100,INR,debit,UPI,
+TXN-00213,txn-user-c,2026-09-06,20:49:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,NetBanking,Pune
+TXN-00214,txn-user-c,2026-09-06,09:19:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,Card,
+TXN-00215,txn-user-c,2026-09-05,12:24:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,Card,
+TXN-00216,txn-user-c,2026-09-05,18:55:00,  Electricity Bill  ,Utilities,2100,INR,DEBIT,,Mumbai
+TXN-00217,txn-user-c,2026-09-04,11:06:00,  Petrol Pump  ,Fuel,2500,INR,DEBIT,,Mumbai
+TXN-00218,txn-user-c,2026-09-04,11:31:00,  SIP DEMO-NOT-LINKED  ,Transfers,10000,INR,DEBIT,Card,Pune
+TXN-00219,txn-user-c,2026-09-03,14:13:00,  Swiggy Order  ,,420,INR,DEBIT,UPI,
+TXN-00220,txn-user-c,2026-09-03,11:42:00,  Petrol Pump  ,,2500,INR,DEBIT,NetBanking,Mumbai

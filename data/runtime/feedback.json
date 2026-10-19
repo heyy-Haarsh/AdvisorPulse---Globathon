@@ -1,0 +1,183 @@
+[
+  {
+    "id": "b318accd-f9c3-4e7d-bacc-5dc8ce0ad4cc",
+    "created_at": "2026-10-18T18:29:45.235708+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "751d1f8b-cce9-4809-9ba3-4123b6610cdb",
+    "created_at": "2026-10-18T18:30:08.878592+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "c2639103-1546-4bb8-85a9-9bbd42a6359d",
+    "created_at": "2026-10-18T18:30:34.225231+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "b10339cc-17be-4c25-b90a-6ecb8160b15e",
+    "created_at": "2026-10-18T18:31:49.473771+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "303e64be-a135-4699-83b3-b794a22506b5",
+    "created_at": "2026-10-19T13:07:59.523505+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "confirm",
+    "correction": "pytest accept"
+  },
+  {
+    "id": "8bb0243f-9d6f-4f7d-81d3-48821d8c3e72",
+    "created_at": "2026-10-19T13:08:00.877702+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "eb406c61-6239-4d8a-a2bd-f1c42d6af182",
+    "created_at": "2026-10-19T13:08:18.753715+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "198ceabd-42ce-4b9d-96a0-f0b1805520d3",
+    "created_at": "2026-10-19T13:08:20.556259+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "confirm",
+    "correction": "pytest accept"
+  },
+  {
+    "id": "1151f641-a2c7-4512-a738-a90b9f584cb3",
+    "created_at": "2026-10-19T13:14:20.846827+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "22546ec1-53d6-4824-81fc-14d3ad09e64a",
+    "created_at": "2026-10-19T13:14:22.656054+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "confirm",
+    "correction": "pytest accept"
+  },
+  {
+    "id": "5d6d1602-d2f1-4a80-9fa9-44b75b9ae8a2",
+    "created_at": "2026-10-19T13:27:23.513676+00:00",
+    "investor_id": "DEMO-INV-L017",
+    "insight_ref": "next_action::clarify_goal_or_withdrawal",
+    "action": "confirm",
+    "correction": null
+  },
+  {
+    "id": "958b0364-db91-4437-817a-f083a559c5eb",
+    "created_at": "2026-10-19T13:38:41.709375+00:00",
+    "investor_id": "DEMO-INV-L085",
+    "insight_ref": "DEMO-ADV-L085-1",
+    "action": "confirm",
+    "correction": null,
+    "note": null
+  },
+  {
+    "id": "b1164587-7302-4d6e-8814-033a01c0f37b",
+    "created_at": "2026-10-19T13:38:42.741253+00:00",
+    "investor_id": "DEMO-INV-L085",
+    "insight_ref": "DEMO-ADV-L085-1",
+    "action": "confirm",
+    "correction": null,
+    "note": null
+  },
+  {
+    "id": "1086f758-6d6b-40d2-bbd6-f3a4d91617d4",
+    "created_at": "2026-10-19T14:01:26.280546+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-NOTE-001-1",
+    "action": "confirm",
+    "correction": null,
+    "note": null
+  },
+  {
+    "id": "fd4bd810-1223-4b52-b7ec-190fa23a5b2e",
+    "created_at": "2026-10-19T14:01:28.846422+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-NOTE-001-1",
+    "action": "dismiss",
+    "correction": null,
+    "note": null
+  },
+  {
+    "id": "887be015-5bc8-4bf4-b8d7-371acdd85db2",
+    "created_at": "2026-10-19T14:30:30.572432+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "27bdd2cd-e673-4c5f-9033-c1fdff3d02ca",
+    "created_at": "2026-10-19T14:30:32.621689+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "confirm",
+    "correction": "pytest accept"
+  },
+  {
+    "id": "b30d88c9-ceb4-4d09-81d6-7bcb028f216c",
+    "created_at": "2026-10-19T14:43:08.864224+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "confirm",
+    "correction": "pytest accept"
+  },
+  {
+    "id": "997cd4c9-deb6-466a-821c-28fb9a1c81b4",
+    "created_at": "2026-10-19T14:44:07.243179+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "DEMO-ADV-001-A",
+    "action": "confirm",
+    "correction": null,
+    "note": "looks right"
+  },
+  {
+    "id": "abcfd407-627c-4b50-8483-35a1110800df",
+    "created_at": "2026-10-19T14:44:16.675405+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "confirm",
+    "correction": "pytest accept"
+  },
+  {
+    "id": "3821143f-93d4-4dd5-a0ee-f8f10953687a",
+    "created_at": "2026-10-19T14:47:00.621559+00:00",
+    "investor_id": "DEMO-INV-001",
+    "insight_ref": "next_action::rebalance_review",
+    "action": "dismiss",
+    "correction": "Rejected suggested pack"
+  }
+]

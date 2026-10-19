@@ -1,0 +1,976 @@
+[
+  {
+    "meeting_id": "MTG-E3E17521CF",
+    "investor_id": "DEMO-INV-001",
+    "display_name": "Priya Sharma",
+    "title": "Pytest portfolio review",
+    "meeting_type": "portfolio_review",
+    "scheduled_at": "2026-10-19T14:42:56.302687+00:00",
+    "expected_duration_min": 45,
+    "participants": [
+      "DEMO-ADV-USER-01",
+      "Priya Sharma"
+    ],
+    "channel": "online",
+    "purpose": "Unit test meeting",
+    "advisor_prep_notes": "",
+    "agenda": [
+      "Prepare rebalancing discussion to reduce mid-cap overweight toward policy",
+      "Close overdue follow-up on prior mid-cap reduction advice",
+      "Confirm SIP affordability and goal assumptions with client"
+    ],
+    "custom_questions": [],
+    "checklist": [
+      {
+        "id": "chk-0",
+        "label": "Review previous meeting notes",
+        "done": false
+      },
+      {
+        "id": "chk-1",
+        "label": "Review outstanding commitments",
+        "done": false
+      },
+      {
+        "id": "chk-2",
+        "label": "Check portfolio allocation",
+        "done": false
+      },
+      {
+        "id": "chk-3",
+        "label": "Review goal progress",
+        "done": false
+      },
+      {
+        "id": "chk-4",
+        "label": "Confirm the meeting agenda",
+        "done": false
+      },
+      {
+        "id": "chk-5",
+        "label": "Identify missing client information",
+        "done": false
+      }
+    ],
+    "status": "transcript_ready",
+    "consent_status": "confirmed",
+    "consent_confirmed_at": "2026-10-19T14:42:57.045199+00:00",
+    "consent_note": "pytest consent",
+    "recording_status": "recording",
+    "recording_path": null,
+    "recording_mime": null,
+    "transcript_status": "ready",
+    "transcript": {
+      "full_text": "Advisor discussed mid-cap allocation. Client asked for more time before rebalancing. Advisor to send a follow-up proposal next week.",
+      "segments": [
+        {
+          "segment_id": "SEG-621eba",
+          "start_time": "00:00",
+          "end_time": "",
+          "speaker_id": "Speaker 1",
+          "text": "Advisor discussed mid-cap allocation. Client asked for more time before rebalancing. Advisor to send a follow-up proposal next week.",
+          "source_type": "advisor_paste"
+        }
+      ],
+      "source": "advisor_paste",
+      "edited": false,
+      "provider": null
+    },
+    "live_notes": [
+      {
+        "note_id": "LN-255ae835",
+        "category": "question",
+        "text": "Client asked about SIP",
+        "timestamp": "2026-10-19T14:42:57.320136+00:00",
+        "linked_segment_ids": [],
+        "created_at": "2026-10-19T14:42:57.320136+00:00"
+      }
+    ],
+    "minutes_status": "none",
+    "minutes": null,
+    "minutes_version": 0,
+    "approved_at": null,
+    "approved_by": null,
+    "started_at": "2026-10-19T14:42:57.206993+00:00",
+    "ended_at": null,
+    "created_at": "2026-10-19T14:42:56.302687+00:00",
+    "updated_at": "2026-10-19T14:42:57.348850+00:00",
+    "is_demo": true,
+    "prep_brief": {
+      "client_snapshot": {
+        "display_name": "Priya Sharma",
+        "investor_id": "DEMO-INV-001",
+        "city": "Pune",
+        "goal": "Retirement corpus",
+        "portfolio_value": 7200000.0,
+        "priority": "Critical",
+        "score": 78.0,
+        "risk_profile": "Moderate",
+        "last_review_date": "2026-07-14",
+        "open_commitments_count": 4
+      },
+      "previous_meeting_recap": null,
+      "portfolio_and_goal_changes": [
+        {
+          "title": "Goal path deviation",
+          "detail": "Retirement corpus: -20.88% vs expected path",
+          "period": "2026-10-17",
+          "kind": "actual"
+        },
+        {
+          "title": "Active return vs benchmark",
+          "detail": "-12.06 pp (TWR window)",
+          "period": "TWR: chain-linked monthly period returns (timing-neutral vs benchmark). Modified",
+          "kind": "actual"
+        },
+        {
+          "title": "Allocation drift \u2014 Equity - Large Cap",
+          "detail": "Equity - Large Cap at 48.0% vs policy 35.0% (\u0394 +13.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Equity - Mid Cap",
+          "detail": "Equity - Mid Cap at 22.0% vs policy 15.0% (\u0394 +7.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Debt - Duration",
+          "detail": "Debt - Duration at 12.0% vs policy 25.0% (\u0394 -13.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Hybrid / Balanced",
+          "detail": "Hybrid / Balanced at 10.0% vs policy 15.0% (\u0394 -5.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        }
+      ],
+      "pending_advice": [
+        {
+          "advice_id": "DEMO-ADV-001-A",
+          "description": "Reduce mid-cap overweight and restore debt sleeve to 25%",
+          "date": "2026-06-19",
+          "status": "Not yet aligned \u2014 mid-cap still overweight",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Reduce mid-cap overweight and restore debt sleeve to 25%?"
+        },
+        {
+          "advice_id": "DEMO-ADV-001-B",
+          "description": "Raise monthly SIP from 35k to 45k",
+          "date": "2025-12-21",
+          "status": "Funding cadence near advised SIP",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Raise monthly SIP from 35k to 45k?"
+        }
+      ],
+      "priority_topics": [
+        {
+          "title": "goal_deviation",
+          "why_it_matters": "Behind expected path by -20.9%",
+          "suggested_question": "How should we address: Behind expected path by -20.9%?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "active_underperformance",
+          "why_it_matters": "Active return -12.06 pp vs bench",
+          "suggested_question": "How should we address: Active return -12.06 pp vs bench?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "urgency_time_to_goal",
+          "why_it_matters": "11.4y remaining",
+          "suggested_question": "How should we address: 11.4y remaining?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "overdue_followups",
+          "why_it_matters": "1 overdue commitment(s)",
+          "suggested_question": "How should we address: 1 overdue commitment(s)?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "stale_review",
+          "why_it_matters": "Reviewed 95 days ago",
+          "suggested_question": "How should we address: Reviewed 95 days ago?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        }
+      ],
+      "questions_to_ask": [
+        "Does the Retirement corpus target date or amount still reflect client intent?",
+        "Any near-term liquidity needs not yet recorded?",
+        "Comfort with current risk profile given recent market path?"
+      ],
+      "limitations": [
+        "Preparation uses DEMO analytics and recorded Meeting Intelligence history only.",
+        "No previous meeting is invented when none exists."
+      ]
+    }
+  },
+  {
+    "meeting_id": "MTG-85441174A3",
+    "investor_id": "DEMO-INV-002",
+    "display_name": "Arjun Mehta",
+    "title": "Audio reject",
+    "meeting_type": "portfolio_review",
+    "scheduled_at": "2026-10-19T14:42:57.388633+00:00",
+    "expected_duration_min": 45,
+    "participants": [
+      "DEMO-ADV-USER-01",
+      "Arjun Mehta"
+    ],
+    "channel": "online",
+    "purpose": "",
+    "advisor_prep_notes": "",
+    "agenda": [],
+    "custom_questions": [],
+    "checklist": [
+      {
+        "id": "chk-0",
+        "label": "Review previous meeting notes",
+        "done": false
+      },
+      {
+        "id": "chk-1",
+        "label": "Review outstanding commitments",
+        "done": false
+      },
+      {
+        "id": "chk-2",
+        "label": "Check portfolio allocation",
+        "done": false
+      },
+      {
+        "id": "chk-3",
+        "label": "Review goal progress",
+        "done": false
+      },
+      {
+        "id": "chk-4",
+        "label": "Confirm the meeting agenda",
+        "done": false
+      },
+      {
+        "id": "chk-5",
+        "label": "Identify missing client information",
+        "done": false
+      }
+    ],
+    "status": "prepared",
+    "consent_status": "confirmed",
+    "consent_confirmed_at": "2026-10-19T14:42:57.560419+00:00",
+    "consent_note": "Advisor confirmed participant consent obtained.",
+    "recording_status": "ready",
+    "recording_path": null,
+    "recording_mime": null,
+    "transcript_status": "none",
+    "transcript": {
+      "full_text": "",
+      "segments": [],
+      "source": null,
+      "edited": false
+    },
+    "live_notes": [],
+    "minutes_status": "none",
+    "minutes": null,
+    "minutes_version": 0,
+    "approved_at": null,
+    "approved_by": null,
+    "started_at": null,
+    "ended_at": null,
+    "created_at": "2026-10-19T14:42:57.388633+00:00",
+    "updated_at": "2026-10-19T14:42:57.584135+00:00",
+    "is_demo": true
+  },
+  {
+    "meeting_id": "MTG-4283DED0E0",
+    "investor_id": "DEMO-INV-001",
+    "display_name": "Priya Sharma",
+    "title": "Pytest portfolio review",
+    "meeting_type": "portfolio_review",
+    "scheduled_at": "2026-10-19T14:44:07.659948+00:00",
+    "expected_duration_min": 45,
+    "participants": [
+      "DEMO-ADV-USER-01",
+      "Priya Sharma"
+    ],
+    "channel": "online",
+    "purpose": "Unit test meeting",
+    "advisor_prep_notes": "",
+    "agenda": [
+      "Prepare rebalancing discussion to reduce mid-cap overweight toward policy",
+      "Close overdue follow-up on prior mid-cap reduction advice",
+      "Confirm SIP affordability and goal assumptions with client"
+    ],
+    "custom_questions": [],
+    "checklist": [
+      {
+        "id": "chk-0",
+        "label": "Review previous meeting notes",
+        "done": false
+      },
+      {
+        "id": "chk-1",
+        "label": "Review outstanding commitments",
+        "done": false
+      },
+      {
+        "id": "chk-2",
+        "label": "Check portfolio allocation",
+        "done": false
+      },
+      {
+        "id": "chk-3",
+        "label": "Review goal progress",
+        "done": false
+      },
+      {
+        "id": "chk-4",
+        "label": "Confirm the meeting agenda",
+        "done": false
+      },
+      {
+        "id": "chk-5",
+        "label": "Identify missing client information",
+        "done": false
+      }
+    ],
+    "status": "transcript_ready",
+    "consent_status": "confirmed",
+    "consent_confirmed_at": "2026-10-19T14:44:07.970494+00:00",
+    "consent_note": "pytest consent",
+    "recording_status": "recording",
+    "recording_path": null,
+    "recording_mime": null,
+    "transcript_status": "ready",
+    "transcript": {
+      "full_text": "Advisor discussed mid-cap allocation. Client asked for more time before rebalancing. Advisor to send a follow-up proposal next week.",
+      "segments": [
+        {
+          "segment_id": "SEG-5c297d",
+          "start_time": "00:00",
+          "end_time": "",
+          "speaker_id": "Speaker 1",
+          "text": "Advisor discussed mid-cap allocation. Client asked for more time before rebalancing. Advisor to send a follow-up proposal next week.",
+          "source_type": "advisor_paste"
+        }
+      ],
+      "source": "advisor_paste",
+      "edited": false,
+      "provider": null
+    },
+    "live_notes": [
+      {
+        "note_id": "LN-129df8af",
+        "category": "question",
+        "text": "Client asked about SIP",
+        "timestamp": "2026-10-19T14:44:08.036219+00:00",
+        "linked_segment_ids": [],
+        "created_at": "2026-10-19T14:44:08.036219+00:00"
+      }
+    ],
+    "minutes_status": "none",
+    "minutes": null,
+    "minutes_version": 0,
+    "approved_at": null,
+    "approved_by": null,
+    "started_at": "2026-10-19T14:44:08.011857+00:00",
+    "ended_at": null,
+    "created_at": "2026-10-19T14:44:07.659948+00:00",
+    "updated_at": "2026-10-19T14:44:08.060077+00:00",
+    "is_demo": true,
+    "prep_brief": {
+      "client_snapshot": {
+        "display_name": "Priya Sharma",
+        "investor_id": "DEMO-INV-001",
+        "city": "Pune",
+        "goal": "Retirement corpus",
+        "portfolio_value": 7200000.0,
+        "priority": "Critical",
+        "score": 78.0,
+        "risk_profile": "Moderate",
+        "last_review_date": "2026-07-14",
+        "open_commitments_count": 5
+      },
+      "previous_meeting_recap": null,
+      "portfolio_and_goal_changes": [
+        {
+          "title": "Goal path deviation",
+          "detail": "Retirement corpus: -20.88% vs expected path",
+          "period": "2026-10-17",
+          "kind": "actual"
+        },
+        {
+          "title": "Active return vs benchmark",
+          "detail": "-12.06 pp (TWR window)",
+          "period": "TWR: chain-linked monthly period returns (timing-neutral vs benchmark). Modified",
+          "kind": "actual"
+        },
+        {
+          "title": "Allocation drift \u2014 Equity - Large Cap",
+          "detail": "Equity - Large Cap at 48.0% vs policy 35.0% (\u0394 +13.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Equity - Mid Cap",
+          "detail": "Equity - Mid Cap at 22.0% vs policy 15.0% (\u0394 +7.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Debt - Duration",
+          "detail": "Debt - Duration at 12.0% vs policy 25.0% (\u0394 -13.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Hybrid / Balanced",
+          "detail": "Hybrid / Balanced at 10.0% vs policy 15.0% (\u0394 -5.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        }
+      ],
+      "pending_advice": [
+        {
+          "advice_id": "DEMO-ADV-001-A",
+          "description": "Reduce mid-cap overweight and restore debt sleeve to 25%",
+          "date": "2026-06-19",
+          "status": "Not yet aligned \u2014 mid-cap still overweight",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Reduce mid-cap overweight and restore debt sleeve to 25%?"
+        },
+        {
+          "advice_id": "DEMO-ADV-001-B",
+          "description": "Raise monthly SIP from 35k to 45k",
+          "date": "2025-12-21",
+          "status": "Funding cadence near advised SIP",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Raise monthly SIP from 35k to 45k?"
+        }
+      ],
+      "priority_topics": [
+        {
+          "title": "goal_deviation",
+          "why_it_matters": "Behind expected path by -20.9%",
+          "suggested_question": "How should we address: Behind expected path by -20.9%?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "active_underperformance",
+          "why_it_matters": "Active return -12.06 pp vs bench",
+          "suggested_question": "How should we address: Active return -12.06 pp vs bench?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "urgency_time_to_goal",
+          "why_it_matters": "11.4y remaining",
+          "suggested_question": "How should we address: 11.4y remaining?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "overdue_followups",
+          "why_it_matters": "1 overdue commitment(s)",
+          "suggested_question": "How should we address: 1 overdue commitment(s)?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "stale_review",
+          "why_it_matters": "Reviewed 95 days ago",
+          "suggested_question": "How should we address: Reviewed 95 days ago?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        }
+      ],
+      "questions_to_ask": [
+        "Does the Retirement corpus target date or amount still reflect client intent?",
+        "Any near-term liquidity needs not yet recorded?",
+        "Comfort with current risk profile given recent market path?"
+      ],
+      "limitations": [
+        "Preparation uses DEMO analytics and recorded Meeting Intelligence history only.",
+        "No previous meeting is invented when none exists."
+      ]
+    }
+  },
+  {
+    "meeting_id": "MTG-508B04AE28",
+    "investor_id": "DEMO-INV-002",
+    "display_name": "Arjun Mehta",
+    "title": "Audio reject",
+    "meeting_type": "portfolio_review",
+    "scheduled_at": "2026-10-19T14:44:08.261006+00:00",
+    "expected_duration_min": 45,
+    "participants": [
+      "DEMO-ADV-USER-01",
+      "Arjun Mehta"
+    ],
+    "channel": "online",
+    "purpose": "",
+    "advisor_prep_notes": "",
+    "agenda": [],
+    "custom_questions": [],
+    "checklist": [
+      {
+        "id": "chk-0",
+        "label": "Review previous meeting notes",
+        "done": false
+      },
+      {
+        "id": "chk-1",
+        "label": "Review outstanding commitments",
+        "done": false
+      },
+      {
+        "id": "chk-2",
+        "label": "Check portfolio allocation",
+        "done": false
+      },
+      {
+        "id": "chk-3",
+        "label": "Review goal progress",
+        "done": false
+      },
+      {
+        "id": "chk-4",
+        "label": "Confirm the meeting agenda",
+        "done": false
+      },
+      {
+        "id": "chk-5",
+        "label": "Identify missing client information",
+        "done": false
+      }
+    ],
+    "status": "prepared",
+    "consent_status": "confirmed",
+    "consent_confirmed_at": "2026-10-19T14:44:08.337902+00:00",
+    "consent_note": "Advisor confirmed participant consent obtained.",
+    "recording_status": "ready",
+    "recording_path": null,
+    "recording_mime": null,
+    "transcript_status": "none",
+    "transcript": {
+      "full_text": "",
+      "segments": [],
+      "source": null,
+      "edited": false
+    },
+    "live_notes": [],
+    "minutes_status": "none",
+    "minutes": null,
+    "minutes_version": 0,
+    "approved_at": null,
+    "approved_by": null,
+    "started_at": null,
+    "ended_at": null,
+    "created_at": "2026-10-19T14:44:08.261006+00:00",
+    "updated_at": "2026-10-19T14:44:08.370542+00:00",
+    "is_demo": true
+  },
+  {
+    "meeting_id": "MTG-890B49F382",
+    "investor_id": "DEMO-INV-001",
+    "display_name": "Priya Sharma",
+    "title": "Meeting with Priya Sharma",
+    "meeting_type": "portfolio_review",
+    "scheduled_at": "2026-10-19T14:47:23.504155+00:00",
+    "expected_duration_min": 45,
+    "participants": [
+      "DEMO-ADV-USER-01",
+      "Priya Sharma"
+    ],
+    "channel": "online",
+    "purpose": "Quarterly portfolio review",
+    "advisor_prep_notes": "",
+    "agenda": [
+      "Prepare rebalancing discussion to reduce mid-cap overweight toward policy",
+      "Close overdue follow-up on prior mid-cap reduction advice",
+      "Confirm SIP affordability and goal assumptions with client"
+    ],
+    "custom_questions": [],
+    "checklist": [
+      {
+        "id": "chk-0",
+        "label": "Review previous meeting notes",
+        "done": false
+      },
+      {
+        "id": "chk-1",
+        "label": "Review outstanding commitments",
+        "done": false
+      },
+      {
+        "id": "chk-2",
+        "label": "Check portfolio allocation",
+        "done": false
+      },
+      {
+        "id": "chk-3",
+        "label": "Review goal progress",
+        "done": false
+      },
+      {
+        "id": "chk-4",
+        "label": "Confirm the meeting agenda",
+        "done": false
+      },
+      {
+        "id": "chk-5",
+        "label": "Identify missing client information",
+        "done": false
+      }
+    ],
+    "status": "prepared",
+    "consent_status": "not_confirmed",
+    "consent_confirmed_at": null,
+    "consent_note": null,
+    "recording_status": "ready",
+    "recording_path": null,
+    "recording_mime": null,
+    "transcript_status": "none",
+    "transcript": {
+      "full_text": "",
+      "segments": [],
+      "source": null,
+      "edited": false
+    },
+    "live_notes": [],
+    "minutes_status": "none",
+    "minutes": null,
+    "minutes_version": 0,
+    "approved_at": null,
+    "approved_by": null,
+    "started_at": null,
+    "ended_at": null,
+    "created_at": "2026-10-19T14:47:23.504155+00:00",
+    "updated_at": "2026-10-19T14:47:34.032787+00:00",
+    "is_demo": true,
+    "prep_brief": {
+      "client_snapshot": {
+        "display_name": "Priya Sharma",
+        "investor_id": "DEMO-INV-001",
+        "city": "Pune",
+        "goal": "Retirement corpus",
+        "portfolio_value": 7200000.0,
+        "priority": "Critical",
+        "score": 78.0,
+        "risk_profile": "Moderate",
+        "last_review_date": "2026-07-14",
+        "open_commitments_count": 7
+      },
+      "previous_meeting_recap": null,
+      "portfolio_and_goal_changes": [
+        {
+          "title": "Goal path deviation",
+          "detail": "Retirement corpus: -20.88% vs expected path",
+          "period": "2026-10-17",
+          "kind": "actual"
+        },
+        {
+          "title": "Active return vs benchmark",
+          "detail": "-12.06 pp (TWR window)",
+          "period": "TWR: chain-linked monthly period returns (timing-neutral vs benchmark). Modified",
+          "kind": "actual"
+        },
+        {
+          "title": "Allocation drift \u2014 Equity - Large Cap",
+          "detail": "Equity - Large Cap at 48.0% vs policy 35.0% (\u0394 +13.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Equity - Mid Cap",
+          "detail": "Equity - Mid Cap at 22.0% vs policy 15.0% (\u0394 +7.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Debt - Duration",
+          "detail": "Debt - Duration at 12.0% vs policy 25.0% (\u0394 -13.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Allocation drift \u2014 Hybrid / Balanced",
+          "detail": "Hybrid / Balanced at 10.0% vs policy 15.0% (\u0394 -5.0 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        }
+      ],
+      "pending_advice": [
+        {
+          "advice_id": "DEMO-ADV-001-A",
+          "description": "Reduce mid-cap overweight and restore debt sleeve to 25%",
+          "date": "2026-06-19",
+          "status": "Not yet aligned \u2014 mid-cap still overweight",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Reduce mid-cap overweight and restore debt sleeve to 25%?"
+        },
+        {
+          "advice_id": "DEMO-ADV-001-B",
+          "description": "Raise monthly SIP from 35k to 45k",
+          "date": "2025-12-21",
+          "status": "Funding cadence near advised SIP",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Raise monthly SIP from 35k to 45k?"
+        }
+      ],
+      "priority_topics": [
+        {
+          "title": "goal_deviation",
+          "why_it_matters": "Behind expected path by -20.9%",
+          "suggested_question": "How should we address: Behind expected path by -20.9%?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "active_underperformance",
+          "why_it_matters": "Active return -12.06 pp vs bench",
+          "suggested_question": "How should we address: Active return -12.06 pp vs bench?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "urgency_time_to_goal",
+          "why_it_matters": "11.4y remaining",
+          "suggested_question": "How should we address: 11.4y remaining?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "overdue_followups",
+          "why_it_matters": "1 overdue commitment(s)",
+          "suggested_question": "How should we address: 1 overdue commitment(s)?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "stale_review",
+          "why_it_matters": "Reviewed 95 days ago",
+          "suggested_question": "How should we address: Reviewed 95 days ago?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        }
+      ],
+      "questions_to_ask": [
+        "Does the Retirement corpus target date or amount still reflect client intent?",
+        "Any near-term liquidity needs not yet recorded?",
+        "Comfort with current risk profile given recent market path?"
+      ],
+      "limitations": [
+        "Preparation uses DEMO analytics and recorded Meeting Intelligence history only.",
+        "No previous meeting is invented when none exists."
+      ]
+    }
+  },
+  {
+    "meeting_id": "MTG-207A2D8DE0",
+    "investor_id": "DEMO-INV-L186",
+    "display_name": "Diya Banerjee",
+    "title": "Meeting with Diya Banerjee",
+    "meeting_type": "portfolio_review",
+    "scheduled_at": "2026-10-19T14:48:15.105262+00:00",
+    "expected_duration_min": 45,
+    "participants": [
+      "DEMO-ADV-USER-01",
+      "Diya Banerjee"
+    ],
+    "channel": "online",
+    "purpose": "Quarterly portfolio review",
+    "advisor_prep_notes": "",
+    "agenda": [
+      "Schedule portfolio review meeting",
+      "Review allocation vs agreed policy and outstanding advice follow-ups"
+    ],
+    "custom_questions": [],
+    "checklist": [
+      {
+        "id": "chk-0",
+        "label": "Review previous meeting notes",
+        "done": false
+      },
+      {
+        "id": "chk-1",
+        "label": "Review outstanding commitments",
+        "done": false
+      },
+      {
+        "id": "chk-2",
+        "label": "Check portfolio allocation",
+        "done": false
+      },
+      {
+        "id": "chk-3",
+        "label": "Review goal progress",
+        "done": false
+      },
+      {
+        "id": "chk-4",
+        "label": "Confirm the meeting agenda",
+        "done": false
+      },
+      {
+        "id": "chk-5",
+        "label": "Identify missing client information",
+        "done": false
+      }
+    ],
+    "status": "transcribing",
+    "consent_status": "confirmed",
+    "consent_confirmed_at": "2026-10-19T14:52:31.468044+00:00",
+    "consent_note": "Advisor confirms required participant consent for recording under firm policy.",
+    "recording_status": "stopped",
+    "recording_path": "E:\\Globathon\\data\\runtime\\recordings\\MTG-207A2D8DE0.webm",
+    "recording_mime": "audio/webm;codecs=opus",
+    "transcript_status": "queued",
+    "transcript": {
+      "full_text": "",
+      "segments": [],
+      "source": null,
+      "edited": false
+    },
+    "live_notes": [],
+    "minutes_status": "none",
+    "minutes": null,
+    "minutes_version": 0,
+    "approved_at": null,
+    "approved_by": null,
+    "started_at": "2026-10-19T14:52:32.949298+00:00",
+    "ended_at": null,
+    "created_at": "2026-10-19T14:48:15.105262+00:00",
+    "updated_at": "2026-10-19T14:53:08.038816+00:00",
+    "is_demo": true,
+    "prep_brief": {
+      "client_snapshot": {
+        "display_name": "Diya Banerjee",
+        "investor_id": "DEMO-INV-L186",
+        "city": "Chennai",
+        "goal": "Wealth accumulation",
+        "portfolio_value": 5659200.0,
+        "priority": "High",
+        "score": 53.5,
+        "risk_profile": "Moderate",
+        "last_review_date": "2026-08-18",
+        "open_commitments_count": 0
+      },
+      "previous_meeting_recap": null,
+      "portfolio_and_goal_changes": [
+        {
+          "title": "Goal path deviation",
+          "detail": "Wealth accumulation: -16.61% vs expected path",
+          "period": "2026-10-17",
+          "kind": "actual"
+        },
+        {
+          "title": "Active return vs benchmark",
+          "detail": "-13.633 pp (TWR window)",
+          "period": "TWR: chain-linked monthly period returns (timing-neutral vs benchmark). Modified",
+          "kind": "actual"
+        },
+        {
+          "title": "Allocation drift \u2014 Debt - Duration",
+          "detail": "Debt - Duration at 19.7% vs policy 25.0% (\u0394 -5.3 pp)",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "Goal path behind expected",
+          "detail": "Behind expected path by -16.6%",
+          "period": null,
+          "kind": "alert",
+          "evidence_status": "Verified"
+        }
+      ],
+      "pending_advice": [
+        {
+          "advice_id": "DEMO-ADV-L186-0",
+          "description": "Increase SIP by 10%",
+          "date": "2026-08-18",
+          "status": "Funding cadence near advised SIP",
+          "evidence_status": "Limited",
+          "suggested_question": "Shall we revisit: Increase SIP by 10%?"
+        },
+        {
+          "advice_id": "DEMO-ADV-L186-1",
+          "description": "Rebalance to target allocation",
+          "date": "2026-07-19",
+          "status": "Partially aligned",
+          "evidence_status": "Verified",
+          "suggested_question": "Shall we revisit: Rebalance to target allocation?"
+        }
+      ],
+      "priority_topics": [
+        {
+          "title": "goal_deviation",
+          "why_it_matters": "Behind expected path by -16.6%",
+          "suggested_question": "How should we address: Behind expected path by -16.6%?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "active_underperformance",
+          "why_it_matters": "Active return -13.63 pp vs bench",
+          "suggested_question": "How should we address: Active return -13.63 pp vs bench?",
+          "priority": "high",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "urgency_time_to_goal",
+          "why_it_matters": "5.0y to goal",
+          "suggested_question": "How should we address: 5.0y to goal?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "overdue_followups",
+          "why_it_matters": "No overdue follow-ups",
+          "suggested_question": "How should we address: No overdue follow-ups?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        },
+        {
+          "title": "stale_review",
+          "why_it_matters": "Reviewed 60 days ago",
+          "suggested_question": "How should we address: Reviewed 60 days ago?",
+          "priority": "medium",
+          "evidence_status": "Verified"
+        }
+      ],
+      "questions_to_ask": [
+        "Does the Wealth accumulation target date or amount still reflect client intent?",
+        "Any near-term liquidity needs not yet recorded?",
+        "Comfort with current risk profile given recent market path?"
+      ],
+      "limitations": [
+        "Preparation uses DEMO analytics and recorded Meeting Intelligence history only.",
+        "No previous meeting is invented when none exists."
+      ]
+    },
+    "recording_sha256": "3027fc17d6519370b2bb4254949942cdc0d3995d51d6a12a0ba2b562e72ae469"
+  }
+]

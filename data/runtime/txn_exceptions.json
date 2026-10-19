@@ -1,0 +1,47 @@
+[
+  {
+    "exception_id": "TXN-EX-2-8446c7",
+    "transaction_id": "T00003",
+    "user_id": "STU",
+    "description": "H&M Apparel",
+    "amount_raw": "1899",
+    "amount_num": 1899.0,
+    "category": "UNCATEGORIZED",
+    "category_suggested": "Clothing",
+    "city": "Mumbai",
+    "reasons": [
+      "missing_category"
+    ],
+    "status": "open"
+  },
+  {
+    "exception_id": "TXN-EX-7-a810f2",
+    "transaction_id": "T00008",
+    "user_id": "GIG",
+    "description": "Swiggy Dinner",
+    "amount_raw": "390",
+    "amount_num": 390.0,
+    "category": "UNCATEGORIZED",
+    "category_suggested": "Food Delivery",
+    "city": "Unknown",
+    "reasons": [
+      "missing_category"
+    ],
+    "status": "open"
+  },
+  {
+    "exception_id": "TXN-EX-9-d44390",
+    "transaction_id": "T00010",
+    "user_id": "SAL",
+    "description": "Amazon Apparel",
+    "amount_raw": "1299",
+    "amount_num": 1299.0,
+    "category": "Clothing",
+    "category_suggested": "",
+    "city": "Pune",
+    "reasons": [
+      "probable_duplicate_same_content"
+    ],
+    "status": "open"
+  }
+]

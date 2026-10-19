@@ -1,0 +1,48 @@
+{
+  "description": "Labeled DEMO scenarios for Alert Quality Lab. Metrics are computed from these labels — not invented.",
+  "as_of": "2026-10-17",
+  "labels": [
+    {
+      "investor_id": "DEMO-INV-001",
+      "display_name": "Priya Sharma",
+      "label": "material_review_needed",
+      "rationale": "Behind expected retirement path; mid-cap drift; overdue advice"
+    },
+    {
+      "investor_id": "DEMO-INV-L017",
+      "display_name": "Diya Iyer",
+      "label": "material_review_needed",
+      "rationale": "Overlooked long-tail: stale review, goal lag, unresolved advice"
+    },
+    {
+      "investor_id": "DEMO-INV-002",
+      "display_name": "Arjun Mehta",
+      "label": "false_alarm_context",
+      "rationale": "Absolute AUM dip explained by planned education withdrawal"
+    },
+    {
+      "investor_id": "DEMO-INV-H03",
+      "display_name": "Ayaan Sharma",
+      "label": "monitor_only",
+      "rationale": "High-visibility; recent review; not a material demo alert"
+    },
+    {
+      "investor_id": "DEMO-INV-H04",
+      "display_name": "Sai Verma",
+      "label": "monitor_only",
+      "rationale": "Recently reviewed high-visibility client"
+    },
+    {
+      "investor_id": "DEMO-INV-L001",
+      "display_name": "Long-tail sample",
+      "label": "monitor_only",
+      "rationale": "Long-tail without seeded material crisis for this eval set"
+    },
+    {
+      "investor_id": "DEMO-INV-L029",
+      "display_name": "Stale-data long-tail",
+      "label": "monitor_only",
+      "rationale": "May have data freshness issues — not labeled as material distress"
+    }
+  ]
+}

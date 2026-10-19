@@ -1,0 +1,11 @@
+transaction_id,user_id,date,time,description,category,amount,currency,type,payment_mode,city,is_duplicate,duplicate_reason,date_parsed,amount_raw,amount_num,category_raw,category_suggested,type_norm
+T00001,SAL,01-04-2026,09:15:00,Salary Credit,Income,85000,INR,credit,BankTransfer,Pune,False,,2026-04-01,85000,85000.0,Income,,credit
+T00002,SAL,02-04-2026,13:20:00,Swiggy Order,Food Delivery,420,INR,debit,UPI,Pune,False,,2026-04-02,420,420.0,food_delivery,,debit
+T00003,STU,02-04-2026,16:45:00,H&M Apparel,UNCATEGORIZED,1899,INR,debit,Card,Mumbai,False,,2026-04-02,1899,1899.0,nan,Clothing,debit
+T00004,SAL,03-04-2026,12:10:00,Zomato Lunch,Food Delivery,560,INR,debit,UPI,Pune,False,,2026-04-03,560,560.0,Food Delivery,,debit
+T00005,GIG,03-04-2026,18:30:00,Petrol Pump,Fuel,2500,INR,debit,UPI,Unknown,False,,2026-04-03,2500,2500.0,Fuel,,debit
+T00006,STU,04-04-2026,11:00:00,Course Fee,Education,"₹43,437.10",INR,debit,NetBanking,Bengaluru,False,,2026-04-04,"₹43,437.10",43437.1,Education,,debit
+T00007,SAL,05-04-2026,20:15:00,Electricity Bill,Utilities,2100,INR,debit,UPI,Pune,False,,2026-04-05,2100,2100.0,Utilities,,debit
+T00008,GIG,05-04-2026,21:00:00,Swiggy Dinner,UNCATEGORIZED,390,INR,debit,UPI,Unknown,False,,2026-04-05,390,390.0,nan,Food Delivery,debit
+T00009,SAL,06-04-2026,10:00:00,Amazon Apparel,Clothing,1299,INR,debit,Card,Pune,False,,2026-04-06,1299,1299.0,Clothing,,debit
+T00010,SAL,06-04-2026,10:00:00,Amazon Apparel,Clothing,1299,INR,debit,Card,Pune,True,probable_duplicate_same_content,2026-04-06,1299,1299.0,Clothing,,debit

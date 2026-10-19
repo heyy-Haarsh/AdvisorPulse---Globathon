@@ -1,0 +1,458 @@
+advice_id,investor_id,is_demo,advice_date,recommendation,intended_outcome,follow_up_status,follow_up_due,advisor_id
+DEMO-ADV-001-A,DEMO-INV-001,true,2026-06-19,Reduce mid-cap overweight and restore debt sleeve to 25%,Lower tracking error vs moderate policy; improve goal path confidence,overdue,2026-09-17,DEMO-ADV-USER-01
+DEMO-ADV-001-B,DEMO-INV-001,true,2025-12-21,Raise monthly SIP from 35k to 45k,Close retirement funding gap,done,2026-02-19,DEMO-ADV-USER-01
+DEMO-ADV-002-A,DEMO-INV-002,true,2026-08-28,Execute planned education withdrawal from liquid sleeve first,Fund fees without disrupting equity compounding,done,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-H03-0,DEMO-INV-H03,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-07,DEMO-ADV-USER-01
+DEMO-ADV-H03-1,DEMO-INV-H03,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-26,DEMO-ADV-USER-01
+DEMO-ADV-H03-2,DEMO-INV-H03,true,2026-06-11,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-H04-0,DEMO-INV-H04,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-06,DEMO-ADV-USER-01
+DEMO-ADV-H04-1,DEMO-INV-H04,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-02,DEMO-ADV-USER-01
+DEMO-ADV-H04-2,DEMO-INV-H04,true,2026-06-11,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-H05-0,DEMO-INV-H05,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-27,DEMO-ADV-USER-01
+DEMO-ADV-H05-1,DEMO-INV-H05,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-10-24,DEMO-ADV-USER-01
+DEMO-ADV-H05-2,DEMO-INV-H05,true,2026-06-09,Review emergency fund,Liquidity buffer,pending,2026-09-13,DEMO-ADV-USER-01
+DEMO-ADV-H06-0,DEMO-INV-H06,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-28,DEMO-ADV-USER-01
+DEMO-ADV-H06-1,DEMO-INV-H06,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-19,DEMO-ADV-USER-01
+DEMO-ADV-H06-2,DEMO-INV-H06,true,2026-06-06,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-21,DEMO-ADV-USER-01
+DEMO-ADV-H07-0,DEMO-INV-H07,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-H07-1,DEMO-INV-H07,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-10-17,DEMO-ADV-USER-01
+DEMO-ADV-H07-2,DEMO-INV-H07,true,2026-06-04,Review emergency fund,Liquidity buffer,pending,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-H08-0,DEMO-INV-H08,true,2026-08-13,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-22,DEMO-ADV-USER-01
+DEMO-ADV-H08-1,DEMO-INV-H08,true,2026-07-14,Rebalance to target allocation,Reduce equity drift,done,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-H08-2,DEMO-INV-H08,true,2026-06-14,Review emergency fund,Liquidity buffer,overdue,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-H09-0,DEMO-INV-H09,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-H09-1,DEMO-INV-H09,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-23,DEMO-ADV-USER-01
+DEMO-ADV-H09-2,DEMO-INV-H09,true,2026-05-31,Rebalance to target allocation,Reduce equity drift,done,2026-11-02,DEMO-ADV-USER-01
+DEMO-ADV-H10-0,DEMO-INV-H10,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-13,DEMO-ADV-USER-01
+DEMO-ADV-H10-1,DEMO-INV-H10,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,overdue,2026-09-04,DEMO-ADV-USER-01
+DEMO-ADV-H10-2,DEMO-INV-H10,true,2026-06-01,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-H11-0,DEMO-INV-H11,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-H11-1,DEMO-INV-H11,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-31,DEMO-ADV-USER-01
+DEMO-ADV-H11-2,DEMO-INV-H11,true,2026-06-05,Rebalance to target allocation,Reduce equity drift,done,2026-09-05,DEMO-ADV-USER-01
+DEMO-ADV-H12-0,DEMO-INV-H12,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-10-20,DEMO-ADV-USER-01
+DEMO-ADV-H12-1,DEMO-INV-H12,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-08-28,DEMO-ADV-USER-01
+DEMO-ADV-H12-2,DEMO-INV-H12,true,2026-06-13,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-14,DEMO-ADV-USER-01
+DEMO-ADV-H13-0,DEMO-INV-H13,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-16,DEMO-ADV-USER-01
+DEMO-ADV-H13-1,DEMO-INV-H13,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-H13-2,DEMO-INV-H13,true,2026-06-04,Review emergency fund,Liquidity buffer,pending,2026-09-30,DEMO-ADV-USER-01
+DEMO-ADV-H14-0,DEMO-INV-H14,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-22,DEMO-ADV-USER-01
+DEMO-ADV-H14-1,DEMO-INV-H14,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-H14-2,DEMO-INV-H14,true,2026-06-04,Review emergency fund,Liquidity buffer,pending,2026-09-30,DEMO-ADV-USER-01
+DEMO-ADV-H15-0,DEMO-INV-H15,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-10-03,DEMO-ADV-USER-01
+DEMO-ADV-H15-1,DEMO-INV-H15,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-H15-2,DEMO-INV-H15,true,2026-06-13,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-26,DEMO-ADV-USER-01
+DEMO-ADV-H16-0,DEMO-INV-H16,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-H16-1,DEMO-INV-H16,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-H16-2,DEMO-INV-H16,true,2026-06-16,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-H17-0,DEMO-INV-H17,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,overdue,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-H17-1,DEMO-INV-H17,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-H17-2,DEMO-INV-H17,true,2026-06-05,Rebalance to target allocation,Reduce equity drift,done,2026-09-30,DEMO-ADV-USER-01
+DEMO-ADV-H18-0,DEMO-INV-H18,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-H18-1,DEMO-INV-H18,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-H18-2,DEMO-INV-H18,true,2026-06-19,Review emergency fund,Liquidity buffer,pending,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-H19-0,DEMO-INV-H19,true,2026-08-07,Rebalance to target allocation,Reduce equity drift,done,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-H19-1,DEMO-INV-H19,true,2026-07-08,Review emergency fund,Liquidity buffer,overdue,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-H19-2,DEMO-INV-H19,true,2026-06-08,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-21,DEMO-ADV-USER-01
+DEMO-ADV-H20-0,DEMO-INV-H20,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-05,DEMO-ADV-USER-01
+DEMO-ADV-H20-1,DEMO-INV-H20,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-H20-2,DEMO-INV-H20,true,2026-06-09,Review emergency fund,Liquidity buffer,pending,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L001-0,DEMO-INV-L001,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-L001-1,DEMO-INV-L001,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L002-0,DEMO-INV-L002,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-20,DEMO-ADV-USER-01
+DEMO-ADV-L002-1,DEMO-INV-L002,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L003-0,DEMO-INV-L003,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-31,DEMO-ADV-USER-01
+DEMO-ADV-L003-1,DEMO-INV-L003,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L004-0,DEMO-INV-L004,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L004-1,DEMO-INV-L004,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-27,DEMO-ADV-USER-01
+DEMO-ADV-L005-0,DEMO-INV-L005,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-14,DEMO-ADV-USER-01
+DEMO-ADV-L005-1,DEMO-INV-L005,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L006-0,DEMO-INV-L006,true,2026-08-07,Rebalance to target allocation,Reduce equity drift,done,2026-10-18,DEMO-ADV-USER-01
+DEMO-ADV-L006-1,DEMO-INV-L006,true,2026-07-08,Review emergency fund,Liquidity buffer,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L007-0,DEMO-INV-L007,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-29,DEMO-ADV-USER-01
+DEMO-ADV-L007-1,DEMO-INV-L007,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L008-0,DEMO-INV-L008,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L008-1,DEMO-INV-L008,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L009-0,DEMO-INV-L009,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L009-1,DEMO-INV-L009,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-25,DEMO-ADV-USER-01
+DEMO-ADV-L010-0,DEMO-INV-L010,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-08-30,DEMO-ADV-USER-01
+DEMO-ADV-L010-1,DEMO-INV-L010,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-09-09,DEMO-ADV-USER-01
+DEMO-ADV-L011-0,DEMO-INV-L011,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L011-1,DEMO-INV-L011,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-25,DEMO-ADV-USER-01
+DEMO-ADV-L012-0,DEMO-INV-L012,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-10-30,DEMO-ADV-USER-01
+DEMO-ADV-L012-1,DEMO-INV-L012,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-19,DEMO-ADV-USER-01
+DEMO-ADV-L013-0,DEMO-INV-L013,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L013-1,DEMO-INV-L013,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-22,DEMO-ADV-USER-01
+DEMO-ADV-L014-0,DEMO-INV-L014,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-17,DEMO-ADV-USER-01
+DEMO-ADV-L014-1,DEMO-INV-L014,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-29,DEMO-ADV-USER-01
+DEMO-ADV-L015-0,DEMO-INV-L015,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L015-1,DEMO-INV-L015,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L016-0,DEMO-INV-L016,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-09,DEMO-ADV-USER-01
+DEMO-ADV-L016-1,DEMO-INV-L016,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L017-0,DEMO-INV-L017,true,2026-08-01,Increase SIP and review equity drift for education goal,Liquidity buffer,overdue,2026-01-15,DEMO-ADV-USER-01
+DEMO-ADV-L017-1,DEMO-INV-L017,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L018-0,DEMO-INV-L018,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L018-1,DEMO-INV-L018,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L019-0,DEMO-INV-L019,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-01,DEMO-ADV-USER-01
+DEMO-ADV-L019-1,DEMO-INV-L019,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-09-13,DEMO-ADV-USER-01
+DEMO-ADV-L020-0,DEMO-INV-L020,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-08-24,DEMO-ADV-USER-01
+DEMO-ADV-L020-1,DEMO-INV-L020,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L021-0,DEMO-INV-L021,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L021-1,DEMO-INV-L021,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-19,DEMO-ADV-USER-01
+DEMO-ADV-L022-0,DEMO-INV-L022,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-16,DEMO-ADV-USER-01
+DEMO-ADV-L022-1,DEMO-INV-L022,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-05,DEMO-ADV-USER-01
+DEMO-ADV-L023-0,DEMO-INV-L023,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,overdue,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L023-1,DEMO-INV-L023,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-08-29,DEMO-ADV-USER-01
+DEMO-ADV-L024-0,DEMO-INV-L024,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L024-1,DEMO-INV-L024,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-28,DEMO-ADV-USER-01
+DEMO-ADV-L025-0,DEMO-INV-L025,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L025-1,DEMO-INV-L025,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-18,DEMO-ADV-USER-01
+DEMO-ADV-L026-0,DEMO-INV-L026,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-10-24,DEMO-ADV-USER-01
+DEMO-ADV-L026-1,DEMO-INV-L026,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-10-10,DEMO-ADV-USER-01
+DEMO-ADV-L027-0,DEMO-INV-L027,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L027-1,DEMO-INV-L027,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L028-0,DEMO-INV-L028,true,2026-08-07,Rebalance to target allocation,Reduce equity drift,done,2026-10-04,DEMO-ADV-USER-01
+DEMO-ADV-L028-1,DEMO-INV-L028,true,2026-07-08,Review emergency fund,Liquidity buffer,pending,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L029-0,DEMO-INV-L029,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-10-24,DEMO-ADV-USER-01
+DEMO-ADV-L029-1,DEMO-INV-L029,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-21,DEMO-ADV-USER-01
+DEMO-ADV-L030-0,DEMO-INV-L030,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-L030-1,DEMO-INV-L030,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L031-0,DEMO-INV-L031,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-09-18,DEMO-ADV-USER-01
+DEMO-ADV-L031-1,DEMO-INV-L031,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L032-0,DEMO-INV-L032,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-08-25,DEMO-ADV-USER-01
+DEMO-ADV-L032-1,DEMO-INV-L032,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L033-0,DEMO-INV-L033,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-08-21,DEMO-ADV-USER-01
+DEMO-ADV-L033-1,DEMO-INV-L033,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L034-0,DEMO-INV-L034,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-L034-1,DEMO-INV-L034,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L035-0,DEMO-INV-L035,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-L035-1,DEMO-INV-L035,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L036-0,DEMO-INV-L036,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L036-1,DEMO-INV-L036,true,2026-07-03,Review emergency fund,Liquidity buffer,overdue,2026-10-08,DEMO-ADV-USER-01
+DEMO-ADV-L037-0,DEMO-INV-L037,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-10,DEMO-ADV-USER-01
+DEMO-ADV-L037-1,DEMO-INV-L037,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L038-0,DEMO-INV-L038,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,overdue,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-L038-1,DEMO-INV-L038,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-L039-0,DEMO-INV-L039,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-L039-1,DEMO-INV-L039,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L040-0,DEMO-INV-L040,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L040-1,DEMO-INV-L040,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L041-0,DEMO-INV-L041,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-09-26,DEMO-ADV-USER-01
+DEMO-ADV-L041-1,DEMO-INV-L041,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-28,DEMO-ADV-USER-01
+DEMO-ADV-L042-0,DEMO-INV-L042,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-31,DEMO-ADV-USER-01
+DEMO-ADV-L042-1,DEMO-INV-L042,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-10-20,DEMO-ADV-USER-01
+DEMO-ADV-L043-0,DEMO-INV-L043,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-02,DEMO-ADV-USER-01
+DEMO-ADV-L043-1,DEMO-INV-L043,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L044-0,DEMO-INV-L044,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-09-13,DEMO-ADV-USER-01
+DEMO-ADV-L044-1,DEMO-INV-L044,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L045-0,DEMO-INV-L045,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-26,DEMO-ADV-USER-01
+DEMO-ADV-L045-1,DEMO-INV-L045,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-29,DEMO-ADV-USER-01
+DEMO-ADV-L046-0,DEMO-INV-L046,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-03,DEMO-ADV-USER-01
+DEMO-ADV-L046-1,DEMO-INV-L046,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-22,DEMO-ADV-USER-01
+DEMO-ADV-L047-0,DEMO-INV-L047,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-07,DEMO-ADV-USER-01
+DEMO-ADV-L047-1,DEMO-INV-L047,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L048-0,DEMO-INV-L048,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-17,DEMO-ADV-USER-01
+DEMO-ADV-L048-1,DEMO-INV-L048,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-19,DEMO-ADV-USER-01
+DEMO-ADV-L049-0,DEMO-INV-L049,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-09-18,DEMO-ADV-USER-01
+DEMO-ADV-L049-1,DEMO-INV-L049,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L050-0,DEMO-INV-L050,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-22,DEMO-ADV-USER-01
+DEMO-ADV-L050-1,DEMO-INV-L050,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L051-0,DEMO-INV-L051,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-L051-1,DEMO-INV-L051,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-09-27,DEMO-ADV-USER-01
+DEMO-ADV-L052-0,DEMO-INV-L052,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-08-31,DEMO-ADV-USER-01
+DEMO-ADV-L052-1,DEMO-INV-L052,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-27,DEMO-ADV-USER-01
+DEMO-ADV-L053-0,DEMO-INV-L053,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-21,DEMO-ADV-USER-01
+DEMO-ADV-L053-1,DEMO-INV-L053,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-10,DEMO-ADV-USER-01
+DEMO-ADV-L054-0,DEMO-INV-L054,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L054-1,DEMO-INV-L054,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L055-0,DEMO-INV-L055,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-L055-1,DEMO-INV-L055,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-L056-0,DEMO-INV-L056,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L056-1,DEMO-INV-L056,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L057-0,DEMO-INV-L057,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-05,DEMO-ADV-USER-01
+DEMO-ADV-L057-1,DEMO-INV-L057,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-05,DEMO-ADV-USER-01
+DEMO-ADV-L058-0,DEMO-INV-L058,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,pending,2026-10-22,DEMO-ADV-USER-01
+DEMO-ADV-L058-1,DEMO-INV-L058,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L059-0,DEMO-INV-L059,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-L059-1,DEMO-INV-L059,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L060-0,DEMO-INV-L060,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L060-1,DEMO-INV-L060,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-11-03,DEMO-ADV-USER-01
+DEMO-ADV-L061-0,DEMO-INV-L061,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,overdue,2026-09-21,DEMO-ADV-USER-01
+DEMO-ADV-L061-1,DEMO-INV-L061,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L062-0,DEMO-INV-L062,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L062-1,DEMO-INV-L062,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-09-13,DEMO-ADV-USER-01
+DEMO-ADV-L063-0,DEMO-INV-L063,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-10,DEMO-ADV-USER-01
+DEMO-ADV-L063-1,DEMO-INV-L063,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-L064-0,DEMO-INV-L064,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L064-1,DEMO-INV-L064,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L065-0,DEMO-INV-L065,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-19,DEMO-ADV-USER-01
+DEMO-ADV-L065-1,DEMO-INV-L065,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L066-0,DEMO-INV-L066,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L066-1,DEMO-INV-L066,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L067-0,DEMO-INV-L067,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L067-1,DEMO-INV-L067,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L068-0,DEMO-INV-L068,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-21,DEMO-ADV-USER-01
+DEMO-ADV-L068-1,DEMO-INV-L068,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-31,DEMO-ADV-USER-01
+DEMO-ADV-L069-0,DEMO-INV-L069,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L069-1,DEMO-INV-L069,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L070-0,DEMO-INV-L070,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L070-1,DEMO-INV-L070,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L071-0,DEMO-INV-L071,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L071-1,DEMO-INV-L071,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-25,DEMO-ADV-USER-01
+DEMO-ADV-L072-0,DEMO-INV-L072,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L072-1,DEMO-INV-L072,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-10-05,DEMO-ADV-USER-01
+DEMO-ADV-L073-0,DEMO-INV-L073,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-03,DEMO-ADV-USER-01
+DEMO-ADV-L073-1,DEMO-INV-L073,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L074-0,DEMO-INV-L074,true,2026-08-13,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-21,DEMO-ADV-USER-01
+DEMO-ADV-L074-1,DEMO-INV-L074,true,2026-07-14,Rebalance to target allocation,Reduce equity drift,done,2026-10-03,DEMO-ADV-USER-01
+DEMO-ADV-L075-0,DEMO-INV-L075,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-11-02,DEMO-ADV-USER-01
+DEMO-ADV-L075-1,DEMO-INV-L075,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L076-0,DEMO-INV-L076,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-06,DEMO-ADV-USER-01
+DEMO-ADV-L076-1,DEMO-INV-L076,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-17,DEMO-ADV-USER-01
+DEMO-ADV-L077-0,DEMO-INV-L077,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-11-01,DEMO-ADV-USER-01
+DEMO-ADV-L077-1,DEMO-INV-L077,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-10-05,DEMO-ADV-USER-01
+DEMO-ADV-L078-0,DEMO-INV-L078,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L078-1,DEMO-INV-L078,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-L079-0,DEMO-INV-L079,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-30,DEMO-ADV-USER-01
+DEMO-ADV-L079-1,DEMO-INV-L079,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,overdue,2026-08-25,DEMO-ADV-USER-01
+DEMO-ADV-L080-0,DEMO-INV-L080,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-11-03,DEMO-ADV-USER-01
+DEMO-ADV-L080-1,DEMO-INV-L080,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L081-0,DEMO-INV-L081,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-08-21,DEMO-ADV-USER-01
+DEMO-ADV-L081-1,DEMO-INV-L081,true,2026-07-13,Review emergency fund,Liquidity buffer,overdue,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-L082-0,DEMO-INV-L082,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-09,DEMO-ADV-USER-01
+DEMO-ADV-L082-1,DEMO-INV-L082,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-09-05,DEMO-ADV-USER-01
+DEMO-ADV-L083-0,DEMO-INV-L083,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L083-1,DEMO-INV-L083,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L084-0,DEMO-INV-L084,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,overdue,2026-08-29,DEMO-ADV-USER-01
+DEMO-ADV-L084-1,DEMO-INV-L084,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-24,DEMO-ADV-USER-01
+DEMO-ADV-L085-0,DEMO-INV-L085,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-11-02,DEMO-ADV-USER-01
+DEMO-ADV-L085-1,DEMO-INV-L085,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L086-0,DEMO-INV-L086,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-11-03,DEMO-ADV-USER-01
+DEMO-ADV-L086-1,DEMO-INV-L086,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-L087-0,DEMO-INV-L087,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-18,DEMO-ADV-USER-01
+DEMO-ADV-L087-1,DEMO-INV-L087,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L088-0,DEMO-INV-L088,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-21,DEMO-ADV-USER-01
+DEMO-ADV-L088-1,DEMO-INV-L088,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-27,DEMO-ADV-USER-01
+DEMO-ADV-L089-0,DEMO-INV-L089,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-14,DEMO-ADV-USER-01
+DEMO-ADV-L089-1,DEMO-INV-L089,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-22,DEMO-ADV-USER-01
+DEMO-ADV-L090-0,DEMO-INV-L090,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-30,DEMO-ADV-USER-01
+DEMO-ADV-L090-1,DEMO-INV-L090,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L091-0,DEMO-INV-L091,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-30,DEMO-ADV-USER-01
+DEMO-ADV-L091-1,DEMO-INV-L091,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-27,DEMO-ADV-USER-01
+DEMO-ADV-L092-0,DEMO-INV-L092,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,overdue,2026-10-25,DEMO-ADV-USER-01
+DEMO-ADV-L092-1,DEMO-INV-L092,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,overdue,2026-08-29,DEMO-ADV-USER-01
+DEMO-ADV-L093-0,DEMO-INV-L093,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L093-1,DEMO-INV-L093,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L094-0,DEMO-INV-L094,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-L094-1,DEMO-INV-L094,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-11-04,DEMO-ADV-USER-01
+DEMO-ADV-L095-0,DEMO-INV-L095,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L095-1,DEMO-INV-L095,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-09-27,DEMO-ADV-USER-01
+DEMO-ADV-L096-0,DEMO-INV-L096,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L096-1,DEMO-INV-L096,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L097-0,DEMO-INV-L097,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-21,DEMO-ADV-USER-01
+DEMO-ADV-L097-1,DEMO-INV-L097,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-L098-0,DEMO-INV-L098,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L098-1,DEMO-INV-L098,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-09-16,DEMO-ADV-USER-01
+DEMO-ADV-L099-0,DEMO-INV-L099,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-14,DEMO-ADV-USER-01
+DEMO-ADV-L099-1,DEMO-INV-L099,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-30,DEMO-ADV-USER-01
+DEMO-ADV-L100-0,DEMO-INV-L100,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-10-29,DEMO-ADV-USER-01
+DEMO-ADV-L100-1,DEMO-INV-L100,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L101-0,DEMO-INV-L101,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-03,DEMO-ADV-USER-01
+DEMO-ADV-L101-1,DEMO-INV-L101,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-L102-0,DEMO-INV-L102,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-03,DEMO-ADV-USER-01
+DEMO-ADV-L102-1,DEMO-INV-L102,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-10-27,DEMO-ADV-USER-01
+DEMO-ADV-L103-0,DEMO-INV-L103,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L103-1,DEMO-INV-L103,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,overdue,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L104-0,DEMO-INV-L104,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-01,DEMO-ADV-USER-01
+DEMO-ADV-L104-1,DEMO-INV-L104,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L105-0,DEMO-INV-L105,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-21,DEMO-ADV-USER-01
+DEMO-ADV-L105-1,DEMO-INV-L105,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L106-0,DEMO-INV-L106,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-03,DEMO-ADV-USER-01
+DEMO-ADV-L106-1,DEMO-INV-L106,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-15,DEMO-ADV-USER-01
+DEMO-ADV-L107-0,DEMO-INV-L107,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L107-1,DEMO-INV-L107,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L108-0,DEMO-INV-L108,true,2026-08-01,Review emergency fund,Liquidity buffer,overdue,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L108-1,DEMO-INV-L108,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L109-0,DEMO-INV-L109,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L109-1,DEMO-INV-L109,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L110-0,DEMO-INV-L110,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-10-22,DEMO-ADV-USER-01
+DEMO-ADV-L110-1,DEMO-INV-L110,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-09-24,DEMO-ADV-USER-01
+DEMO-ADV-L111-0,DEMO-INV-L111,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L111-1,DEMO-INV-L111,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L112-0,DEMO-INV-L112,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L112-1,DEMO-INV-L112,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L113-0,DEMO-INV-L113,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L113-1,DEMO-INV-L113,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L114-0,DEMO-INV-L114,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-23,DEMO-ADV-USER-01
+DEMO-ADV-L114-1,DEMO-INV-L114,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L115-0,DEMO-INV-L115,true,2026-08-03,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-14,DEMO-ADV-USER-01
+DEMO-ADV-L115-1,DEMO-INV-L115,true,2026-07-04,Rebalance to target allocation,Reduce equity drift,done,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L116-0,DEMO-INV-L116,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-14,DEMO-ADV-USER-01
+DEMO-ADV-L116-1,DEMO-INV-L116,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-27,DEMO-ADV-USER-01
+DEMO-ADV-L117-0,DEMO-INV-L117,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L117-1,DEMO-INV-L117,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-L118-0,DEMO-INV-L118,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-11-04,DEMO-ADV-USER-01
+DEMO-ADV-L118-1,DEMO-INV-L118,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L119-0,DEMO-INV-L119,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L119-1,DEMO-INV-L119,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-10,DEMO-ADV-USER-01
+DEMO-ADV-L120-0,DEMO-INV-L120,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L120-1,DEMO-INV-L120,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-09,DEMO-ADV-USER-01
+DEMO-ADV-L121-0,DEMO-INV-L121,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-10-27,DEMO-ADV-USER-01
+DEMO-ADV-L121-1,DEMO-INV-L121,true,2026-07-18,Review emergency fund,Liquidity buffer,overdue,2026-10-06,DEMO-ADV-USER-01
+DEMO-ADV-L122-0,DEMO-INV-L122,true,2026-08-01,Review emergency fund,Liquidity buffer,overdue,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L122-1,DEMO-INV-L122,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L123-0,DEMO-INV-L123,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-10-21,DEMO-ADV-USER-01
+DEMO-ADV-L123-1,DEMO-INV-L123,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L124-0,DEMO-INV-L124,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-31,DEMO-ADV-USER-01
+DEMO-ADV-L124-1,DEMO-INV-L124,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-19,DEMO-ADV-USER-01
+DEMO-ADV-L125-0,DEMO-INV-L125,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-01,DEMO-ADV-USER-01
+DEMO-ADV-L125-1,DEMO-INV-L125,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L126-0,DEMO-INV-L126,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,overdue,2026-10-02,DEMO-ADV-USER-01
+DEMO-ADV-L126-1,DEMO-INV-L126,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-20,DEMO-ADV-USER-01
+DEMO-ADV-L127-0,DEMO-INV-L127,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L127-1,DEMO-INV-L127,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-09-27,DEMO-ADV-USER-01
+DEMO-ADV-L128-0,DEMO-INV-L128,true,2026-08-17,Rebalance to target allocation,Reduce equity drift,done,2026-09-15,DEMO-ADV-USER-01
+DEMO-ADV-L128-1,DEMO-INV-L128,true,2026-07-18,Review emergency fund,Liquidity buffer,pending,2026-10-09,DEMO-ADV-USER-01
+DEMO-ADV-L129-0,DEMO-INV-L129,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-13,DEMO-ADV-USER-01
+DEMO-ADV-L129-1,DEMO-INV-L129,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-03,DEMO-ADV-USER-01
+DEMO-ADV-L130-0,DEMO-INV-L130,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L130-1,DEMO-INV-L130,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L131-0,DEMO-INV-L131,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-30,DEMO-ADV-USER-01
+DEMO-ADV-L131-1,DEMO-INV-L131,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-04,DEMO-ADV-USER-01
+DEMO-ADV-L132-0,DEMO-INV-L132,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L132-1,DEMO-INV-L132,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-04,DEMO-ADV-USER-01
+DEMO-ADV-L133-0,DEMO-INV-L133,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L133-1,DEMO-INV-L133,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-05,DEMO-ADV-USER-01
+DEMO-ADV-L134-0,DEMO-INV-L134,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-22,DEMO-ADV-USER-01
+DEMO-ADV-L134-1,DEMO-INV-L134,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-24,DEMO-ADV-USER-01
+DEMO-ADV-L135-0,DEMO-INV-L135,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-21,DEMO-ADV-USER-01
+DEMO-ADV-L135-1,DEMO-INV-L135,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L136-0,DEMO-INV-L136,true,2026-08-16,Review emergency fund,Liquidity buffer,pending,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-L136-1,DEMO-INV-L136,true,2026-07-17,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-10,DEMO-ADV-USER-01
+DEMO-ADV-L137-0,DEMO-INV-L137,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-L137-1,DEMO-INV-L137,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L138-0,DEMO-INV-L138,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-11-02,DEMO-ADV-USER-01
+DEMO-ADV-L138-1,DEMO-INV-L138,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-24,DEMO-ADV-USER-01
+DEMO-ADV-L139-0,DEMO-INV-L139,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-09-18,DEMO-ADV-USER-01
+DEMO-ADV-L139-1,DEMO-INV-L139,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-18,DEMO-ADV-USER-01
+DEMO-ADV-L140-0,DEMO-INV-L140,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-30,DEMO-ADV-USER-01
+DEMO-ADV-L140-1,DEMO-INV-L140,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L141-0,DEMO-INV-L141,true,2026-08-16,Review emergency fund,Liquidity buffer,pending,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-L141-1,DEMO-INV-L141,true,2026-07-17,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-L142-0,DEMO-INV-L142,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L142-1,DEMO-INV-L142,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-01,DEMO-ADV-USER-01
+DEMO-ADV-L143-0,DEMO-INV-L143,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-L143-1,DEMO-INV-L143,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-24,DEMO-ADV-USER-01
+DEMO-ADV-L144-0,DEMO-INV-L144,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-03,DEMO-ADV-USER-01
+DEMO-ADV-L144-1,DEMO-INV-L144,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-28,DEMO-ADV-USER-01
+DEMO-ADV-L145-0,DEMO-INV-L145,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-03,DEMO-ADV-USER-01
+DEMO-ADV-L145-1,DEMO-INV-L145,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L146-0,DEMO-INV-L146,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-02,DEMO-ADV-USER-01
+DEMO-ADV-L146-1,DEMO-INV-L146,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,overdue,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-L147-0,DEMO-INV-L147,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-04,DEMO-ADV-USER-01
+DEMO-ADV-L147-1,DEMO-INV-L147,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-10,DEMO-ADV-USER-01
+DEMO-ADV-L148-0,DEMO-INV-L148,true,2026-08-09,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L148-1,DEMO-INV-L148,true,2026-07-10,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-04,DEMO-ADV-USER-01
+DEMO-ADV-L149-0,DEMO-INV-L149,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-11-02,DEMO-ADV-USER-01
+DEMO-ADV-L149-1,DEMO-INV-L149,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-23,DEMO-ADV-USER-01
+DEMO-ADV-L150-0,DEMO-INV-L150,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-09-01,DEMO-ADV-USER-01
+DEMO-ADV-L150-1,DEMO-INV-L150,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-L151-0,DEMO-INV-L151,true,2026-08-10,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-14,DEMO-ADV-USER-01
+DEMO-ADV-L151-1,DEMO-INV-L151,true,2026-07-11,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L152-0,DEMO-INV-L152,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-20,DEMO-ADV-USER-01
+DEMO-ADV-L152-1,DEMO-INV-L152,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L153-0,DEMO-INV-L153,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L153-1,DEMO-INV-L153,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-09-26,DEMO-ADV-USER-01
+DEMO-ADV-L154-0,DEMO-INV-L154,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L154-1,DEMO-INV-L154,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L155-0,DEMO-INV-L155,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-09-19,DEMO-ADV-USER-01
+DEMO-ADV-L155-1,DEMO-INV-L155,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L156-0,DEMO-INV-L156,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-11-02,DEMO-ADV-USER-01
+DEMO-ADV-L156-1,DEMO-INV-L156,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-26,DEMO-ADV-USER-01
+DEMO-ADV-L157-0,DEMO-INV-L157,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-24,DEMO-ADV-USER-01
+DEMO-ADV-L157-1,DEMO-INV-L157,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-08-18,DEMO-ADV-USER-01
+DEMO-ADV-L158-0,DEMO-INV-L158,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-09-22,DEMO-ADV-USER-01
+DEMO-ADV-L158-1,DEMO-INV-L158,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-11-05,DEMO-ADV-USER-01
+DEMO-ADV-L159-0,DEMO-INV-L159,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-10-17,DEMO-ADV-USER-01
+DEMO-ADV-L159-1,DEMO-INV-L159,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-14,DEMO-ADV-USER-01
+DEMO-ADV-L160-0,DEMO-INV-L160,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L160-1,DEMO-INV-L160,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L161-0,DEMO-INV-L161,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-09-24,DEMO-ADV-USER-01
+DEMO-ADV-L161-1,DEMO-INV-L161,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-10-25,DEMO-ADV-USER-01
+DEMO-ADV-L162-0,DEMO-INV-L162,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-10-14,DEMO-ADV-USER-01
+DEMO-ADV-L162-1,DEMO-INV-L162,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-22,DEMO-ADV-USER-01
+DEMO-ADV-L163-0,DEMO-INV-L163,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L163-1,DEMO-INV-L163,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-17,DEMO-ADV-USER-01
+DEMO-ADV-L164-0,DEMO-INV-L164,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-08,DEMO-ADV-USER-01
+DEMO-ADV-L164-1,DEMO-INV-L164,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,overdue,2026-08-29,DEMO-ADV-USER-01
+DEMO-ADV-L165-0,DEMO-INV-L165,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-14,DEMO-ADV-USER-01
+DEMO-ADV-L165-1,DEMO-INV-L165,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-11-04,DEMO-ADV-USER-01
+DEMO-ADV-L166-0,DEMO-INV-L166,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-09-11,DEMO-ADV-USER-01
+DEMO-ADV-L166-1,DEMO-INV-L166,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-08-20,DEMO-ADV-USER-01
+DEMO-ADV-L167-0,DEMO-INV-L167,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-09-09,DEMO-ADV-USER-01
+DEMO-ADV-L167-1,DEMO-INV-L167,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L168-0,DEMO-INV-L168,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-08-25,DEMO-ADV-USER-01
+DEMO-ADV-L168-1,DEMO-INV-L168,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-L169-0,DEMO-INV-L169,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-16,DEMO-ADV-USER-01
+DEMO-ADV-L169-1,DEMO-INV-L169,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L170-0,DEMO-INV-L170,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-06,DEMO-ADV-USER-01
+DEMO-ADV-L170-1,DEMO-INV-L170,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-05,DEMO-ADV-USER-01
+DEMO-ADV-L171-0,DEMO-INV-L171,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L171-1,DEMO-INV-L171,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-08-22,DEMO-ADV-USER-01
+DEMO-ADV-L172-0,DEMO-INV-L172,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-09-24,DEMO-ADV-USER-01
+DEMO-ADV-L172-1,DEMO-INV-L172,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-06,DEMO-ADV-USER-01
+DEMO-ADV-L173-0,DEMO-INV-L173,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-16,DEMO-ADV-USER-01
+DEMO-ADV-L173-1,DEMO-INV-L173,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-29,DEMO-ADV-USER-01
+DEMO-ADV-L174-0,DEMO-INV-L174,true,2026-08-08,Increase SIP by 10%,Improve goal trajectory,pending,2026-11-01,DEMO-ADV-USER-01
+DEMO-ADV-L174-1,DEMO-INV-L174,true,2026-07-09,Rebalance to target allocation,Reduce equity drift,done,2026-10-08,DEMO-ADV-USER-01
+DEMO-ADV-L175-0,DEMO-INV-L175,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-03,DEMO-ADV-USER-01
+DEMO-ADV-L175-1,DEMO-INV-L175,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-24,DEMO-ADV-USER-01
+DEMO-ADV-L176-0,DEMO-INV-L176,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,overdue,2026-09-14,DEMO-ADV-USER-01
+DEMO-ADV-L176-1,DEMO-INV-L176,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,overdue,2026-09-13,DEMO-ADV-USER-01
+DEMO-ADV-L177-0,DEMO-INV-L177,true,2026-08-07,Rebalance to target allocation,Reduce equity drift,done,2026-10-03,DEMO-ADV-USER-01
+DEMO-ADV-L177-1,DEMO-INV-L177,true,2026-07-08,Review emergency fund,Liquidity buffer,pending,2026-08-25,DEMO-ADV-USER-01
+DEMO-ADV-L178-0,DEMO-INV-L178,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-16,DEMO-ADV-USER-01
+DEMO-ADV-L178-1,DEMO-INV-L178,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-23,DEMO-ADV-USER-01
+DEMO-ADV-L179-0,DEMO-INV-L179,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-11-03,DEMO-ADV-USER-01
+DEMO-ADV-L179-1,DEMO-INV-L179,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-17,DEMO-ADV-USER-01
+DEMO-ADV-L180-0,DEMO-INV-L180,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,overdue,2026-09-02,DEMO-ADV-USER-01
+DEMO-ADV-L180-1,DEMO-INV-L180,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,overdue,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L181-0,DEMO-INV-L181,true,2026-08-04,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-29,DEMO-ADV-USER-01
+DEMO-ADV-L181-1,DEMO-INV-L181,true,2026-07-05,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-22,DEMO-ADV-USER-01
+DEMO-ADV-L182-0,DEMO-INV-L182,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-08-31,DEMO-ADV-USER-01
+DEMO-ADV-L182-1,DEMO-INV-L182,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L183-0,DEMO-INV-L183,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-26,DEMO-ADV-USER-01
+DEMO-ADV-L183-1,DEMO-INV-L183,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-20,DEMO-ADV-USER-01
+DEMO-ADV-L184-0,DEMO-INV-L184,true,2026-08-01,Review emergency fund,Liquidity buffer,pending,2026-10-21,DEMO-ADV-USER-01
+DEMO-ADV-L184-1,DEMO-INV-L184,true,2026-07-02,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-25,DEMO-ADV-USER-01
+DEMO-ADV-L185-0,DEMO-INV-L185,true,2026-08-13,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-31,DEMO-ADV-USER-01
+DEMO-ADV-L185-1,DEMO-INV-L185,true,2026-07-14,Rebalance to target allocation,Reduce equity drift,done,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L186-0,DEMO-INV-L186,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L186-1,DEMO-INV-L186,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-L187-0,DEMO-INV-L187,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,overdue,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L187-1,DEMO-INV-L187,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,overdue,2026-09-09,DEMO-ADV-USER-01
+DEMO-ADV-L188-0,DEMO-INV-L188,true,2026-08-02,Rebalance to target allocation,Reduce equity drift,done,2026-09-17,DEMO-ADV-USER-01
+DEMO-ADV-L188-1,DEMO-INV-L188,true,2026-07-03,Review emergency fund,Liquidity buffer,pending,2026-10-16,DEMO-ADV-USER-01
+DEMO-ADV-L189-0,DEMO-INV-L189,true,2026-08-05,Tax-loss harvest candidates,Seasonal review,cancelled,2026-09-09,DEMO-ADV-USER-01
+DEMO-ADV-L189-1,DEMO-INV-L189,true,2026-07-06,Consolidate overlapping funds,Simplify portfolio,pending,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L190-0,DEMO-INV-L190,true,2026-07-31,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-19,DEMO-ADV-USER-01
+DEMO-ADV-L190-1,DEMO-INV-L190,true,2026-07-01,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-12,DEMO-ADV-USER-01
+DEMO-ADV-L191-0,DEMO-INV-L191,true,2026-08-18,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-15,DEMO-ADV-USER-01
+DEMO-ADV-L191-1,DEMO-INV-L191,true,2026-07-19,Rebalance to target allocation,Reduce equity drift,done,2026-09-29,DEMO-ADV-USER-01
+DEMO-ADV-L192-0,DEMO-INV-L192,true,2026-07-30,Consolidate overlapping funds,Simplify portfolio,pending,2026-09-28,DEMO-ADV-USER-01
+DEMO-ADV-L192-1,DEMO-INV-L192,true,2026-06-30,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-27,DEMO-ADV-USER-01
+DEMO-ADV-L193-0,DEMO-INV-L193,true,2026-08-06,Review emergency fund,Liquidity buffer,pending,2026-10-14,DEMO-ADV-USER-01
+DEMO-ADV-L193-1,DEMO-INV-L193,true,2026-07-07,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-07,DEMO-ADV-USER-01
+DEMO-ADV-L194-0,DEMO-INV-L194,true,2026-08-15,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-11,DEMO-ADV-USER-01
+DEMO-ADV-L194-1,DEMO-INV-L194,true,2026-07-16,Consolidate overlapping funds,Simplify portfolio,overdue,2026-09-12,DEMO-ADV-USER-01
+DEMO-ADV-L195-0,DEMO-INV-L195,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-26,DEMO-ADV-USER-01
+DEMO-ADV-L195-1,DEMO-INV-L195,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-10-06,DEMO-ADV-USER-01
+DEMO-ADV-L196-0,DEMO-INV-L196,true,2026-08-14,Consolidate overlapping funds,Simplify portfolio,pending,2026-10-18,DEMO-ADV-USER-01
+DEMO-ADV-L196-1,DEMO-INV-L196,true,2026-07-15,Increase SIP by 10%,Improve goal trajectory,pending,2026-08-27,DEMO-ADV-USER-01
+DEMO-ADV-L197-0,DEMO-INV-L197,true,2026-08-07,Rebalance to target allocation,Reduce equity drift,done,2026-09-20,DEMO-ADV-USER-01
+DEMO-ADV-L197-1,DEMO-INV-L197,true,2026-07-08,Review emergency fund,Liquidity buffer,pending,2026-11-06,DEMO-ADV-USER-01
+DEMO-ADV-L198-0,DEMO-INV-L198,true,2026-08-12,Rebalance to target allocation,Reduce equity drift,done,2026-09-06,DEMO-ADV-USER-01
+DEMO-ADV-L198-1,DEMO-INV-L198,true,2026-07-13,Review emergency fund,Liquidity buffer,pending,2026-10-17,DEMO-ADV-USER-01
+DEMO-ADV-L199-0,DEMO-INV-L199,true,2026-08-16,Review emergency fund,Liquidity buffer,pending,2026-09-23,DEMO-ADV-USER-01
+DEMO-ADV-L199-1,DEMO-INV-L199,true,2026-07-17,Tax-loss harvest candidates,Seasonal review,cancelled,2026-10-25,DEMO-ADV-USER-01
+DEMO-ADV-L200-0,DEMO-INV-L200,true,2026-08-11,Review emergency fund,Liquidity buffer,pending,2026-09-07,DEMO-ADV-USER-01
+DEMO-ADV-L200-1,DEMO-INV-L200,true,2026-07-12,Tax-loss harvest candidates,Seasonal review,cancelled,2026-08-28,DEMO-ADV-USER-01

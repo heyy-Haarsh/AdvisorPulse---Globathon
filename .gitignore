@@ -1,0 +1,10 @@
+.env
+.env.local
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+frontend/dist/
+data/runtime/recordings/
+.DS_Store

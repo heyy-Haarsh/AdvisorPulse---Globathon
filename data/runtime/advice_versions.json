@@ -1,0 +1,180 @@
+{
+  "DEMO-ADV-001-A": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-18T18:29:45.065346+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-001",
+      "advice_date": "2026-06-19",
+      "recommendation": "Reduce mid-cap overweight and restore debt sleeve to 25%",
+      "intended_outcome": "Lower tracking error vs moderate policy; improve goal path confidence",
+      "follow_up_status": "overdue",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-001-B": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-18T18:29:45.085885+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-001",
+      "advice_date": "2025-12-21",
+      "recommendation": "Raise monthly SIP from 35k to 45k",
+      "intended_outcome": "Close retirement funding gap",
+      "follow_up_status": "done",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L194-0": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T04:41:34.283521+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L194",
+      "advice_date": "2026-08-15",
+      "recommendation": "Tax-loss harvest candidates",
+      "intended_outcome": "Seasonal review",
+      "follow_up_status": "cancelled",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L194-1": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T04:41:34.315564+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L194",
+      "advice_date": "2026-07-16",
+      "recommendation": "Consolidate overlapping funds",
+      "intended_outcome": "Simplify portfolio",
+      "follow_up_status": "overdue",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L154-0": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T06:00:13.345377+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L154",
+      "advice_date": "2026-08-08",
+      "recommendation": "Increase SIP by 10%",
+      "intended_outcome": "Improve goal trajectory",
+      "follow_up_status": "pending",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L154-1": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T06:00:13.388472+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L154",
+      "advice_date": "2026-07-09",
+      "recommendation": "Rebalance to target allocation",
+      "intended_outcome": "Reduce equity drift",
+      "follow_up_status": "done",
+      "source": "synthetic_csv"
+    },
+    {
+      "version": 2,
+      "recorded_at": "2026-10-19T06:00:13.431813+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L154",
+      "advice_date": "2026-07-09",
+      "recommendation": "Rebalance to target allocation",
+      "intended_outcome": "Reduce equity drift",
+      "follow_up_status": "done",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L017-0": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T13:26:39.674894+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L017",
+      "advice_date": "2026-08-01",
+      "recommendation": "Increase SIP and review equity drift for education goal",
+      "intended_outcome": "Liquidity buffer",
+      "follow_up_status": "overdue",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L017-1": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T13:26:39.732589+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L017",
+      "advice_date": "2026-07-02",
+      "recommendation": "Tax-loss harvest candidates",
+      "intended_outcome": "Seasonal review",
+      "follow_up_status": "cancelled",
+      "source": "synthetic_csv"
+    },
+    {
+      "version": 2,
+      "recorded_at": "2026-10-19T13:26:39.825003+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L017",
+      "advice_date": "2026-07-02",
+      "recommendation": "Tax-loss harvest candidates",
+      "intended_outcome": "Seasonal review",
+      "follow_up_status": "cancelled",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L085-0": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T13:28:09.352947+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L085",
+      "advice_date": "2026-08-17",
+      "recommendation": "Rebalance to target allocation",
+      "intended_outcome": "Reduce equity drift",
+      "follow_up_status": "done",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L085-1": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T13:28:09.379718+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L085",
+      "advice_date": "2026-07-18",
+      "recommendation": "Review emergency fund",
+      "intended_outcome": "Liquidity buffer",
+      "follow_up_status": "pending",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L186-0": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T14:48:15.269160+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L186",
+      "advice_date": "2026-08-18",
+      "recommendation": "Increase SIP by 10%",
+      "intended_outcome": "Improve goal trajectory",
+      "follow_up_status": "pending",
+      "source": "synthetic_csv"
+    }
+  ],
+  "DEMO-ADV-L186-1": [
+    {
+      "version": 1,
+      "recorded_at": "2026-10-19T14:48:15.284654+00:00",
+      "immutable": true,
+      "investor_id": "DEMO-INV-L186",
+      "advice_date": "2026-07-19",
+      "recommendation": "Rebalance to target allocation",
+      "intended_outcome": "Reduce equity drift",
+      "follow_up_status": "done",
+      "source": "synthetic_csv"
+    }
+  ]
+}

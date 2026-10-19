@@ -1,0 +1,1117 @@
+[
+  {
+    "ts": "2026-10-18T18:29:44.244521+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.117719+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.140305+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.151345+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "summary",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.181225+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.202819+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-4e52c45a"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.224683+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::33e93be5-9430-4b98-baf7-4a9b9ef8bc5f",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.233703+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "33e93be5-9430-4b98-baf7-4a9b9ef8bc5f",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:29:45.245733+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:07.974138+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.750466+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.764035+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.774079+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "summary",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.809100+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.844967+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-db443bf1"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.866221+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::62f61229-bec0-4be8-bc75-1d366715ba88",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.876585+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "62f61229-bec0-4be8-bc75-1d366715ba88",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:08.890384+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:33.389357+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.088201+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.100027+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.109553+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "summary",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.139991+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.183512+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-15b118c7"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.206190+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::b3aa1732-6f46-47e7-9a3f-1902160d86ed",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.220219+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "b3aa1732-6f46-47e7-9a3f-1902160d86ed",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:30:34.240351+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:25.976752+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "summary",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:46.934444+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:48.629317+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.318840+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.349789+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.363060+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.379426+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.429812+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-630f8b49"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.459781+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::9dd3a96a-7a9f-4174-a95f-f079433898cb",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.472769+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "9dd3a96a-7a9f-4174-a95f-f079433898cb",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-18T18:31:49.490210+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T04:39:48.449840+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "whatif",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T04:39:50.919176+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "whatif",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T04:41:20.584131+00:00",
+    "action": "drift_state",
+    "meta": {
+      "alert_id": "DEMO-INV-001::allocation_drift::Equity - Large Cap",
+      "status": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:05:06.052868+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T13:07:59.495645+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:07:59.513257+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "d0ce8216-48d9-4032-9d71-1f3532e931b2",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:07:59.541899+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:07:59.624351+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T13:07:59.840345+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.627746+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.654955+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.683076+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.711945+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.777288+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-62275150"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.825626+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::61253aee-92ed-431c-b368-596057a516c7",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.853658+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "61253aee-92ed-431c-b368-596057a516c7",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:00.898100+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:17.793622+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.544529+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.566292+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.587341+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.626208+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.689092+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-95c4dd1d"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.730556+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::e6f50333-dd60-4175-b3b8-55337d1167f6",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.747931+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "e6f50333-dd60-4175-b3b8-55337d1167f6",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:18.772565+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:20.535766+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:20.549767+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "e6b6f10f-9d15-43eb-9869-75ca018911db",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:20.571852+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:08:20.667897+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:19.958199+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.677987+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.700226+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.725832+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.756638+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.781435+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-cec3e6b0"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.820131+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::1a3a67b9-9023-4c95-b7eb-f9e4e55ca77b",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.839999+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "1a3a67b9-9023-4c95-b7eb-f9e4e55ca77b",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:20.857797+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:22.638409+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:22.656054+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "6ff21db2-290b-4b22-9375-0b25f45cd675",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:22.677097+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:14:22.747047+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T13:25:32.629926+00:00",
+    "action": "drift_state",
+    "meta": {
+      "alert_id": "DEMO-INV-001::goal_path_drift",
+      "status": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:27:23.482094+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-L017",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:27:23.513676+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "a4131a2c-990d-4e87-a71a-977b6574d935",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:27:23.536458+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-L017",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:38:41.727802+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-L085",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:38:42.758911+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-L085",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T13:55:38.660426+00:00",
+    "action": "drift_state",
+    "meta": {
+      "alert_id": "DEMO-INV-001::goal_path_drift",
+      "status": "dismissed"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:01:26.308936+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:01:28.872248+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:29.298320+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.423993+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.452135+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.468017+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.489162+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.515653+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-0ce913c1"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.553667+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::a0037e2a-81be-4a67-af67-4bd2a352ac4a",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.572110+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "a0037e2a-81be-4a67-af67-4bd2a352ac4a",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:30.586495+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:32.609416+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:32.621689+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "8ec209eb-abb7-43ac-9461-09b45909063d",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:32.637531+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:30:32.732897+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T14:42:56.308718+00:00",
+    "action": "meeting_intel_create",
+    "meta": {
+      "meeting_id": "MTG-E3E17521CF",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:42:57.081453+00:00",
+    "action": "meeting_intel_consent",
+    "meta": {
+      "meeting_id": "MTG-E3E17521CF"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:42:57.404947+00:00",
+    "action": "meeting_intel_create",
+    "meta": {
+      "meeting_id": "MTG-85441174A3",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:42:57.581001+00:00",
+    "action": "meeting_intel_consent",
+    "meta": {
+      "meeting_id": "MTG-85441174A3"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:43:08.836377+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:43:08.861299+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "e13f4498-988f-42fe-8495-013a7a79af5e",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:43:08.878863+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:43:08.978568+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:02.855698+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-H03",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.047261+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.075340+00:00",
+    "action": "copilot_denied",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.096269+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "priority",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.128759+00:00",
+    "action": "settings_update",
+    "meta": {
+      "keys": [
+        "accessible_clients"
+      ]
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.161363+00:00",
+    "action": "mock_transcription",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "note_id": "DEMO-NOTE-TX-82f95678"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.206210+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "memory::DEMO-INV-001::e889f786-101d-4951-a299-0280fe7d3274",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.225955+00:00",
+    "action": "extraction_confirm",
+    "meta": {
+      "extraction_id": "e889f786-101d-4951-a299-0280fe7d3274",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.258855+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.684879+00:00",
+    "action": "meeting_intel_create",
+    "meta": {
+      "meeting_id": "MTG-4283DED0E0",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:07.987262+00:00",
+    "action": "meeting_intel_consent",
+    "meta": {
+      "meeting_id": "MTG-4283DED0E0"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:08.288687+00:00",
+    "action": "meeting_intel_create",
+    "meta": {
+      "meeting_id": "MTG-508B04AE28",
+      "investor_id": "DEMO-INV-002"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:08.354524+00:00",
+    "action": "meeting_intel_consent",
+    "meta": {
+      "meeting_id": "MTG-508B04AE28"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:16.651488+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "follow_up"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:16.675405+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "5a3c1390-7880-4e16-be79-5e3a15053376",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:16.699666+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "confirm"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:44:16.984622+00:00",
+    "action": "txn_validate",
+    "meta": {
+      "filename": "sample_transactions_dirty.csv",
+      "rows_read": 10
+    }
+  },
+  {
+    "ts": "2026-10-19T14:45:51.536458+00:00",
+    "action": "copilot_query",
+    "meta": {
+      "advisor_id": "DEMO-ADV-USER-01",
+      "intent": "summary",
+      "investor_id": null
+    }
+  },
+  {
+    "ts": "2026-10-19T14:46:51.644373+00:00",
+    "action": "commitment",
+    "meta": {
+      "id": "b8ee1a2c-661d-423a-9150-acc17090e60b",
+      "status": "open"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:47:00.604883+00:00",
+    "action": "attention_decision",
+    "meta": {
+      "key": "DEMO-INV-001",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:47:00.636969+00:00",
+    "action": "feedback",
+    "meta": {
+      "investor_id": "DEMO-INV-001",
+      "action": "dismiss"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:47:23.526850+00:00",
+    "action": "meeting_intel_create",
+    "meta": {
+      "meeting_id": "MTG-890B49F382",
+      "investor_id": "DEMO-INV-001"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:48:15.138361+00:00",
+    "action": "meeting_intel_create",
+    "meta": {
+      "meeting_id": "MTG-207A2D8DE0",
+      "investor_id": "DEMO-INV-L186"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:52:31.470043+00:00",
+    "action": "meeting_intel_consent",
+    "meta": {
+      "meeting_id": "MTG-207A2D8DE0"
+    }
+  },
+  {
+    "ts": "2026-10-19T14:53:07.907184+00:00",
+    "action": "meeting_intel_recording_saved",
+    "meta": {
+      "meeting_id": "MTG-207A2D8DE0",
+      "bytes": 101687
+    }
+  }
+]
