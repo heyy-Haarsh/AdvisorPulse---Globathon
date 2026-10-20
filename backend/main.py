@@ -11,8 +11,11 @@ import numpy as np
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
+
+from services import google_meet
 
 from agents.coordinator import run_analysis
 from analytics.portfolio import DataStore, investor_snapshot
@@ -28,12 +31,14 @@ from ingestion.transactions import cashflow_signals, load_transactions
 from prioritization.engine import overview_kpis, rank_book, score_investor
 from services import (
     advice_outcome,
+    attention_engine_page as attention_engine_svc,
     blind_spot,
     client_summary,
     copilot,
     drift,
     feedback,
     meeting_intel,
+    market_shock,
     meetings,
     memory,
     patterns,
@@ -151,6 +156,8 @@ class DriftStatusIn(BaseModel):
 
 
 class WhatIfIn(BaseModel):
+    """Legacy per-client what-if (SIP/allocation). UI uses Market Shock; Copilot still may call SIP."""
+
     sip_delta: float = 0.0
     return_delta_pp: float = 0.0
     years_override: float | None = None
@@ -160,10 +167,34 @@ class WhatIfIn(BaseModel):
     market_shocks: dict[str, float] | None = None
 
 
+class MarketShockIn(BaseModel):
+    """Market & Asset Scenario request. Supports stock / index / broad_market with signed moves."""
+
+    scenario_name: str | None = None
+    scenario_type: str = "broad_market"  # stock | index | broad_market
+    instrument_id: str | None = None
+    price_change_pct: float | None = Field(default=None, ge=-30.0, le=30.0)
+    # Legacy field — used when price_change_pct omitted
+    equity_market_shock_pct: float | None = Field(default=None, ge=-30.0, le=30.0)
+    include_indirect_exposure: bool = True
+    assumptions_version: str = "demo-v1"
+    preset_id: str | None = None
+    include_goal_impact: bool = True
+    advisor_id: str = "DEMO-ADV-USER-01"
+
+
+class MarketShockReviewIn(BaseModel):
+    investor_id: str
+    scenario_equity_shock_pct: float = -12.0
+    note: str = ""
+    advisor_id: str = "DEMO-ADV-USER-01"
+
+
 class CopilotIn(BaseModel):
     query: str = Field(min_length=1, max_length=2000)
     context_investor_id: str | None = None
     advisor_id: str = "DEMO-ADV-USER-01"
+    conversation_context: dict[str, Any] | None = None
 
 
 class FeedbackIn(BaseModel):
@@ -302,11 +333,13 @@ def health():
             "multi_agent",
             "copilot",
             "whatif",
+            "market_shock",
             "patterns",
             "meeting_prep",
             "evidence_guard",
             "feedback_loop",
             "blind_spot_radar",
+            "attention_engine_page",
             "alert_quality_lab",
             "next_review_action",
             "txn_data_quality",
@@ -363,6 +396,15 @@ def attention(
         item["decision_action"] = dec.get("action")
         out.append(item)
     return JSONResponse(to_jsonable({"count": len(out), "clients": out, "is_demo": True}))
+
+
+@app.get("/api/attention-engine")
+def get_attention_engine():
+    """
+    Dedicated Attention Engine page payload.
+    Reuses rank_book + blind_spot obscurity/segments — no second scoring model.
+    """
+    return JSONResponse(to_jsonable(attention_engine_svc.build_attention_engine(store())))
 
 
 @app.post("/api/attention/decision")
@@ -487,6 +529,7 @@ def set_drift_status(alert_id: str, body: DriftStatusIn):
 
 @app.post("/api/investors/{investor_id}/whatif")
 def run_whatif(investor_id: str, body: WhatIfIn):
+    """Legacy per-client what-if retained for Copilot SIP / tests. Active UI is Market Shock."""
     return JSONResponse(
         to_jsonable(
             whatif.simulate_scenario(
@@ -502,6 +545,58 @@ def run_whatif(investor_id: str, body: WhatIfIn):
             )
         )
     )
+
+
+@app.get("/api/market-shock/assumptions")
+def market_shock_assumptions():
+    return JSONResponse(to_jsonable(market_shock.assumptions_catalog()))
+
+
+@app.get("/api/market-shock/instruments")
+def market_shock_instruments(kind: str | None = None):
+    return JSONResponse(
+        to_jsonable(
+            {
+                "instruments": market_shock.list_instruments(kind),
+                "is_demo": True,
+            }
+        )
+    )
+
+
+@app.post("/api/market-shock/run")
+def market_shock_run(body: MarketShockIn):
+    pct = body.price_change_pct
+    if pct is None:
+        pct = body.equity_market_shock_pct
+    if pct is None:
+        pct = -12.0
+    result = market_shock.run_scenario(
+        store(),
+        scenario_type=body.scenario_type,
+        instrument_id=body.instrument_id,
+        price_change_pct=pct,
+        include_indirect_exposure=body.include_indirect_exposure,
+        assumptions_version=body.assumptions_version,
+        advisor_id=body.advisor_id,
+        scenario_name=body.scenario_name,
+    )
+    if result.get("error"):
+        raise HTTPException(400, result["error"])
+    return JSONResponse(to_jsonable(result))
+
+
+@app.post("/api/market-shock/mark-reviewed")
+def market_shock_mark_reviewed(body: MarketShockReviewIn):
+    out = market_shock.mark_reviewed(
+        body.investor_id,
+        scenario_equity_shock_pct=body.scenario_equity_shock_pct,
+        note=body.note,
+        advisor_id=body.advisor_id,
+    )
+    if out.get("denied"):
+        raise HTTPException(403, out.get("message") or "Access denied")
+    return JSONResponse(to_jsonable(out))
 
 
 @app.get("/api/investors/{investor_id}/agents")
@@ -626,6 +721,12 @@ def dismiss_extraction(extraction_id: str):
         raise HTTPException(404, "Extraction not found") from None
 
 
+@app.get("/api/copilot/demo-catalog")
+def copilot_demo_catalog():
+    """Seeded demo questions/scenarios — templates only; facts come from live analysis."""
+    return JSONResponse(to_jsonable(copilot.demo_catalog()))
+
+
 @app.post("/api/copilot")
 def copilot_query(body: CopilotIn):
     return JSONResponse(
@@ -635,6 +736,7 @@ def copilot_query(body: CopilotIn):
                 body.query,
                 context_investor_id=body.context_investor_id,
                 advisor_id=body.advisor_id,
+                conversation_context=body.conversation_context,
             )
         )
     )
@@ -964,7 +1066,104 @@ def meeting_intel_end(meeting_id: str):
     return JSONResponse(to_jsonable(result))
 
 
+@app.post("/api/meeting-intel/meetings/{meeting_id}/schedule-meet")
+def meeting_intel_schedule_meet(meeting_id: str, prefer_google: bool = True):
+    result = meeting_intel.schedule_meet(meeting_id, prefer_google=prefer_google)
+    if result.get("error") and not (result.get("meeting") or {}).get("meet_link"):
+        raise HTTPException(400, result["error"])
+    return JSONResponse(to_jsonable(result))
+
+
+@app.post("/api/meeting-intel/meetings/{meeting_id}/load-demo-transcript")
+def meeting_intel_load_demo_transcript(meeting_id: str):
+    result = meeting_intel.load_demo_transcript(meeting_id, store=store())
+    if result.get("error"):
+        raise HTTPException(400, result["error"])
+    return JSONResponse(to_jsonable(result))
+
+
+@app.post("/api/meeting-intel/seed-demo")
+def meeting_intel_seed_demo():
+    """One-click Priya demo: prep + video room + packaged transcript."""
+    result = meeting_intel.seed_demo_meeting(store())
+    if result.get("error"):
+        raise HTTPException(400, result["error"])
+    return JSONResponse(to_jsonable(result))
+
+
+@app.get("/api/meeting-intel/google/status")
+def meeting_intel_google_status():
+    return JSONResponse(to_jsonable(google_meet.status()))
+
+
+@app.get("/api/meeting-intel/google/auth-url")
+def meeting_intel_google_auth_url():
+    result = google_meet.auth_url()
+    if result.get("error"):
+        raise HTTPException(400, result["error"])
+    return JSONResponse(to_jsonable(result))
+
+
+@app.get("/api/meeting-intel/google/callback")
+def meeting_intel_google_callback(code: str | None = None, error: str | None = None):
+    if error:
+        return HTMLResponse(
+            f"<html><body><h2>Google connect failed</h2><p>{error}</p>"
+            "<p>Close this tab and retry from Meeting Intelligence.</p></body></html>",
+            status_code=400,
+        )
+    if not code:
+        raise HTTPException(400, "Missing OAuth code")
+    result = google_meet.exchange_code(code)
+    if result.get("error"):
+        return HTMLResponse(
+            f"<html><body><h2>Token exchange failed</h2><p>{result['error']}</p></body></html>",
+            status_code=400,
+        )
+    # Prefer SPA route when frontend is mounted
+    return HTMLResponse(
+        "<html><body><h2>Google Calendar connected</h2>"
+        "<p>You can close this tab and return to Meeting Intelligence. "
+        "Create Meet will now use Google Meet when available.</p>"
+        "<script>setTimeout(function(){ window.close(); }, 1500);</script>"
+        "</body></html>"
+    )
+
+
+# ---------- Production SPA (frontend/dist) ----------
+
+FRONTEND_DIST = ROOT / "frontend" / "dist"
+
+
+def _mount_frontend() -> None:
+    """Serve Vite build from the same origin as the API when dist/ exists."""
+    if not FRONTEND_DIST.is_dir() or not (FRONTEND_DIST / "index.html").exists():
+        return
+    assets = FRONTEND_DIST / "assets"
+    if assets.is_dir():
+        app.mount("/assets", StaticFiles(directory=assets), name="frontend_assets")
+
+    @app.get("/")
+    def spa_index():
+        return FileResponse(FRONTEND_DIST / "index.html")
+
+    @app.get("/{full_path:path}")
+    def spa_fallback(full_path: str):
+        if full_path.startswith("api/") or full_path == "api" or full_path.startswith("docs"):
+            raise HTTPException(404, "Not found")
+        candidate = FRONTEND_DIST / full_path
+        if candidate.is_file():
+            return FileResponse(candidate)
+        return FileResponse(FRONTEND_DIST / "index.html")
+
+
+_mount_frontend()
+
+
 if __name__ == "__main__":
+    import os
     import uvicorn
 
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", "8000"))
+    uvicorn.run("main:app", host=host, port=port, reload=False)

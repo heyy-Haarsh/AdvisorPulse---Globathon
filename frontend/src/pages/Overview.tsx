@@ -132,7 +132,10 @@ export default function Overview() {
           <h1>Overview</h1>
           <p>
             Attention command center — detect, prioritize, and act across{' '}
-            {data.total_clients} DEMO clients.
+            {data.total_clients} DEMO clients.{' '}
+            <Link className="linkish" to="/attention-engine">
+              Open full Attention Engine →
+            </Link>
           </p>
         </div>
         <label className="search-pill">

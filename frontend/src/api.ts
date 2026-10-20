@@ -89,6 +89,7 @@ export const api = {
     const q = new URLSearchParams(params).toString();
     return get<{ count: number; clients: ClientPriority[] }>(`/api/attention${q ? `?${q}` : ''}`);
   },
+  attentionEngine: () => get<any>('/api/attention-engine'),
   clients: (params: Record<string, string> = {}) => {
     const q = new URLSearchParams(params).toString();
     return get<{ count: number; clients: ClientPriority[] }>(`/api/clients${q ? `?${q}` : ''}`);
@@ -111,6 +112,25 @@ export const api = {
       market_shocks?: Record<string, number>;
     },
   ) => post<any>(`/api/investors/${id}/whatif`, body),
+  marketShockAssumptions: () => get<any>('/api/market-shock/assumptions'),
+  marketShockInstruments: (kind?: string) =>
+    get<any>(`/api/market-shock/instruments${kind ? `?kind=${encodeURIComponent(kind)}` : ''}`),
+  marketShockRun: (body: {
+    scenario_name?: string;
+    scenario_type?: string;
+    instrument_id?: string | null;
+    price_change_pct?: number;
+    equity_market_shock_pct?: number;
+    include_indirect_exposure?: boolean;
+    assumptions_version?: string;
+    preset_id?: string | null;
+    include_goal_impact?: boolean;
+  }) => post<any>('/api/market-shock/run', body),
+  marketShockMarkReviewed: (body: {
+    investor_id: string;
+    scenario_equity_shock_pct?: number;
+    note?: string;
+  }) => post<any>('/api/market-shock/mark-reviewed', body),
   agents: (id: string) => get<any>(`/api/investors/${id}/agents`),
   timeline: (id: string) => get<any>(`/api/investors/${id}/timeline`),
   brief: (id: string) => get<any>(`/api/investors/${id}/meeting-brief`),
@@ -146,8 +166,17 @@ export const api = {
     status?: string;
     commitment_id?: string;
   }) => post<any>('/api/commitments', body),
-  copilot: (query: string, context_investor_id?: string) =>
-    post<any>('/api/copilot', { query, context_investor_id }),
+  copilot: (
+    query: string,
+    context_investor_id?: string,
+    conversation_context?: Record<string, unknown>,
+  ) =>
+    post<any>('/api/copilot', {
+      query,
+      context_investor_id,
+      conversation_context,
+    }),
+  copilotDemoCatalog: () => get<any>('/api/copilot/demo-catalog'),
   patterns: () => get<any>('/api/patterns'),
   pattern: (id: string) => get<any>(`/api/patterns/${id}`),
   feedback: (body: {
@@ -268,4 +297,14 @@ export const api = {
     post<any>(`/api/meeting-intel/meetings/${meetingId}/commitments`, { action_ids }),
   meetingIntelEnd: (meetingId: string) =>
     post<any>(`/api/meeting-intel/meetings/${meetingId}/end`, {}),
+  meetingIntelScheduleMeet: (meetingId: string, preferGoogle = true) =>
+    post<any>(
+      `/api/meeting-intel/meetings/${meetingId}/schedule-meet?prefer_google=${preferGoogle}`,
+      {},
+    ),
+  meetingIntelLoadDemoTranscript: (meetingId: string) =>
+    post<any>(`/api/meeting-intel/meetings/${meetingId}/load-demo-transcript`, {}),
+  meetingIntelSeedDemo: () => post<any>('/api/meeting-intel/seed-demo', {}),
+  meetingIntelGoogleStatus: () => get<any>('/api/meeting-intel/google/status'),
+  meetingIntelGoogleAuthUrl: () => get<any>('/api/meeting-intel/google/auth-url'),
 };

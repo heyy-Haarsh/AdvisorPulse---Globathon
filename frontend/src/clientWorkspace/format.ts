@@ -27,7 +27,6 @@ export const WORKSPACE_TABS = [
   { id: 'evidence', label: 'Evidence & Summary', path: 'evidence' },
   { id: 'portfolio', label: 'Portfolio & Drift', path: 'portfolio' },
   { id: 'meetings', label: 'Meetings & Advice', path: 'meetings' },
-  { id: 'simulator', label: 'What-if Simulator', path: 'simulator' },
   { id: 'review-actions', label: 'Review Actions', path: 'review-actions' },
 ] as const;
 

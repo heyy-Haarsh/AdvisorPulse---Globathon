@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../api';
-import { EvidenceBadge } from './EvidenceBadge';
+import { ConfidencePill, EvidenceBadge } from './EvidenceBadge';
 import type { WorkspaceTabId } from '../clientWorkspace/format';
 
 type Msg = {
@@ -30,12 +30,6 @@ function promptsFor(tab: WorkspaceTabId, name: string): string[] {
         'Summarize the latest meeting notes.',
         'Which advice items remain unresolved?',
         'What commitments are overdue?',
-      ];
-    case 'simulator':
-      return [
-        'Explain the difference between baseline and scenario SIP projections.',
-        'Which assumptions have the largest effect?',
-        'What happens to allocation if mid-cap weight changes?',
       ];
     case 'review-actions':
       return [
@@ -66,12 +60,16 @@ export function CopilotChatPanel({ investorId, displayName, tab, open, onOpenCha
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [err, setErr] = useState('');
   const [loading, setLoading] = useState(false);
+  const [conversationContext, setConversationContext] = useState<Record<string, unknown>>({
+    investor_id: investorId,
+  });
 
   // Reset conversation when client changes
   useEffect(() => {
     setMsgs([]);
     setErr('');
     setQuery('');
+    setConversationContext({ investor_id: investorId });
   }, [investorId]);
 
   const suggestions = useMemo(
@@ -87,16 +85,14 @@ export function CopilotChatPanel({ investorId, displayName, tab, open, onOpenCha
     setMsgs((m) => [...m, { role: 'user', text }]);
     setQuery('');
     try {
-      const r = await api.copilot(text, investorId);
-      const summary =
-        r.denied
-          ? r.message || 'Request denied'
-          : [
-              r.result?.priority_reason || r.result?.summary || r.message || 'See structured result.',
-              r.intent ? `Intent: ${r.intent} → ${r.mapped_function}` : '',
-            ]
-              .filter(Boolean)
-              .join('\n');
+      const r = await api.copilot(text, investorId, conversationContext);
+      if (r.conversation_context) setConversationContext(r.conversation_context);
+      const summary = r.denied
+        ? r.message || 'Request denied'
+        : r.answer?.summary ||
+          r.result?.priority_reason ||
+          r.message ||
+          'See evidence-backed result below.';
       setMsgs((m) => [...m, { role: 'assistant', text: summary, result: r }]);
     } catch (e) {
       setErr(String(e));
@@ -104,6 +100,8 @@ export function CopilotChatPanel({ investorId, displayName, tab, open, onOpenCha
       setLoading(false);
     }
   };
+
+  const lastAssistant = [...msgs].reverse().find((m) => m.role === 'assistant');
 
   if (!open) return null;
 
@@ -128,6 +126,7 @@ export function CopilotChatPanel({ investorId, displayName, tab, open, onOpenCha
             onClick={() => {
               setMsgs([]);
               setErr('');
+              setConversationContext({ investor_id: investorId });
             }}
           >
             New
@@ -170,7 +169,25 @@ export function CopilotChatPanel({ investorId, displayName, tab, open, onOpenCha
               <div key={i} className={`copilot-msg ${m.role}`}>
                 <div className="copilot-msg-body">{m.text}</div>
                 {m.result && !m.result.denied && (
-                  <>
+                  <div className="copilot-answer-card">
+                    {m.result.answer?.title && <h4>{m.result.answer.title}</h4>}
+                    {(m.result.answer?.bullets || []).length > 0 && (
+                      <ul>
+                        {m.result.answer.bullets.slice(0, 6).map((b: string, bi: number) => (
+                          <li key={bi}>{b}</li>
+                        ))}
+                      </ul>
+                    )}
+                    {(m.result.answer?.claims || []).length > 0 && (
+                      <div className="copilot-claims">
+                        {(m.result.answer.claims as any[]).slice(0, 4).map((c, ci) => (
+                          <div key={ci} className="copilot-claim">
+                            <ConfidencePill confidence={c.status} />
+                            <span>{c.text}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                     <EvidenceBadge evidence={m.result.evidence} />
                     {m.result.citations?.length ? (
                       <p className="muted" style={{ fontSize: '0.78rem' }}>
@@ -178,33 +195,39 @@ export function CopilotChatPanel({ investorId, displayName, tab, open, onOpenCha
                       </p>
                     ) : null}
                     <div className="filters">
+                      {(m.result.links || []).map((l: any) => (
+                        <Link key={l.href} className="linkish" to={l.href}>
+                          {l.label}
+                        </Link>
+                      ))}
                       <Link className="linkish" to={`/clients/${investorId}/evidence`}>
                         Evidence →
                       </Link>
-                      <Link className="linkish" to={`/clients/${investorId}/portfolio`}>
-                        Portfolio →
-                      </Link>
-                      <Link className="linkish" to={`/clients/${investorId}/review-actions`}>
-                        Review action →
-                      </Link>
                     </div>
-                    <details>
-                      <summary className="muted">Raw structured result</summary>
-                      <pre className="json-block">
-                        {JSON.stringify(m.result.result ?? m.result.message, null, 2)}
-                      </pre>
-                    </details>
-                  </>
+                  </div>
                 )}
               </div>
             ))}
-            {loading && <p className="muted">Analyzing…</p>}
+            {loading && <p className="muted">Running validated analysis…</p>}
             {err && (
               <div className="error">
                 {err}{' '}
-                <button type="button" className="btn ghost" onClick={() => ask(msgs.at(-1)?.text)}>
+                <button
+                  type="button"
+                  className="btn ghost"
+                  onClick={() => ask(msgs.filter((x) => x.role === 'user').slice(-1)[0]?.text)}
+                >
                   Retry
                 </button>
+              </div>
+            )}
+            {!!lastAssistant?.result?.follow_ups?.length && !loading && (
+              <div className="copilot-suggestions">
+                {(lastAssistant!.result.follow_ups as string[]).slice(0, 4).map((f) => (
+                  <button key={f} type="button" className="chip" onClick={() => ask(f)}>
+                    {f}
+                  </button>
+                ))}
               </div>
             )}
           </div>

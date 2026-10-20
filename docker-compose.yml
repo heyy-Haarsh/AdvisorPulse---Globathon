@@ -1,0 +1,17 @@
+services:
+  advisor-pulse:
+    build: .
+    image: advisor-pulse:latest
+    container_name: advisor-pulse
+    ports:
+      - "18080:8000"
+    env_file:
+      - .env
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "8000"
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.0-flash}
+    volumes:
+      # Persist advisor decisions, meetings, recordings across restarts
+      - ./data/runtime:/app/data/runtime
+    restart: unless-stopped

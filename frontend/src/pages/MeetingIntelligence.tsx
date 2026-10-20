@@ -17,6 +17,23 @@ const MEETING_TYPES = [
   'general_client_review',
 ];
 
+const DEMO_LOAD_STEPS = [
+  'Connecting to meeting record…',
+  'Loading packaged transcript…',
+  'Parsing speaker segments…',
+  'Drafting executive summary…',
+  'Extracting client concerns…',
+  'Structuring advice given…',
+  'Capturing decisions & preferences…',
+  'Building action items…',
+  'Writing follow-up draft…',
+  'Formatting Minutes of Meeting…',
+];
+
+function sleep(ms: number) {
+  return new Promise((resolve) => window.setTimeout(resolve, ms));
+}
+
 export default function MeetingIntelligence() {
   const { clientId, meetingId, stage: stageParam } = useParams();
   const navigate = useNavigate();
@@ -25,11 +42,15 @@ export default function MeetingIntelligence() {
   const [clients, setClients] = useState<ClientPriority[]>([]);
   const [selectedClient, setSelectedClient] = useState(clientId || 'DEMO-INV-001');
   const [gemini, setGemini] = useState<any>(null);
+  const [video, setVideo] = useState<any>(null);
   const [meetings, setMeetings] = useState<any[]>([]);
   const [meeting, setMeeting] = useState<any>(null);
   const [brief, setBrief] = useState<any>(null);
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
+  const [demoHint, setDemoHint] = useState('');
+  const [demoLoading, setDemoLoading] = useState(false);
+  const [demoStep, setDemoStep] = useState(0);
   const [pasteText, setPasteText] = useState('');
   const [noteText, setNoteText] = useState('');
   const [noteCat, setNoteCat] = useState('decision');
@@ -46,22 +67,79 @@ export default function MeetingIntelligence() {
   const chunksRef = useRef<Blob[]>([]);
   const timerRef = useRef<number | null>(null);
 
+  const applyStatus = (r: any) => {
+    setGemini(r?.gemini || r);
+    setVideo(r?.video || null);
+  };
+
   const refreshList = async (iid?: string) => {
     const r = await api.meetingIntelList(iid || selectedClient);
     setMeetings(r.meetings || []);
-    setGemini(r.gemini);
+    applyStatus(r);
   };
 
   const loadMeeting = async (mid: string) => {
     const m = await api.meetingIntelGet(mid);
     setMeeting(m);
+    applyStatus(m);
     return m;
   };
 
   useEffect(() => {
-    api.clients({ limit: '80' }).then((r) => setClients(r.clients));
-    api.meetingIntelStatus().then(setGemini).catch(() => undefined);
-  }, []);
+    // Book ranking can push DEMO-INV-001 (Priya) outside the default top-N —
+    // always pin her + the route client so the Meeting Intelligence demo works.
+    api
+      .clients({ limit: '200' })
+      .then(async (r) => {
+        let list = [...(r.clients || [])];
+        const ensure = async (id: string, fallbackName: string) => {
+          if (!id || list.some((c) => c.investor_id === id)) return;
+          try {
+            const inv = await api.investor(id);
+            const name =
+              inv?.snapshot?.investor?.display_name ||
+              inv?.investor?.display_name ||
+              inv?.display_name ||
+              fallbackName;
+            list = [
+              {
+                investor_id: id,
+                display_name: name,
+                tier: inv?.snapshot?.investor?.tier || 'HNI',
+                risk_profile: inv?.snapshot?.investor?.risk_profile || 'Moderate',
+                priority: inv?.priority?.priority || 'High',
+                score: inv?.priority?.score || 0,
+                confidence: inv?.priority?.confidence,
+                goal_status: inv?.snapshot?.goal_progress?.status,
+              } as ClientPriority,
+              ...list,
+            ];
+          } catch {
+            list = [
+              {
+                investor_id: id,
+                display_name: fallbackName,
+                tier: 'HNI',
+                risk_profile: 'Moderate',
+                priority: 'High',
+                score: 0,
+              } as ClientPriority,
+              ...list,
+            ];
+          }
+        };
+        await ensure('DEMO-INV-001', 'Priya Sharma');
+        if (clientId && clientId !== 'DEMO-INV-001') await ensure(clientId, clientId);
+        // Keep Priya first so the demo client is obvious in the dropdown
+        list = [
+          ...list.filter((c) => c.investor_id === 'DEMO-INV-001'),
+          ...list.filter((c) => c.investor_id !== 'DEMO-INV-001'),
+        ];
+        setClients(list);
+      })
+      .catch(() => undefined);
+    api.meetingIntelStatus().then(applyStatus).catch(() => undefined);
+  }, [clientId]);
 
   useEffect(() => {
     if (clientId) setSelectedClient(clientId);
@@ -128,6 +206,88 @@ export default function MeetingIntelligence() {
       setMeeting(m);
       await refreshList();
       navigate(`/meeting-intel/${selectedClient}/${m.meeting_id}/prepare`);
+    } catch (e) {
+      setErr(String(e));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const runDemoBuffer = async <T,>(apiCall: () => Promise<T>): Promise<T> => {
+    setBusy(true);
+    setDemoLoading(true);
+    setDemoStep(0);
+    setDemoHint('');
+    setErr('');
+    const apiPromise = apiCall();
+    for (let i = 0; i < DEMO_LOAD_STEPS.length; i++) {
+      setDemoStep(i);
+      await sleep(420);
+    }
+    const result = await apiPromise;
+    setDemoStep(DEMO_LOAD_STEPS.length - 1);
+    await sleep(280);
+    setDemoLoading(false);
+    setBusy(false);
+    return result;
+  };
+
+  const seedDemoMeeting = async () => {
+    try {
+      setSelectedClient('DEMO-INV-001');
+      const r = await runDemoBuffer(() => api.meetingIntelSeedDemo());
+      const m = r.meeting;
+      setMeeting(m);
+      applyStatus(r);
+      setSelectedClient('DEMO-INV-001');
+      setDemoHint('Demo complete — review formatted Minutes below, then Approve → Create commitments');
+      await refreshList('DEMO-INV-001');
+      navigate(`/meeting-intel/DEMO-INV-001/${m.meeting_id}/minutes`);
+    } catch (e) {
+      setErr(String(e));
+      setDemoLoading(false);
+      setBusy(false);
+    }
+  };
+
+  const scheduleMeet = async () => {
+    if (!meetingId) return;
+    setBusy(true);
+    setErr('');
+    try {
+      const r = await api.meetingIntelScheduleMeet(meetingId, true);
+      setMeeting(r.meeting || r);
+      applyStatus(r);
+    } catch (e) {
+      setErr(String(e));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const loadDemoTranscript = async () => {
+    if (!meetingId) return;
+    try {
+      go('minutes', meetingId);
+      const r = await runDemoBuffer(() => api.meetingIntelLoadDemoTranscript(meetingId));
+      setMeeting(r.meeting);
+      applyStatus(r);
+      setDemoHint(r.hint || 'Transcript and structured minutes are ready for review');
+      go('minutes', meetingId);
+    } catch (e) {
+      setErr(String(e));
+      setDemoLoading(false);
+      setBusy(false);
+    }
+  };
+
+  const connectGoogle = async () => {
+    setBusy(true);
+    setErr('');
+    try {
+      const r = await api.meetingIntelGoogleAuthUrl();
+      if (r.auth_url) window.open(r.auth_url, '_blank', 'noopener,noreferrer');
+      else setErr(r.error || 'Could not start Google OAuth');
     } catch (e) {
       setErr(String(e));
     } finally {
@@ -263,7 +423,12 @@ export default function MeetingIntelligence() {
       await loadMeeting(meetingId);
       go('minutes', meetingId);
     } catch (e) {
-      setErr(String(e));
+      const raw = String(e);
+      const friendly =
+        /api key not valid|API_KEY_INVALID|Gemini API key/i.test(raw)
+          ? 'Gemini API key is invalid. For the demo, click “Load demo transcript → Minutes” instead of Transcribe. Or put a valid Google AI Studio key (starts with AIza) in .env and restart the API.'
+          : raw.replace(/^Error:\s*/i, '').replace(/^API\s+[^\s:]+:\s*\d+\s*/i, '');
+      setErr(friendly);
       await loadMeeting(meetingId);
     } finally {
       setBusy(false);
@@ -285,15 +450,30 @@ export default function MeetingIntelligence() {
 
   const genMinutes = async () => {
     if (!meetingId) return;
-    setBusy(true);
-    setErr('');
     try {
-      await api.meetingIntelGenerateMinutes(meetingId);
-      await loadMeeting(meetingId);
+      // If Gemini is unusable and there is no transcript yet, load the packaged demo first
+      if (!gemini?.usable && meeting?.transcript_status !== 'ready') {
+        go('minutes', meetingId);
+        const r = await runDemoBuffer(() => api.meetingIntelLoadDemoTranscript(meetingId));
+        setMeeting(r.meeting);
+        setDemoHint(r.hint || 'Demo transcript + minutes ready');
+        go('minutes', meetingId);
+        return;
+      }
+      go('minutes', meetingId);
+      const r = await runDemoBuffer(() => api.meetingIntelGenerateMinutes(meetingId));
+      setMeeting(r.meeting || (await api.meetingIntelGet(meetingId)));
+      if (r.note) setDemoHint(r.note);
+      else setDemoHint('Minutes ready for advisor review');
       go('minutes', meetingId);
     } catch (e) {
-      setErr(String(e));
-    } finally {
+      const raw = String(e);
+      if (/Gemini|API key|not usable/i.test(raw)) {
+        setErr(`${raw.replace(/^Error:\s*/i, '')} — try “Load demo transcript” instead.`);
+      } else {
+        setErr(String(e));
+      }
+      setDemoLoading(false);
       setBusy(false);
     }
   };
@@ -368,17 +548,31 @@ export default function MeetingIntelligence() {
         </div>
       </div>
 
-      <div className={`mi-gemini-banner ${gemini?.configured ? 'ok' : 'warn'}`}>
-        Gemini: {gemini?.configured ? `configured · ${gemini.model}` : 'not configured — set GEMINI_API_KEY in .env'}
-        {!gemini?.configured && (
-          <span className="muted">
-            {' '}
-            Prep briefs still work from analytics. Transcription & minutes require the API key.
-          </span>
+      <div className={`mi-gemini-banner ${gemini?.usable ? 'ok' : 'warn'}`}>
+        Gemini:{' '}
+        {gemini?.usable
+          ? `ready · ${gemini.model}`
+          : gemini?.configured
+            ? 'key present but not usable — use Priya demo path (not Live Transcribe)'
+            : 'not configured — demo path still works'}
+        <span className="muted">
+          {' '}
+          · Video:{' '}
+          {video?.connected
+            ? 'Google Meet ready'
+            : video?.configured
+              ? 'Google OAuth not connected — Jitsi fallback'
+              : 'Jitsi free rooms (no Google setup)'}
+        </span>
+        {video?.configured && !video?.connected && (
+          <button type="button" className="linkish" style={{ marginLeft: 8 }} onClick={connectGoogle} disabled={busy}>
+            Connect Google Calendar
+          </button>
         )}
       </div>
 
       {err && <div className="error">{err}</div>}
+      {demoHint && <div className="mi-gemini-banner ok">{demoHint}</div>}
 
       <nav className="ws-tabs" aria-label="Meeting stages">
         {(['prepare', 'live', 'minutes', 'history'] as Stage[]).map((s) => (
@@ -403,10 +597,20 @@ export default function MeetingIntelligence() {
         <div className="panel">
           <div className="panel-head">
             <h2>Meeting history — {selectedClient}</h2>
-            <button type="button" className="btn" onClick={() => go('prepare')}>
-              Prepare Meeting
-            </button>
+            <div className="row-actions">
+              <button type="button" className="btn soft" disabled={busy || demoLoading} onClick={seedDemoMeeting}>
+                {demoLoading ? 'Loading transcript & minutes…' : 'Load Priya demo (Meet + transcript)'}
+              </button>
+              <button type="button" className="btn" onClick={() => go('prepare')}>
+                Prepare Meeting
+              </button>
+            </div>
           </div>
+          <p className="muted">
+            Recommended demo: <strong>Load Priya demo</strong> → Join Meet (Jitsi) → Minutes tab
+            (transcript + MoM already filled) → Approve → Create commitments. Do not use Live
+            Transcribe unless you have a valid Google AI Studio key.
+          </p>
           <table>
             <thead>
               <tr>
@@ -546,6 +750,40 @@ export default function MeetingIntelligence() {
                     onClick={startLive}
                   >
                     Start Meeting
+                  </button>
+                </div>
+              </div>
+
+              <div className="panel">
+                <h2>Video meeting</h2>
+                <p className="muted">
+                  Google Meet when Calendar OAuth is connected; otherwise a free Jitsi room so the demo
+                  still has a joinable link.
+                </p>
+                {meeting.meet_link ? (
+                  <p>
+                    <strong>{meeting.meet_provider === 'google_meet' ? 'Google Meet' : 'Jitsi'}:</strong>{' '}
+                    <a href={meeting.meet_link} target="_blank" rel="noreferrer">
+                      {meeting.meet_link}
+                    </a>
+                    {meeting.meet_meta?.fallback_reason && (
+                      <span className="muted"> — {meeting.meet_meta.fallback_reason}</span>
+                    )}
+                  </p>
+                ) : (
+                  <p className="muted">No video room yet.</p>
+                )}
+                <div className="filters">
+                  <button type="button" className="btn soft" disabled={busy} onClick={scheduleMeet}>
+                    {meeting.meet_link ? 'Refresh video room' : 'Create Meet / Jitsi room'}
+                  </button>
+                  {meeting.meet_link && (
+                    <a className="btn" href={meeting.meet_link} target="_blank" rel="noreferrer">
+                      Join Meet
+                    </a>
+                  )}
+                  <button type="button" className="btn ghost" disabled={busy || demoLoading} onClick={loadDemoTranscript}>
+                    {demoLoading ? 'Loading…' : 'Load demo transcript'}
                   </button>
                 </div>
               </div>
@@ -714,6 +952,30 @@ export default function MeetingIntelligence() {
         <div className="ws-overview">
           <div className="ws-overview-main">
             <section className="panel">
+              <h2>Join video</h2>
+              {meeting.meet_link ? (
+                <p>
+                  <a className="btn" href={meeting.meet_link} target="_blank" rel="noreferrer">
+                    Join {meeting.meet_provider === 'google_meet' ? 'Google Meet' : 'Jitsi'}
+                  </a>
+                  <span className="muted" style={{ marginLeft: 8 }}>
+                    {meeting.meet_link}
+                  </span>
+                </p>
+              ) : (
+                <button type="button" className="btn soft" disabled={busy} onClick={scheduleMeet}>
+                  Create Meet / Jitsi room
+                </button>
+              )}
+              <p className="muted" style={{ marginTop: 8 }}>
+                For the judge demo without a live call: load the packaged Priya transcript, then generate
+                minutes.
+              </p>
+              <button type="button" className="btn soft" disabled={busy} onClick={loadDemoTranscript}>
+                Load demo transcript → Minutes
+              </button>
+            </section>
+            <section className="panel">
               <h2>Agenda</h2>
               <ol>
                 {(meeting.agenda || []).map((a: string, i: number) => (
@@ -789,8 +1051,21 @@ export default function MeetingIntelligence() {
                 />
               </label>
               <div className="filters" style={{ marginTop: 12 }}>
-                <button type="button" className="btn" disabled={busy} onClick={runTranscribe}>
+                <button
+                  type="button"
+                  className="btn"
+                  disabled={busy || !gemini?.usable}
+                  title={
+                    gemini?.usable
+                      ? 'Transcribe uploaded audio with Gemini'
+                      : 'Needs a valid AI Studio key — use Load demo transcript instead'
+                  }
+                  onClick={runTranscribe}
+                >
                   Transcribe with Gemini
+                </button>
+                <button type="button" className="btn soft" disabled={busy || demoLoading} onClick={loadDemoTranscript}>
+                  {demoLoading ? 'Loading transcript…' : 'Load demo transcript → Minutes'}
                 </button>
                 <button
                   type="button"
@@ -803,6 +1078,12 @@ export default function MeetingIntelligence() {
                   End Meeting
                 </button>
               </div>
+              {!gemini?.usable && (
+                <p className="warn" style={{ marginTop: 8 }}>
+                  Live Transcribe is disabled — your Gemini key is missing or invalid. Use{' '}
+                  <strong>Load demo transcript</strong> for the judge demo.
+                </p>
+              )}
               <h3>Or paste advisor transcript</h3>
               <p className="muted">Use only real notes — never fabricated content.</p>
               <textarea
@@ -820,42 +1101,91 @@ export default function MeetingIntelligence() {
         </div>
       )}
 
-      {stage === 'minutes' && meeting && (
+      {demoLoading && (
+        <div className="mi-buffer panel" role="status" aria-live="polite">
+          <div className="mi-buffer-head">
+            <div className="mi-spinner" aria-hidden />
+            <div>
+              <h2>Generating meeting intelligence…</h2>
+              <p className="muted">{DEMO_LOAD_STEPS[demoStep]}</p>
+            </div>
+          </div>
+          <div className="mi-buffer-bar">
+            <div
+              className="mi-buffer-fill"
+              style={{ width: `${((demoStep + 1) / DEMO_LOAD_STEPS.length) * 100}%` }}
+            />
+          </div>
+          <ol className="mi-buffer-steps">
+            {DEMO_LOAD_STEPS.map((label, i) => (
+              <li key={label} className={i < demoStep ? 'done' : i === demoStep ? 'active' : ''}>
+                <span className="mi-buffer-idx">{i + 1}</span>
+                {label.replace(/…$/, '')}
+              </li>
+            ))}
+          </ol>
+          <p className="muted mi-buffer-foot">
+            Building: Transcript · Executive summary · Client concerns · Advice · Decisions · Action
+            items · Follow-up draft
+          </p>
+        </div>
+      )}
+
+      {stage === 'minutes' && meeting && !demoLoading && (
         <div className="mi-minutes">
-          <div className="panel">
+          <div className="panel mi-mom-hero">
             <div className="panel-head">
-              <h2>Transcript & Minutes</h2>
+              <h2>1. Transcript &amp; Minutes</h2>
               <span className="muted">
                 transcript: {meeting.transcript_status} · minutes: {meeting.minutes_status}
               </span>
             </div>
+            {meeting.meet_link && (
+              <p>
+                Video room:{' '}
+                <a className="btn soft" href={meeting.meet_link} target="_blank" rel="noreferrer">
+                  Join {meeting.meet_provider === 'google_meet' ? 'Google Meet' : 'Jitsi'}
+                </a>
+              </p>
+            )}
             {!meeting.transcript?.full_text && (
               <p className="warn">
-                No transcript yet. Record/upload + Gemini transcribe, or paste advisor-provided text on
-                Live Meeting.
+                No transcript yet. Use <strong>Load demo transcript</strong> for the Priya demo path.
               </p>
+            )}
+            {meeting.transcript?.source === 'demo_fixture' && (
+              <p className="muted">{meeting.transcript.disclaimer}</p>
             )}
             {(meeting.transcript?.segments || []).length > 0 && (
               <div className="mi-transcript">
-                <h3>Segments</h3>
+                <h3>Speaker segments</h3>
                 {(meeting.transcript.segments as any[]).map((s) => (
                   <div key={s.segment_id} className="mi-seg">
-                    <span className="muted">
-                      [{s.start_time}] {s.speaker_id} · {s.segment_id}
-                    </span>
-                    <div>{s.text}</div>
+                    <div className="mi-seg-meta">
+                      <span className="mi-speaker">{s.speaker_id}</span>
+                      <span className="muted">
+                        {s.start_time}
+                        {s.end_time ? `–${s.end_time}` : ''} · {s.segment_id}
+                      </span>
+                    </div>
+                    <p className="mi-seg-text">{s.text}</p>
                   </div>
                 ))}
               </div>
             )}
             <div className="filters">
+              {!meeting.transcript?.full_text && (
+                <button type="button" className="btn soft" disabled={busy} onClick={loadDemoTranscript}>
+                  {busy ? 'Loading transcript…' : 'Load demo transcript'}
+                </button>
+              )}
               <button
                 type="button"
                 className="btn"
                 disabled={busy || meeting.transcript_status !== 'ready'}
                 onClick={genMinutes}
               >
-                {busy ? 'Generating…' : 'Generate Meeting Minutes (Gemini)'}
+                {busy ? 'Generating…' : 'Regenerate Meeting Minutes'}
               </button>
               {meeting.minutes_status === 'ready_for_review' || meeting.minutes_status === 'draft' ? (
                 <button type="button" className="btn" disabled={busy} onClick={approve}>
@@ -871,101 +1201,228 @@ export default function MeetingIntelligence() {
           </div>
 
           {meeting.minutes && (
-            <div className="ws-overview">
-              <div className="ws-overview-main">
-                <section className="panel">
+            <div className="mi-mom-grid">
+              <section className="panel mi-mom-card">
+                <header className="mi-mom-card-head">
+                  <span className="mi-mom-num">2</span>
                   <h2>Executive summary</h2>
-                  <ul>
-                    {(meeting.minutes.executive_summary || []).map((b: string, i: number) => (
-                      <li key={i}>{b}</li>
-                    ))}
-                  </ul>
-                  <EvidenceBadge evidence={meeting.minutes.evidence} />
-                </section>
-                <section className="panel">
-                  <h2>Advice given</h2>
-                  {(meeting.minutes.advice_items || []).map((a: any) => (
-                    <div key={a.advice_id} className="ws-drift-card">
-                      <div className="ws-drift-body">
-                        <strong>{a.summary}</strong>{' '}
-                        <ConfidencePill confidence={a.evidence_status} />
-                        <div className="muted">
-                          Response: {a.client_response} · segments:{' '}
-                          {(a.evidence_segment_ids || []).join(', ') || 'none'}
-                        </div>
-                        <p>{a.rationale}</p>
-                      </div>
-                    </div>
+                </header>
+                <ol className="mi-mom-list">
+                  {(meeting.minutes.executive_summary || []).map((b: string, i: number) => (
+                    <li key={i}>{b}</li>
                   ))}
-                </section>
-                <section className="panel">
-                  <h2>Decisions & preferences</h2>
-                  {(meeting.minutes.decisions || []).map((d: any, i: number) => (
-                    <div key={i} className="ws-alert-mini">
-                      <strong>{d.decision}</strong> — {d.status}{' '}
-                      <ConfidencePill confidence={d.evidence_status} />
-                    </div>
-                  ))}
-                </section>
-                <section className="panel">
-                  <h2>Action items</h2>
-                  {(meeting.minutes.action_items || []).map((a: any) => (
-                    <div key={a.action_id} className="ws-commit-row">
-                      <strong>{a.description}</strong>
-                      <div className="muted">
-                        {a.owner} · due {a.due_date || 'unassigned'} ·{' '}
-                        {a.suggestion_only ? 'suggestion (needs approval)' : 'agreed'}
-                        {a.commitment_id ? ` · commitment ${a.commitment_id}` : ''}
-                      </div>
-                    </div>
-                  ))}
-                </section>
-              </div>
-              <aside className="ws-overview-side">
-                <section className="panel">
+                </ol>
+                {!meeting.minutes.executive_summary?.length && (
+                  <p className="muted">No summary bullets.</p>
+                )}
+                <EvidenceBadge evidence={meeting.minutes.evidence} />
+              </section>
+
+              <section className="panel mi-mom-card">
+                <header className="mi-mom-card-head">
+                  <span className="mi-mom-num">3</span>
                   <h2>Client concerns</h2>
+                </header>
+                <div className="mi-mom-stack">
                   {(meeting.minutes.client_concerns || []).map((c: any, i: number) => (
-                    <div key={i} className="ws-alert-mini">
-                      <strong>{c.concern}</strong>
-                      <div className="muted">{c.supporting_statement}</div>
-                    </div>
+                    <article key={i} className="mi-mom-item">
+                      <div className="mi-mom-item-title">
+                        <strong>{c.concern}</strong>
+                        <ConfidencePill confidence={c.evidence_status} />
+                      </div>
+                      <p className="muted">{c.supporting_statement}</p>
+                      <div className="mi-mom-meta">
+                        Addressed: {c.addressed ? 'Yes' : 'Open'}
+                        {(c.evidence_segment_ids || []).length
+                          ? ` · Evidence: ${(c.evidence_segment_ids || []).join(', ')}`
+                          : ''}
+                      </div>
+                    </article>
                   ))}
-                </section>
-                <section className="panel">
+                  {!meeting.minutes.client_concerns?.length && (
+                    <p className="muted">No client concerns extracted.</p>
+                  )}
+                </div>
+              </section>
+
+              <section className="panel mi-mom-card">
+                <header className="mi-mom-card-head">
+                  <span className="mi-mom-num">4</span>
+                  <h2>Advice given</h2>
+                </header>
+                <div className="mi-mom-stack">
+                  {(meeting.minutes.advice_items || []).map((a: any) => (
+                    <article key={a.advice_id} className="mi-mom-item">
+                      <div className="mi-mom-item-title">
+                        <strong>{a.summary}</strong>
+                        <ConfidencePill confidence={a.evidence_status} />
+                      </div>
+                      <p>{a.rationale}</p>
+                      <div className="mi-mom-meta">
+                        Client response: <em>{a.client_response}</em>
+                        {a.related_goal_or_asset ? ` · Related: ${a.related_goal_or_asset}` : ''}
+                        {a.follow_up ? ` · Follow-up: ${a.follow_up}` : ''}
+                      </div>
+                      {(a.evidence_segment_ids || []).length > 0 && (
+                        <div className="mi-mom-meta">
+                          Segments: {(a.evidence_segment_ids || []).join(', ')}
+                        </div>
+                      )}
+                    </article>
+                  ))}
+                  {!meeting.minutes.advice_items?.length && (
+                    <p className="muted">No advice items extracted.</p>
+                  )}
+                </div>
+              </section>
+
+              <section className="panel mi-mom-card">
+                <header className="mi-mom-card-head">
+                  <span className="mi-mom-num">5</span>
+                  <h2>Decisions &amp; preferences</h2>
+                </header>
+                <div className="mi-mom-stack">
+                  {(meeting.minutes.decisions || []).map((d: any, i: number) => (
+                    <article key={i} className="mi-mom-item">
+                      <div className="mi-mom-item-title">
+                        <strong>{d.decision}</strong>
+                        <span className={`mi-status-pill ${d.status}`}>{d.status}</span>
+                      </div>
+                      <div className="mi-mom-meta">
+                        Expressed by: {d.expressed_by}{' '}
+                        <ConfidencePill confidence={d.evidence_status} />
+                      </div>
+                    </article>
+                  ))}
+                  {!meeting.minutes.decisions?.length && (
+                    <p className="muted">No decisions recorded.</p>
+                  )}
+                </div>
+              </section>
+
+              <section className="panel mi-mom-card">
+                <header className="mi-mom-card-head">
+                  <span className="mi-mom-num">6</span>
+                  <h2>Action items</h2>
+                </header>
+                <table className="mi-action-table">
+                  <thead>
+                    <tr>
+                      <th>Action</th>
+                      <th>Owner</th>
+                      <th>Due</th>
+                      <th>Priority</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {(meeting.minutes.action_items || []).map((a: any) => (
+                      <tr key={a.action_id}>
+                        <td>
+                          <strong>{a.description}</strong>
+                          {(a.evidence_segment_ids || []).length > 0 && (
+                            <div className="muted" style={{ fontSize: '0.8rem' }}>
+                              {(a.evidence_segment_ids || []).join(', ')}
+                            </div>
+                          )}
+                        </td>
+                        <td>{a.owner}</td>
+                        <td>{a.due_date || '—'}</td>
+                        <td>{a.priority || '—'}</td>
+                        <td>
+                          {a.commitment_id
+                            ? `Commitment ${a.commitment_id}`
+                            : a.explicitly_agreed
+                              ? 'Agreed'
+                              : 'Suggestion'}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                {!meeting.minutes.action_items?.length && (
+                  <p className="muted">No action items.</p>
+                )}
+              </section>
+
+              <section className="panel mi-mom-card">
+                <header className="mi-mom-card-head">
+                  <span className="mi-mom-num">7</span>
                   <h2>Follow-up draft</h2>
                   <span className="pill hypo">Draft — Not Sent</span>
-                  <pre className="draft-msg">{meeting.minutes.follow_up_draft}</pre>
-                  <p className="muted">Status: {meeting.minutes.follow_up_draft_status}</p>
-                </section>
-                <section className="panel">
-                  <h2>Proposed client updates</h2>
+                </header>
+                <pre className="draft-msg mi-followup">{meeting.minutes.follow_up_draft}</pre>
+                <p className="muted">Status: {meeting.minutes.follow_up_draft_status}</p>
+              </section>
+
+              {(meeting.minutes.proposed_client_updates || []).length > 0 && (
+                <section className="panel mi-mom-card">
+                  <header className="mi-mom-card-head">
+                    <span className="mi-mom-num">8</span>
+                    <h2>Proposed client updates</h2>
+                  </header>
                   <p className="muted">Require explicit approval — not auto-applied.</p>
-                  {(meeting.minutes.proposed_client_updates || []).map((p: any, i: number) => (
-                    <div key={i} className="ws-alert-mini">
-                      <strong>{p.field_name}</strong>
-                      <div className="muted">
-                        {String(p.previous_value)} → {String(p.proposed_value)} ({p.status})
-                      </div>
+                  <div className="mi-mom-stack">
+                    {(meeting.minutes.proposed_client_updates || []).map((p: any, i: number) => (
+                      <article key={i} className="mi-mom-item">
+                        <strong>{p.field_name}</strong>
+                        <div className="mi-mom-meta">
+                          {String(p.previous_value)} → <strong>{String(p.proposed_value)}</strong> (
+                          {p.status})
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {meeting.minutes.conclusion && (
+                <section className="panel mi-mom-card">
+                  <header className="mi-mom-card-head">
+                    <span className="mi-mom-num">9</span>
+                    <h2>Conclusion</h2>
+                  </header>
+                  <div className="mi-conclusion">
+                    <div>
+                      <h3>Resolved</h3>
+                      <ul>
+                        {(meeting.minutes.conclusion.resolved || []).map((x: string) => (
+                          <li key={x}>{x}</li>
+                        ))}
+                      </ul>
                     </div>
-                  ))}
-                  {!meeting.minutes.proposed_client_updates?.length && (
-                    <p className="muted">None proposed.</p>
+                    <div>
+                      <h3>Still open</h3>
+                      <ul>
+                        {(meeting.minutes.conclusion.open || []).map((x: string) => (
+                          <li key={x}>{x}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  {meeting.minutes.conclusion.next_step && (
+                    <p>
+                      <strong>Next step:</strong> {meeting.minutes.conclusion.next_step}
+                    </p>
                   )}
                 </section>
-              </aside>
+              )}
             </div>
           )}
         </div>
       )}
 
-      {stage === 'live' && !meeting && (
+      {stage === 'live' && !meeting && !demoLoading && (
         <div className="panel">
           <p className="muted">Open or start a meeting from Preparation first.</p>
         </div>
       )}
-      {stage === 'minutes' && !meeting && (
+      {stage === 'minutes' && !meeting && !demoLoading && (
         <div className="panel">
-          <p className="muted">Select a meeting from History.</p>
+          <p className="muted">Select a meeting from History, or load the Priya demo.</p>
+          <button type="button" className="btn soft" disabled={busy} onClick={seedDemoMeeting}>
+            Load Priya demo (Meet + transcript)
+          </button>
         </div>
       )}
     </div>

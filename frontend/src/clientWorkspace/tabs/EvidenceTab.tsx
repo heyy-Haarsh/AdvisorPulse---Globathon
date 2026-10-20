@@ -129,8 +129,8 @@ export function EvidenceTab({ investorId, data }: Props) {
               <Link className="btn soft" to={`/clients/${investorId}/review-actions`}>
                 Review Actions
               </Link>
-              <Link className="btn soft" to={`/clients/${investorId}/simulator`}>
-                What-if Simulator
+              <Link className="btn soft" to={`/what-if/${investorId}`}>
+                Market Shock Simulator
               </Link>
             </div>
           </>

@@ -10,3 +10,6 @@ python-pptx==1.0.2
 Pillow==11.1.0
 google-generativeai==0.8.4
 python-dotenv==1.0.1
+google-api-python-client==2.160.0
+google-auth-oauthlib==1.2.1
+google-auth-httplib2==0.2.0

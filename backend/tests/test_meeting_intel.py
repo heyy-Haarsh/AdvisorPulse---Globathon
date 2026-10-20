@@ -82,3 +82,47 @@ def test_invalid_audio_rejected(store):
     meeting_intel.confirm_consent(m["meeting_id"])
     bad = meeting_intel.save_recording_bytes(m["meeting_id"], b"not-audio", "notes.txt")
     assert bad.get("error")
+
+
+def test_schedule_meet_jitsi_fallback(store):
+    m = meeting_intel.create_meeting(
+        store, {"investor_id": "DEMO-INV-001", "title": "Jitsi schedule test"}
+    )
+    mid = m["meeting_id"]
+    result = meeting_intel.schedule_meet(mid, prefer_google=False)
+    assert not result.get("error") or result.get("meeting", {}).get("meet_link")
+    meeting = result["meeting"]
+    assert meeting["meet_link"]
+    assert "jit.si" in meeting["meet_link"] or meeting.get("meet_provider") == "google_meet"
+
+
+def test_load_demo_transcript(store):
+    m = meeting_intel.create_meeting(
+        store, {"investor_id": "DEMO-INV-001", "title": "Demo transcript test"}
+    )
+    mid = m["meeting_id"]
+    loaded = meeting_intel.load_demo_transcript(mid, store=store)
+    assert not loaded.get("error"), loaded
+    assert loaded["meeting"]["transcript_status"] == "ready"
+    assert loaded["meeting"]["transcript"]["source"] == "demo_fixture"
+    assert "Priya" in loaded["meeting"]["transcript"]["full_text"]
+    assert loaded["meeting"]["meet_link"]
+    assert len(loaded["meeting"]["transcript"]["segments"]) >= 5
+    assert loaded["meeting"]["minutes_status"] == "ready_for_review"
+    assert loaded["minutes"]
+
+
+def test_seed_demo_meeting(store):
+    seeded = meeting_intel.seed_demo_meeting(store)
+    assert not seeded.get("error"), seeded
+    m = seeded["meeting"]
+    assert m["investor_id"] == "DEMO-INV-001"
+    assert m["transcript_status"] == "ready"
+    assert m["minutes_status"] == "ready_for_review"
+    assert m["meet_link"]
+    assert seeded.get("demo_script")
+    # Preparing again must not wipe minutes-ready status
+    meeting_intel.build_preparation_brief(store, m["meeting_id"])
+    again = meeting_intel.get_meeting(m["meeting_id"])
+    assert again["minutes_status"] == "ready_for_review"
+    assert again["status"] == "ready_for_review"

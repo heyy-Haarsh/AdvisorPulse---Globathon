@@ -1,0 +1,237 @@
+{
+  "is_demo": true,
+  "assumptions_version": "demo-v1",
+  "as_of": "2026-10-14",
+  "source": "synthetic_demo_catalog",
+  "disclaimer": "Synthetic DEMO instruments and reference prices — not a live market feed.",
+  "instruments": [
+    {
+      "instrument_id": "NSE:RELIANCE",
+      "name": "Reliance Industries",
+      "symbol": "RELIANCE",
+      "exchange": "NSE",
+      "instrument_type": "stock",
+      "currency": "INR",
+      "reference_price": 2950.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": ["DEMO-STOCK-RELIANCE_PROXY"]
+    },
+    {
+      "instrument_id": "NSE:TCS",
+      "name": "Tata Consultancy Services",
+      "symbol": "TCS",
+      "exchange": "NSE",
+      "instrument_type": "stock",
+      "currency": "INR",
+      "reference_price": 4125.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": ["DEMO-STOCK-TCS"]
+    },
+    {
+      "instrument_id": "NSE:INFY",
+      "name": "Infosys",
+      "symbol": "INFY",
+      "exchange": "NSE",
+      "instrument_type": "stock",
+      "currency": "INR",
+      "reference_price": 1880.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": ["DEMO-STOCK-INFY"]
+    },
+    {
+      "instrument_id": "NSE:HDFCBANK",
+      "name": "HDFC Bank",
+      "symbol": "HDFCBANK",
+      "exchange": "NSE",
+      "instrument_type": "stock",
+      "currency": "INR",
+      "reference_price": 1685.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": ["DEMO-STOCK-HDFCBANK"]
+    },
+    {
+      "instrument_id": "NASDAQ:AAPL",
+      "name": "Apple",
+      "symbol": "AAPL",
+      "exchange": "NASDAQ",
+      "instrument_type": "stock",
+      "currency": "USD",
+      "reference_price": 228.5,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": ["DEMO-STOCK-AAPL"]
+    },
+    {
+      "instrument_id": "NASDAQ:MSFT",
+      "name": "Microsoft",
+      "symbol": "MSFT",
+      "exchange": "NASDAQ",
+      "instrument_type": "stock",
+      "currency": "USD",
+      "reference_price": 428.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": ["DEMO-STOCK-MSFT"]
+    },
+    {
+      "instrument_id": "INDEX:NIFTY50",
+      "name": "NIFTY 50",
+      "symbol": "NIFTY50",
+      "exchange": "NSE",
+      "instrument_type": "index",
+      "currency": "INR",
+      "reference_price": 24850.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": []
+    },
+    {
+      "instrument_id": "INDEX:NIFTY500",
+      "name": "NIFTY 500",
+      "symbol": "NIFTY500",
+      "exchange": "NSE",
+      "instrument_type": "index",
+      "currency": "INR",
+      "reference_price": 22800.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": []
+    },
+    {
+      "instrument_id": "INDEX:SPX",
+      "name": "S&P 500",
+      "symbol": "SPX",
+      "exchange": "INDEX",
+      "instrument_type": "index",
+      "currency": "USD",
+      "reference_price": 5820.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": []
+    },
+    {
+      "instrument_id": "INDEX:COMP",
+      "name": "NASDAQ Composite",
+      "symbol": "COMP",
+      "exchange": "INDEX",
+      "instrument_type": "index",
+      "currency": "USD",
+      "reference_price": 18450.0,
+      "price_timestamp": "2026-10-14T00:00:00Z",
+      "price_source": "demo_static",
+      "maps_from_holding_ids": []
+    }
+  ],
+  "index_trackers": [
+    {
+      "holding_instrument_id": "DEMO-ETF-NIFTYBEES",
+      "tracks_index": "INDEX:NIFTY50",
+      "sensitivity": 1.0,
+      "exposure_kind": "direct_index_tracker",
+      "note": "Nifty BeES-style sleeve — assumed to track NIFTY 50 1:1 under this scenario"
+    },
+    {
+      "holding_instrument_id": "DEMO-MF-LARGECAP-A",
+      "tracks_index": "INDEX:NIFTY50",
+      "sensitivity": 0.9,
+      "exposure_kind": "approximate_benchmark",
+      "note": "Large-cap MF — illustrative 0.9 sensitivity to NIFTY 50 (not a guaranteed beta)"
+    },
+    {
+      "holding_instrument_id": "DEMO-ETF-MID150",
+      "tracks_index": "INDEX:NIFTY500",
+      "sensitivity": 1.0,
+      "exposure_kind": "direct_index_tracker",
+      "note": "Midcap 150 ETF sleeve — mapped to NIFTY 500 scenario"
+    },
+    {
+      "holding_instrument_id": "DEMO-MF-MIDCAP-B",
+      "tracks_index": "INDEX:NIFTY500",
+      "sensitivity": 0.95,
+      "exposure_kind": "approximate_benchmark",
+      "note": "Midcap MF — illustrative sensitivity to NIFTY 500"
+    },
+    {
+      "holding_instrument_id": "DEMO-STOCK-AAPL",
+      "tracks_index": "INDEX:SPX",
+      "sensitivity": 1.1,
+      "exposure_kind": "constituent_sensitivity",
+      "note": "AAPL constituent sensitivity to S&P 500 scenario (illustrative)"
+    },
+    {
+      "holding_instrument_id": "DEMO-STOCK-MSFT",
+      "tracks_index": "INDEX:SPX",
+      "sensitivity": 1.05,
+      "exposure_kind": "constituent_sensitivity",
+      "note": "MSFT constituent sensitivity to S&P 500 scenario (illustrative)"
+    },
+    {
+      "holding_instrument_id": "DEMO-STOCK-AAPL",
+      "tracks_index": "INDEX:COMP",
+      "sensitivity": 1.15,
+      "exposure_kind": "constituent_sensitivity",
+      "note": "AAPL constituent sensitivity to NASDAQ Composite (illustrative)"
+    },
+    {
+      "holding_instrument_id": "DEMO-STOCK-MSFT",
+      "tracks_index": "INDEX:COMP",
+      "sensitivity": 1.1,
+      "exposure_kind": "constituent_sensitivity",
+      "note": "MSFT constituent sensitivity to NASDAQ Composite (illustrative)"
+    }
+  ],
+  "indirect_fund_constituents": [
+    {
+      "fund_instrument_id": "DEMO-MF-LARGECAP-A",
+      "constituent_id": "NSE:RELIANCE",
+      "weight_pct": 8.5,
+      "note": "Illustrative fund look-through weight for DEMO only"
+    },
+    {
+      "fund_instrument_id": "DEMO-MF-LARGECAP-A",
+      "constituent_id": "NSE:TCS",
+      "weight_pct": 6.0,
+      "note": "Illustrative fund look-through weight for DEMO only"
+    },
+    {
+      "fund_instrument_id": "DEMO-MF-LARGECAP-A",
+      "constituent_id": "NSE:INFY",
+      "weight_pct": 5.5,
+      "note": "Illustrative fund look-through weight for DEMO only"
+    },
+    {
+      "fund_instrument_id": "DEMO-MF-LARGECAP-A",
+      "constituent_id": "NSE:HDFCBANK",
+      "weight_pct": 7.0,
+      "note": "Illustrative fund look-through weight for DEMO only"
+    },
+    {
+      "fund_instrument_id": "DEMO-ETF-NIFTYBEES",
+      "constituent_id": "NSE:RELIANCE",
+      "weight_pct": 10.0,
+      "note": "Illustrative Nifty BeES look-through — avoid double-count if direct RELIANCE also held"
+    },
+    {
+      "fund_instrument_id": "DEMO-ETF-NIFTYBEES",
+      "constituent_id": "NSE:TCS",
+      "weight_pct": 4.5,
+      "note": "Illustrative look-through"
+    },
+    {
+      "fund_instrument_id": "DEMO-ETF-NIFTYBEES",
+      "constituent_id": "NSE:INFY",
+      "weight_pct": 4.0,
+      "note": "Illustrative look-through"
+    },
+    {
+      "fund_instrument_id": "DEMO-ETF-NIFTYBEES",
+      "constituent_id": "NSE:HDFCBANK",
+      "weight_pct": 8.0,
+      "note": "Illustrative look-through"
+    }
+  ]
+}

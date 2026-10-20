@@ -16,7 +16,6 @@ import { OverviewTab } from './tabs/OverviewTab';
 import { EvidenceTab } from './tabs/EvidenceTab';
 import { PortfolioTab } from './tabs/PortfolioTab';
 import { MeetingsAdviceTab } from './tabs/MeetingsAdviceTab';
-import { SimulatorTab } from './tabs/SimulatorTab';
 import { ReviewActionsTab } from './tabs/ReviewActionsTab';
 
 type Props = {
@@ -218,7 +217,6 @@ export function ClientWorkspace({ investorId }: Props) {
             onFeedback={onFeedback}
           />
         )}
-        {tab === 'simulator' && <SimulatorTab investorId={investorId} data={data} />}
         {tab === 'review-actions' && (
           <ReviewActionsTab
             investorId={investorId}

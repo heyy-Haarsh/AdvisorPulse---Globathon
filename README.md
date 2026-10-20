@@ -10,7 +10,42 @@ Advisor Pulse is an **investor-intelligence and action-prioritization layer** �
 
 ---
 
-## Quick start
+## Production deploy
+
+### Cloud (Railway — recommended)
+
+Full stack (React UI + FastAPI) in one Docker service. Use a **personal** Railway account (not internship GCP).
+
+```powershell
+railway login
+powershell -File scripts/deploy-railway.ps1
+```
+
+Or from the [Railway dashboard](https://railway.com/new): deploy from this folder / GitHub repo with `Dockerfile`, then set env vars `GEMINI_API_KEY` and `GEMINI_MODEL`.
+
+> **Why not Vercel alone?** This app needs a long-running Python API (pandas, meetings, Gemini). Vercel is great for static/Next.js frontends; put the API on Railway/Render and point the UI there, or deploy both together on Railway (simpler).
+
+Optional Blueprint: `render.yaml` for [Render](https://dashboard.render.com).
+
+### Local Docker
+
+```bash
+# Ensure .env has GEMINI_API_KEY (gitignored)
+docker compose build
+docker compose up -d
+```
+
+Open **http://127.0.0.1:18080/**
+
+- API health: http://127.0.0.1:18080/api/health  
+- Runtime data persists in `data/runtime/`  
+- Stop: `docker compose down`
+
+Windows helper: `powershell -File scripts/deploy.ps1`
+
+---
+
+## Quick start (local development)
 
 ### 1. Generate / refresh demo data (optional)
 
@@ -118,10 +153,15 @@ All twelve differentiators below are wired end-to-end on the demo stack (API fea
 - No arbitrary SQL; no invented metrics
 - Returns citations / evidence; optional `accessible_clients` ACL in Settings
 
-### 8. Financial What-If Simulator
-- Interactive SIP / contribution scenario on the client profile
-- Explicit formulas; baseline vs alternative; assumptions disclosed
-- Outputs labeled **Hypothetical** — not advice or guaranteed returns
+### 8. Market & Asset Scenario Simulator
+- Select **Individual Stock**, **Market Index**, or **Broad-Market** scenarios
+- Signed price movements **−30% … +30%** (slider, numeric input, presets)
+- Stock impact uses direct security positions + documented fund look-through (no double-count)
+- Index impact uses tracker / sensitivity mappings — not “all equities = index”
+- Separate **scenario impact** vs rule-based **review priority** (does not overwrite Attention Engine)
+- Currencies are never mixed without validated FX; incomplete exposure is labeled honestly
+- Outputs labeled **Hypothetical** — not a live market feed, forecast, or trade advice
+- Legacy SIP/contribution `simulate()` remains available to Advisor Copilot only
 
 ### 9. Cross-Client Pattern Discovery
 - Insights page with explainable cohorts (counts, rule definition, drill-down to clients)

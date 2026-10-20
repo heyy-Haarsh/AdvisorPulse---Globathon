@@ -1,0 +1,96 @@
+{
+  "title": "DEMO — Priya Sharma quarterly portfolio review transcript",
+  "investor_id": "DEMO-INV-001",
+  "disclaimer": "Synthetic demo transcript for Advisor Pulse demos. Not a real client recording.",
+  "full_text": "Advisor: Good morning Priya, thanks for joining. Today I want to review your retirement goal progress and the mid-cap allocation drift we flagged.\nClient: Morning. Yes, I saw the alert — I'm a bit concerned about mid-cap volatility after the last few months.\nAdvisor: Understood. Your portfolio is behind the expected path for the retirement goal, and mid-cap is overweight versus the agreed moderate policy. Active return versus benchmark has also lagged in the recent window.\nClient: Has my retirement timeline changed? Not really — still aiming for the same date. But I may need some liquidity next year for my daughter's education deposit.\nAdvisor: That's helpful. We should not treat that as distress, but we should plan cash and avoid overreacting to short-term mid-cap noise. My recommendation is to review a rebalancing plan that trims mid-cap toward policy and keeps your SIP on track.\nClient: I'm not ready to approve a full rebalance today. I want to see a written proposal first.\nAdvisor: Fair. I will prepare a revised allocation proposal and send it within one week. Meanwhile, can we keep the current SIP amount?\nClient: Yes, keep the SIP for now. Please also schedule a follow-up after I review the proposal.\nAdvisor: Agreed. Action items: I will send the rebalancing proposal by next week; you will review and confirm preference; we will book a short follow-up. Any other concerns?\nClient: Mainly clarity on downside if markets stay weak. I'm okay with equity overall, just not comfortable with so much mid-cap.\nAdvisor: Perfect — we'll address that in the proposal. Thanks Priya.",
+  "segments": [
+    {
+      "segment_id": "SEG-DEMO-01",
+      "start_time": "00:00",
+      "end_time": "00:18",
+      "speaker_id": "Advisor",
+      "text": "Good morning Priya, thanks for joining. Today I want to review your retirement goal progress and the mid-cap allocation drift we flagged.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-02",
+      "start_time": "00:18",
+      "end_time": "00:32",
+      "speaker_id": "Client",
+      "text": "Morning. Yes, I saw the alert — I'm a bit concerned about mid-cap volatility after the last few months.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-03",
+      "start_time": "00:32",
+      "end_time": "00:58",
+      "speaker_id": "Advisor",
+      "text": "Understood. Your portfolio is behind the expected path for the retirement goal, and mid-cap is overweight versus the agreed moderate policy. Active return versus benchmark has also lagged in the recent window.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-04",
+      "start_time": "00:58",
+      "end_time": "01:18",
+      "speaker_id": "Client",
+      "text": "Has my retirement timeline changed? Not really — still aiming for the same date. But I may need some liquidity next year for my daughter's education deposit.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-05",
+      "start_time": "01:18",
+      "end_time": "01:48",
+      "speaker_id": "Advisor",
+      "text": "That's helpful. We should not treat that as distress, but we should plan cash and avoid overreacting to short-term mid-cap noise. My recommendation is to review a rebalancing plan that trims mid-cap toward policy and keeps your SIP on track.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-06",
+      "start_time": "01:48",
+      "end_time": "02:02",
+      "speaker_id": "Client",
+      "text": "I'm not ready to approve a full rebalance today. I want to see a written proposal first.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-07",
+      "start_time": "02:02",
+      "end_time": "02:22",
+      "speaker_id": "Advisor",
+      "text": "Fair. I will prepare a revised allocation proposal and send it within one week. Meanwhile, can we keep the current SIP amount?",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-08",
+      "start_time": "02:22",
+      "end_time": "02:38",
+      "speaker_id": "Client",
+      "text": "Yes, keep the SIP for now. Please also schedule a follow-up after I review the proposal.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-09",
+      "start_time": "02:38",
+      "end_time": "03:05",
+      "speaker_id": "Advisor",
+      "text": "Agreed. Action items: I will send the rebalancing proposal by next week; you will review and confirm preference; we will book a short follow-up. Any other concerns?",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-10",
+      "start_time": "03:05",
+      "end_time": "03:22",
+      "speaker_id": "Client",
+      "text": "Mainly clarity on downside if markets stay weak. I'm okay with equity overall, just not comfortable with so much mid-cap.",
+      "source_type": "demo_fixture"
+    },
+    {
+      "segment_id": "SEG-DEMO-11",
+      "start_time": "03:22",
+      "end_time": "03:32",
+      "speaker_id": "Advisor",
+      "text": "Perfect — we'll address that in the proposal. Thanks Priya.",
+      "source_type": "demo_fixture"
+    }
+  ]
+}

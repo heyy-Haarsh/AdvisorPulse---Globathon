@@ -38,15 +38,67 @@ def is_configured() -> bool:
     return bool(api_key())
 
 
+def looks_like_ai_studio_key(key: str | None = None) -> bool:
+    """Google AI Studio keys typically start with AIza…"""
+    k = (key if key is not None else api_key()) or ""
+    return k.startswith("AIza")
+
+
+def is_usable() -> bool:
+    """
+    True when we should attempt live Gemini calls.
+    A present-but-invalid key (common demo failure) is treated as unusable so
+    Meeting Intelligence falls back to the packaged demo path without 401 noise.
+    Set GEMINI_FORCE=1 to attempt calls even when the key format looks wrong.
+    """
+    if not is_configured():
+        return False
+    if os.getenv("GEMINI_FORCE", "").strip() in {"1", "true", "yes"}:
+        return True
+    return looks_like_ai_studio_key()
+
+
+def friendly_error(exc: BaseException) -> str:
+    """Collapse Google HttpError / discovery noise into a short advisor-facing message."""
+    msg = str(exc)
+    low = msg.lower()
+    if "api key not valid" in low or "api_key_invalid" in low or "access_token_type_unsupported" in low:
+        hint = ""
+        if not looks_like_ai_studio_key():
+            hint = (
+                " Current GEMINI_API_KEY does not look like a Google AI Studio key "
+                "(those usually start with AIza). Create one at https://aistudio.google.com/apikey "
+                "and put it in .env, then restart the API."
+            )
+        return (
+            "Gemini API key is invalid or rejected. "
+            "For the judge demo use “Load demo transcript” instead of Transcribe."
+            + hint
+        )
+    if "api key" in low and ("invalid" in low or "permission" in low or "denied" in low):
+        return "Gemini API key rejected. Use “Load demo transcript” for the demo, or set a valid GEMINI_API_KEY."
+    # Strip huge discovery URL payloads
+    if "HttpError" in msg and "generativelanguage.googleapis.com" in msg:
+        return "Gemini request failed (API key or quota). Use “Load demo transcript” for the demo."
+    if len(msg) > 280:
+        return msg[:277] + "…"
+    return msg
+
+
 def status() -> dict[str, Any]:
+    key = api_key()
+    usable = is_usable()
     return {
         "provider": "google_gemini",
         "configured": is_configured(),
+        "usable": usable,
         "model": DEFAULT_MODEL,
-        "env_vars": ["GEMINI_API_KEY", "GEMINI_MODEL"],
+        "key_format_ok": looks_like_ai_studio_key(key) if key else False,
+        "env_vars": ["GEMINI_API_KEY", "GEMINI_MODEL", "GEMINI_FORCE"],
         "note": (
-            "Set GEMINI_API_KEY in .env for transcription and minutes generation. "
-            "Preparation briefs work without Gemini using deterministic analytics."
+            "Set a valid Google AI Studio GEMINI_API_KEY (usually starts with AIza) for live "
+            "transcription/minutes. Prep briefs and the Priya demo (Meet + transcript + MoM) "
+            "work without a usable key."
         ),
     }
 
@@ -115,33 +167,50 @@ def transcribe_audio_file(path: Path, *, mime_type: str | None = None) -> dict[s
     Transcribe an audio file with Gemini multimodal.
     Returns { full_text, segments: [{start_time, end_time, speaker_id, text}] }
     """
-    genai = _client()
-    if not path.exists():
-        raise GeminiError(f"Audio file not found: {path}")
+    try:
+        genai = _client()
+        if not path.exists():
+            raise GeminiError(f"Audio file not found: {path}")
 
-    mime = mime_type or _guess_mime(path)
-    uploaded = genai.upload_file(path=str(path), mime_type=mime)
-    model = genai.GenerativeModel(DEFAULT_MODEL)
-    prompt = (
-        "Transcribe this advisor–client meeting audio accurately. "
-        "Return JSON with keys: full_text (string), segments (array of objects with "
-        "start_time (mm:ss or HH:mm:ss string), end_time, speaker_id (Speaker 1/2…), text). "
-        "Do not invent content that is not audible. If unintelligible, use [inaudible]. "
-        "Do not assume Speaker 1 is the advisor."
-    )
-    resp = model.generate_content(
-        [prompt, uploaded],
-        generation_config={"temperature": 0.1, "response_mime_type": "application/json"},
-    )
-    text = getattr(resp, "text", None) or ""
-    data = _extract_json(text)
-    if isinstance(data, str):
-        data = {"full_text": data, "segments": [{"start_time": "00:00", "end_time": "", "speaker_id": "Speaker 1", "text": data}]}
-    if "full_text" not in data and "segments" in data:
-        data["full_text"] = " ".join(s.get("text", "") for s in data["segments"])
-    data["provider"] = "google_gemini"
-    data["model"] = DEFAULT_MODEL
-    return data
+        mime = mime_type or _guess_mime(path)
+        uploaded = genai.upload_file(path=str(path), mime_type=mime)
+        model = genai.GenerativeModel(DEFAULT_MODEL)
+        prompt = (
+            "Transcribe this advisor–client meeting audio accurately. "
+            "Return JSON with keys: full_text (string), segments (array of objects with "
+            "start_time (mm:ss or HH:mm:ss string), end_time, speaker_id (Speaker 1/2…), text). "
+            "Do not invent content that is not audible. If unintelligible, use [inaudible]. "
+            "Do not assume Speaker 1 is the advisor."
+        )
+        resp = model.generate_content(
+            [prompt, uploaded],
+            generation_config={"temperature": 0.1, "response_mime_type": "application/json"},
+        )
+        text = getattr(resp, "text", None) or ""
+        data = _extract_json(text)
+        if isinstance(data, str):
+            data = {
+                "full_text": data,
+                "segments": [
+                    {
+                        "start_time": "00:00",
+                        "end_time": "",
+                        "speaker_id": "Speaker 1",
+                        "text": data,
+                    }
+                ],
+            }
+        if "full_text" not in data and "segments" in data:
+            data["full_text"] = " ".join(s.get("text", "") for s in data["segments"])
+        data["provider"] = "google_gemini"
+        data["model"] = DEFAULT_MODEL
+        return data
+    except GeminiNotConfigured:
+        raise
+    except GeminiError:
+        raise
+    except Exception as e:
+        raise GeminiError(friendly_error(e)) from e
 
 
 def _guess_mime(path: Path) -> str:
